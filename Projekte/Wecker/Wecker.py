@@ -1,6 +1,6 @@
 from machine import Pin, I2C
 from picozero import RGBLED
-from utime import sleep, sleep_ms
+from utime import sleep
 from lcd_api import LcdApi
 from pico_i2c_lcd import I2cLcd
 from Driver import DFPlayer
@@ -89,7 +89,7 @@ sounds = [" Chalet ", "Arpeggio", "Breaking", " Sencha ", " Summit "]
 def alarm_sounds():
     saved_sound = []
     i = 1
-    player.setVolume(27)
+    player.setVolume(30)
     custom_characters()
     lcd.move_to(0,0)
     lcd.putchar(chr(2))
@@ -115,7 +115,7 @@ def alarm_sounds():
     lcd.putstr("Chalet")
     player.playTrack(2,1)
     while player.is_running():
-        sleep_ms(5)
+        sleep(0.3)
         if button_3.value() == 1 and i != 5:
             player.pause()
             player.playTrack(2,(i+1))
@@ -144,16 +144,139 @@ def alarm_sounds():
             saved_sound = [i, sounds[i-1]]
             player.pause()
             lcd.clear()
-            lcd.move_to(4,0)
-            lcd.putstr("Selected")
+            rgb.color = (0, 255, 0)
+            lcd.move_to(1,0)
+            lcd.putstr("Sound selected")
             lcd.move_to(4,1)
             lcd.putstr(saved_sound[1])
             lcd.move_to(12,1)
             lcd.putchar(chr(3))
             sleep(3)
+            rgb.color = (0, 0, 0)
             lcd.clear()
-            return None
-            
+
+#Set up an alarm clock
+def set_alarm():
+    (Y, M, D, day, hr, m, s) = ds.date_time()
+    if m < 10:
+        m = "0" + str(m)
+    if hr < 10:
+        hr = "0" + str(hr)
+    
+    set_time = []
+    counter = 0
+    
+    custom_characters()
+    lcd.move_to(0,0)
+    lcd.putchar(chr(2))
+    lcd.move_to(15,0)
+    lcd.putchar(chr(2))
+    lcd.move_to(0,1)
+    lcd.putchar(chr(2))
+    lcd.move_to(15,1)
+    lcd.putchar(chr(2))
+    lcd.move_to(2,0)
+    lcd.putchar(chr(5))
+    lcd.move_to(13,0)
+    lcd.putchar(chr(5))
+    lcd.move_to(5,0)
+    lcd.putstr("Set up")
+    lcd.move_to(3,1)
+    lcd.putstr("your alarm")
+    sleep(2)
+    lcd.clear()
+    lcd.putchar(chr(6))
+    lcd.move_to(2,0)
+    lcd.putstr("Hour:")
+    lcd.move_to(8, 0)
+    lcd.putchar(chr(0))
+    lcd.move_to(10,0)
+    lcd.putstr(str(hr))
+    lcd.move_to(13,0)
+    lcd.putchar(chr(1))
+    lcd.move_to(0,1)
+    lcd.putchar(chr(6))
+    lcd.move_to(2,1)
+    lcd.putstr("Minute:")
+    lcd.move_to(10, 1)
+    lcd.putchar(chr(0))
+    lcd.move_to(12, 1)
+    lcd.putstr(str(m))
+    lcd.move_to(15,1)
+    lcd.putchar(chr(1))
+    while counter != 2:
+        while len(set_time) != 1:
+            sleep(0.2)
+            if button_3.value() == 1 and hr != 24:
+                lcd.move_to(10,0)
+                lcd.putstr(str(hr+1))
+                hr += 1
+                if hr < 10:
+                    lcd.move_to(10,0)
+                    lcd.putstr("0" + str(hr))
+            if button_3.value() == 1 and hr == 24:
+                lcd.move_to(10,0)
+                lcd.putstr("01")
+                hr = 1
+            if button_1.value() == 1 and hr != 0:
+                lcd.move_to(10,0)
+                lcd.putstr(str(hr-1))
+                hr -= 1
+                if hr < 10:
+                    lcd.move_to(10,0)
+                    lcd.putstr("0" + str(hr))
+            if button_1.value() == 1 and hr == 0:
+                lcd.move_to(10,0)
+                lcd.putstr("24")
+                hr = 24
+            if button_2.value() == 1:
+                set_time.append(str(hr))
+                counter += 1
+        while len(set_time) != 2:
+            sleep(0.2)
+            if button_3.value() == 1 and m != 60:
+                lcd.move_to(12,1)
+                lcd.putstr(str(m+1))
+                m += 1
+                if m < 10:
+                    lcd.move_to(12,1)
+                    lcd.putstr("0" + str(m))
+            if button_3.value() == 1 and m == 60:
+                lcd.move_to(12,1)
+                lcd.putstr("01")
+                m = 1
+            if button_1.value() == 1 and m != 0:
+                lcd.move_to(12,1)
+                lcd.putstr(str(m-1))
+                m -= 1
+                if m < 10:
+                    lcd.move_to(12,1)
+                    lcd.putstr("0" + str(m))
+            if button_1.value() == 1 and m == 0:
+                lcd.move_to(12,1)
+                lcd.putstr("59")
+                m = 59
+            if button_2.value() == 1:
+                set_time.append(str(m))
+                counter += 1
+                sleep(0.5)
+                lcd.clear()
+    if counter == 2:
+        rgb.color = (0, 255, 0)
+        lcd.move_to(1,0)
+        lcd.putstr("Time selected:")
+        lcd.move_to(5,1)
+        if len(set_time[0]) == 1:
+            set_time[0] = "0" + str(set_time[0])
+        if len(set_time[1]) == 1:
+            set_time[1] = "0" + str(set_time[1])
+        lcd.putstr(f"{set_time[0]}:{set_time[1]}")
+        lcd.move_to(12,1)
+        lcd.putchar(chr(3))
+        sleep(3)
+        lcd.clear()
+        rgb.color = (0, 0, 0)
+                   
 #Create custom characters for LCD
 def custom_characters():
     #Character '<'
@@ -203,8 +326,43 @@ def custom_characters():
         0x00,
         0x00
     ]))
+    
+    #Character '♪'
+    lcd.custom_char(4, bytearray([
+        0x01,
+        0x03,
+        0x05,
+        0x09,
+        0x09,
+        0x0B,
+        0x1B,
+        0x18
+    ]))
+    
+    #Character '🔔'
+    lcd.custom_char(5, bytearray([
+        0x04,
+        0x0E,
+        0x0E,
+        0x0E,
+        0x1F,
+        0x00,
+        0x04,
+        0x00
+    ]))
+    
+    #Character '•'
+    lcd.custom_char(6, bytearray([
+        0x00,
+        0x0E,
+        0x1F,
+        0x1F,
+        0x1F,
+        0x1F,
+        0x0E,
+        0x00
+    ]))
 
        
-alarm_sounds()
 while True:
-    show_datetime()
+    alarm_sounds()

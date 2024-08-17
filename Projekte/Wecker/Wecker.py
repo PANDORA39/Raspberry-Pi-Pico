@@ -6,6 +6,7 @@ from pico_i2c_lcd import I2cLcd
 from Driver import DFPlayer
 from ds1302 import DS1302
 from threading import Thread
+from random import randint
 
 button_1 = Pin(9, Pin.IN)
 button_2 = Pin(8, Pin.IN)
@@ -42,6 +43,14 @@ keypad_columns = [22, 26, 27, 28]
 col_pins = []
 row_pins = []
 
+# Loop to assign GPIO pins and setup input and outputs
+for x in range(0, 4):
+    row_pins.append(Pin(keypad_rows[x], Pin.OUT))
+    row_pins[x].value(1)
+    col_pins.append(Pin(keypad_columns[x], Pin.IN, Pin.PULL_DOWN))
+    col_pins[x].value(0)
+
+entered = []
 #Function that outputs the pressed button 
 def scankeys():
     for row in range(4):
@@ -51,17 +60,11 @@ def scankeys():
 
             if col_pins[col].value() == 1:
                 print("You have pressed:", matrix_keys[row][col])
-                key_press = matrix_keys[row][col]
+                #key_press = matrix_keys[row][col]
+                entered.append(matrix_keys[row][col])
                 sleep(0.3)
 
         row_pins[row].low()
-
-# Loop to assign GPIO pins and setup input and outputs
-for x in range(0, 4):
-    row_pins.append(Pin(keypad_rows[x], Pin.OUT))
-    row_pins[x].value(1)
-    col_pins.append(Pin(keypad_columns[x], Pin.IN, Pin.PULL_DOWN))
-    col_pins[x].value(0)
 
 #Output current time and date
 def show_datetime():
@@ -87,6 +90,8 @@ sounds = [" Chalet ", "Arpeggio", "Breaking", " Sencha ", " Summit "]
 
 #Select your alarm sound from the available options
 def alarm_sounds():
+    print("here1")
+    global saved_sound
     saved_sound = []
     i = 1
     player.setVolume(30)
@@ -155,15 +160,18 @@ def alarm_sounds():
             sleep(3)
             rgb.color = (0, 0, 0)
             lcd.clear()
+            break
 
 #Set up an alarm clock
 def set_alarm():
+    print("here2")
     (Y, M, D, day, hr, m, s) = ds.date_time()
     if m < 10:
         m = "0" + str(m)
     if hr < 10:
         hr = "0" + str(hr)
     
+    global set_time
     set_time = []
     counter = 0
     
@@ -262,6 +270,7 @@ def set_alarm():
                 counter += 1
                 sleep(0.5)
                 lcd.clear()
+                break
     if counter == 2:
         rgb.color = (0, 255, 0)
         lcd.move_to(1,0)
@@ -272,11 +281,24 @@ def set_alarm():
         if len(set_time[1]) == 1:
             set_time[1] = "0" + str(set_time[1])
         lcd.putstr(f"{set_time[0]}:{set_time[1]}")
-        lcd.move_to(12,1)
-        lcd.putchar(chr(3))
         sleep(3)
         lcd.clear()
         rgb.color = (0, 0, 0)
+
+#Alarm gets activated --> deactivate an alarm
+def deactivate_alarm():
+    print("here3")
+    global set_time
+    global saved_sound
+    (Y, M, D, day, hr, m, s) = ds.date_time()
+    if hr == int(set_time[0]) and m == int(set_time[1]):
+        player.playTrack(2, int(saved_sound[0]))
+        while player.is_running():
+            continue
+        
+    
+    
+    
                    
 #Create custom characters for LCD
 def custom_characters():
@@ -364,6 +386,7 @@ def custom_characters():
         0x00
     ]))
 
-       
 while True:
+    alarm_sounds()
     set_alarm()
+    deactivate_alarm()

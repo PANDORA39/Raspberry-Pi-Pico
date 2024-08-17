@@ -90,6 +90,7 @@ def alarm_sounds():
     saved_sound = []
     i = 1
     player.setVolume(30)
+    
     custom_characters()
     lcd.move_to(0,0)
     lcd.putchar(chr(2))
@@ -115,7 +116,7 @@ def alarm_sounds():
     lcd.putstr("Chalet")
     player.playTrack(2,1)
     while player.is_running():
-        sleep(0.3)
+        sleep(0.2)
         if button_3.value() == 1 and i != 5:
             player.pause()
             player.playTrack(2,(i+1))
@@ -365,4 +366,4 @@ def custom_characters():
 
        
 while True:
-    alarm_sounds()
+    set_alarm()

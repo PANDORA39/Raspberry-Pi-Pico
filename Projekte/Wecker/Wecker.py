@@ -6,7 +6,8 @@ from pico_i2c_lcd import I2cLcd
 from Driver import DFPlayer
 from ds1302 import DS1302
 from threading import Thread
-from random import randint
+from random import randint, choice
+from operator import add, sub, mul
 
 button_1 = Pin(9, Pin.IN)
 button_2 = Pin(8, Pin.IN)
@@ -94,7 +95,7 @@ def alarm_sounds():
     global saved_sound
     saved_sound = []
     i = 1
-    player.setVolume(30)
+    player.setVolume(27)
     
     custom_characters()
     lcd.move_to(0,0)
@@ -123,30 +124,26 @@ def alarm_sounds():
     while player.is_running():
         sleep(0.2)
         if button_3.value() == 1 and i != 5:
-            player.pause()
-            player.playTrack(2,(i+1))
             lcd.move_to(4,1)
             lcd.putstr(sounds[i])
+            player.playTrack(2,(i+1))
             i += 1
-        if button_3.value() == 1 and i == 5:
-            player.pause()
-            player.playTrack(2,1)
+        elif button_3.value() == 1 and i == 5:
             lcd.move_to(4,1)
             lcd.putstr(sounds[0])
+            player.playTrack(2,1)
             i = 1
-        if button_1.value() == 1 and i != 1:
-            player.pause()
-            player.playTrack(2, (i-1))
+        elif button_1.value() == 1 and i != 1:
             lcd.move_to(4,1)
             lcd.putstr(sounds[i-2])
+            player.playTrack(2, (i-1))
             i -= 1
-        if button_1.value() == 1 and i == 1:
-            player.pause()
-            player.playTrack(2, 5)
+        elif button_1.value() == 1 and i == 1:
             lcd.move_to(4,1)
             lcd.putstr(sounds[4])
+            player.playTrack(2, 5)
             i = 5
-        if button_2.value() == 1:
+        elif button_2.value() == 1:
             saved_sound = [i, sounds[i-1]]
             player.pause()
             lcd.clear()
@@ -223,22 +220,22 @@ def set_alarm():
                 if hr < 10:
                     lcd.move_to(10,0)
                     lcd.putstr("0" + str(hr))
-            if button_3.value() == 1 and hr == 24:
+            elif button_3.value() == 1 and hr == 24:
                 lcd.move_to(10,0)
                 lcd.putstr("01")
                 hr = 1
-            if button_1.value() == 1 and hr != 0:
+            elif button_1.value() == 1 and hr != 0:
                 lcd.move_to(10,0)
                 lcd.putstr(str(hr-1))
                 hr -= 1
                 if hr < 10:
                     lcd.move_to(10,0)
                     lcd.putstr("0" + str(hr))
-            if button_1.value() == 1 and hr == 0:
+            elif button_1.value() == 1 and hr == 0:
                 lcd.move_to(10,0)
                 lcd.putstr("24")
                 hr = 24
-            if button_2.value() == 1:
+            elif button_2.value() == 1:
                 set_time.append(str(hr))
                 counter += 1
         while len(set_time) != 2:
@@ -250,27 +247,26 @@ def set_alarm():
                 if m < 10:
                     lcd.move_to(12,1)
                     lcd.putstr("0" + str(m))
-            if button_3.value() == 1 and m == 60:
+            elif button_3.value() == 1 and m == 60:
                 lcd.move_to(12,1)
                 lcd.putstr("01")
                 m = 1
-            if button_1.value() == 1 and m != 0:
+            elif button_1.value() == 1 and m != 0:
                 lcd.move_to(12,1)
                 lcd.putstr(str(m-1))
                 m -= 1
                 if m < 10:
                     lcd.move_to(12,1)
                     lcd.putstr("0" + str(m))
-            if button_1.value() == 1 and m == 0:
+            elif button_1.value() == 1 and m == 0:
                 lcd.move_to(12,1)
                 lcd.putstr("59")
                 m = 59
-            if button_2.value() == 1:
+            elif button_2.value() == 1:
                 set_time.append(str(m))
                 counter += 1
                 sleep(0.5)
                 lcd.clear()
-                break
     if counter == 2:
         rgb.color = (0, 255, 0)
         lcd.move_to(1,0)
@@ -290,12 +286,33 @@ def deactivate_alarm():
     print("here3")
     global set_time
     global saved_sound
+    solved = False
     (Y, M, D, day, hr, m, s) = ds.date_time()
+    
     if hr == int(set_time[0]) and m == int(set_time[1]):
         player.playTrack(2, int(saved_sound[0]))
-        while player.is_running():
-            continue
-        
+        while not solved:
+            for i in range(1, 4):
+                num_1 = randint(50,99)
+                num_2 = randint(0, 49)
+                operator = choice([add, sub, mul])
+                op = ""
+                
+                lcd.putstr(f"{i}. Do the math:")
+                if operator == add:
+                    op = "+"
+                elif operator == sub:
+                    op = "-"
+                else:
+                    op = "*"
+                lcd.move_to(0,1)
+                lcd.putstr(f"{num_1} {op} {num_2} =")
+                sleep(2)
+                lcd.clear()
+#             if player.is_running() == False:
+#                 print("here4")
+#                 player.playTrack(2, int(saved_sound[0]))
+            
     
     
     

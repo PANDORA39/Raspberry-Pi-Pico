@@ -51,9 +51,10 @@ for x in range(0, 4):
     col_pins.append(Pin(keypad_columns[x], Pin.IN, Pin.PULL_DOWN))
     col_pins[x].value(0)
 
-entered = []
 #Function that outputs the pressed button 
 def scankeys():
+    global entered
+    entered = []
     for row in range(4):
         for col in range(4):
             row_pins[row].high()
@@ -61,8 +62,9 @@ def scankeys():
 
             if col_pins[col].value() == 1:
                 print("You have pressed:", matrix_keys[row][col])
-                #key_press = matrix_keys[row][col]
+                key_press = matrix_keys[row][col]
                 entered.append(matrix_keys[row][col])
+                ''.join(entered)
                 sleep(0.3)
 
         row_pins[row].low()
@@ -91,7 +93,6 @@ sounds = [" Chalet ", "Arpeggio", "Breaking", " Sencha ", " Summit "]
 
 #Select your alarm sound from the available options
 def alarm_sounds():
-    print("here1")
     global saved_sound
     saved_sound = []
     i = 1
@@ -121,8 +122,8 @@ def alarm_sounds():
     lcd.move_to(5,1)
     lcd.putstr("Chalet")
     player.playTrack(2,1)
-    while player.is_running():
-        sleep(0.2)
+    while player.is_playing():
+        sleep(0.1)
         if button_3.value() == 1 and i != 5:
             lcd.move_to(4,1)
             lcd.putstr(sounds[i])
@@ -161,7 +162,6 @@ def alarm_sounds():
 
 #Set up an alarm clock
 def set_alarm():
-    print("here2")
     (Y, M, D, day, hr, m, s) = ds.date_time()
     if m < 10:
         m = "0" + str(m)
@@ -283,9 +283,9 @@ def set_alarm():
 
 #Alarm gets activated --> deactivate an alarm
 def deactivate_alarm():
-    print("here3")
     global set_time
     global saved_sound
+    global entered
     solved = False
     (Y, M, D, day, hr, m, s) = ds.date_time()
     
@@ -293,25 +293,29 @@ def deactivate_alarm():
         player.playTrack(2, int(saved_sound[0]))
         while not solved:
             for i in range(1, 4):
+                if player.is_playing() == False:
+                    player.playTrack(2, int(saved_sound[0]))
                 num_1 = randint(50,99)
                 num_2 = randint(0, 49)
                 operator = choice([add, sub, mul])
+                solution = operator(num_1, num_2)
                 op = ""
                 
-                lcd.putstr(f"{i}. Do the math:")
                 if operator == add:
                     op = "+"
                 elif operator == sub:
                     op = "-"
                 else:
                     op = "*"
-                lcd.move_to(0,1)
-                lcd.putstr(f"{num_1} {op} {num_2} =")
-                sleep(2)
-                lcd.clear()
-#             if player.is_running() == False:
-#                 print("here4")
-#                 player.playTrack(2, int(saved_sound[0]))
+                
+                scankeys()
+                while entered != solution:
+                    scankeys()
+                    lcd.putstr(f"{i}. Do the math:")
+                    lcd.move_to(0,1)
+                    lcd.putstr(f"{num_1} {op} {num_2} =")   
+                    lcd.move_to(11,1)
+                    lcd.putstr(entered)
             
     
     

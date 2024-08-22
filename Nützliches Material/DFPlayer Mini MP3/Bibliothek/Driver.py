@@ -11,13 +11,21 @@ class DFPlayer():
     UART_PARITY=None
     UART_STOP=1
     
+    busy_pin = Pin(3, Pin.IN)
+    
     START_BYTE = 0x7E
     VERSION_BYTE = 0xFF
     COMMAND_LENGTH = 0x06
     ACKNOWLEDGE = 0x01
     END_BYTE = 0xEF
     COMMAND_LATENCY =   500
-
+    
+    #Check if the player is currently playing a track
+    def is_playing(self):
+        if self.busy_pin.value() == 0:
+            return True
+        else:
+            return False
 
     def __init__(self, uartInstance, txPin, rxPin, busyPin):
         self.playerBusy=Pin(busyPin, Pin.IN, Pin.PULL_UP)
@@ -37,7 +45,7 @@ class DFPlayer():
 
     def queryBusy(self):
         return not self.playerBusy.value()
-        
+            
     #Common DFPlayer control commands
     def nextTrack(self):
         self.sendcmd(0x01, 0x00, 0x00)

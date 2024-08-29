@@ -1,0 +1,18 @@
+score = 0
+while score < 3
+	solution, task = getRandomTask(score) 
+	displayText(task)
+	userinput = getUserInput()
+	if (userinput == solution)
+		score+=1
+
+getrandomtask(score)
+	number1 = rand(1,50)
+	number2 ...
+	lcd.putstr(f'{score+1}.')
+	
+
+allgemeine Funktion für Display Text
+
+Display_Text('hhghg','ghhh',col1=0,col2=0) und Display_Symbol()
+versuchen chr(n) in String umzuwandeln

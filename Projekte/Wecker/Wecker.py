@@ -95,7 +95,7 @@ def alarm_sounds():
     global saved_sound
     saved_sound = []
     i = 1
-    player.setVolume(20)
+    player.setVolume(25)
     
     custom_characters()
     lcd.move_to(0,0)
@@ -128,22 +128,22 @@ def alarm_sounds():
             lcd.putstr(sounds[i])
             player.playTrack(2,(i+1))
             i += 1
-        elif button_3.value() == 1 and i == 5:
+        if button_3.value() == 1 and i == 5:
             lcd.move_to(4,1)
             lcd.putstr(sounds[0])
             player.playTrack(2,1)
             i = 1
-        elif button_1.value() == 1 and i != 1:
+        if button_1.value() == 1 and i != 1:
             lcd.move_to(4,1)
             lcd.putstr(sounds[i-2])
             player.playTrack(2, (i-1))
             i -= 1
-        elif button_1.value() == 1 and i == 1:
+        if button_1.value() == 1 and i == 1:
             lcd.move_to(4,1)
             lcd.putstr(sounds[4])
             player.playTrack(2, 5)
             i = 5
-        elif button_2.value() == 1:
+        if button_2.value() == 1:
             saved_sound = [i, sounds[i-1]]
             player.pause()
             lcd.clear()
@@ -295,7 +295,7 @@ def deactivate_alarm():
                 num_1 = randint(50,99)
                 num_2 = randint(0, 49)
                 operator = choice([add, sub, mul])
-                solution = operator(num_1, num_2)
+                solution = str(operator(num_1, num_2))
                 op = ""
                 
                 if operator == add:
@@ -316,13 +316,16 @@ def deactivate_alarm():
                     scankeys()
                     lcd.move_to(10,1)
                     lcd.putstr(entered)
-                    if ''.join(entered) == str(solution):
+                    if ''.join(entered) == solution:
                         counter += 1
                         rgb.color = (0, 255, 0)
                         sleep(1)
                         lcd.clear()
                         rgb.color = (0, 0, 0)
                         break
+                    elif ''.join(entered) != solution and len(''.join(entered)) == len(solution):
+                        rgb.color = (255, 0, 0)
+                        
                     
                 entered = []    
                 while i == 2:

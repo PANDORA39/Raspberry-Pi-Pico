@@ -56,7 +56,6 @@ entered = []
 
 #Function that outputs the pressed button 
 def scankeys():
-    
     for row in range(4):
         for col in range(4):
             row_pins[row].high()
@@ -67,7 +66,7 @@ def scankeys():
                 sleep(0.3)
 
         row_pins[row].low()
-
+    return entered
 #Output current time and date
 def show_datetime():
     (Y, M, D, day, hr, m, s) = ds.date_time()
@@ -95,7 +94,7 @@ def alarm_sounds():
     global saved_sound
     saved_sound = []
     i = 1
-    player.setVolume(25)
+    player.setVolume(20)
     
     custom_characters()
     lcd.move_to(0,0)
@@ -280,82 +279,98 @@ def set_alarm():
         lcd.clear()
         rgb.color = (0, 0, 0)
 
+#Get random mathematical equation
+def get_random_task(i):
+    global solution
+    counter = 0
+    num_1 = randint(50,99)
+    num_2 = randint(0, 49)
+    operator = choice([add, sub, mul])
+    solution = str(operator(num_1, num_2))
+    op = ""
+    
+    if operator == add:
+        op = "+"
+    elif operator == sub:
+        op = "-"
+    else:
+        op = "*"
+        
+    lcd.clear()
+    scankeys()
+    lcd.move_to(0,0)
+    lcd.putstr(f"{i+1}. Do the math:")
+    lcd.move_to(0,1)
+    lcd.putstr(f"{num_1} {op} {num_2} =")
+    
 #Alarm gets activated --> deactivate an alarm
 def deactivate_alarm():
     global set_time
     global saved_sound
+    global solution
     global entered
-    counter = 0
+    score = 0
     (Y, M, D, day, hr, m, s) = ds.date_time()
     
     if hr == int(set_time[0]) and m == int(set_time[1]):
         player.playTrack(2, int(saved_sound[0]))
-        while counter != 3:
-            for i in range(1, 4):
-                num_1 = randint(50,99)
-                num_2 = randint(0, 49)
-                operator = choice([add, sub, mul])
-                solution = str(operator(num_1, num_2))
-                op = ""
-                
-                if operator == add:
-                    op = "+"
-                elif operator == sub:
-                    op = "-"
-                else:
-                    op = "*"
-                
-                lcd.move_to(0,0)
-                lcd.putstr(f"{i}. Do the math:")
-                lcd.move_to(0,1)
-                lcd.putstr(f"{num_1} {op} {num_2} =")
-                
-                while i == 1:
-                    if player.is_playing() == False:
-                        player.playTrack(2, int(saved_sound[0]))
-                    scankeys()
-                    lcd.move_to(10,1)
-                    lcd.putstr(entered)
-                    if ''.join(entered) == solution:
-                        counter += 1
-                        rgb.color = (0, 255, 0)
-                        sleep(1)
-                        lcd.clear()
-                        rgb.color = (0, 0, 0)
-                        break
-                    elif ''.join(entered) != solution and len(''.join(entered)) == len(solution):
-                        rgb.color = (255, 0, 0)
-                        
-                    
-                entered = []    
-                while i == 2:
-                    if player.is_playing() == False:
-                        player.playTrack(2, int(saved_sound[0]))
-                    scankeys()
-                    lcd.move_to(10,1)
-                    lcd.putstr(entered)
-                    if ''.join(entered) == str(solution):
-                        counter += 1
-                        rgb.color = (0, 255, 0)
-                        sleep(1)
-                        lcd.clear()
-                        rgb.color = (0, 0, 0)
-                        break
-                    
+        while score < 3:
+            get_random_task(score)            
+            while len(scankeys()) != len(solution):
+                lcd.move_to(10,1)
+                lcd.putstr(entered)
+            if ''.join(entered) == solution:
+                score += 1                
+                lcd.move_to(10,1)
+                lcd.putstr(entered)
+                sleep(1)
                 entered = []
-                while i == 3:
-                    if player.is_playing() == False:
-                        player.playTrack(2, int(saved_sound[0]))
-                    scankeys()
-                    lcd.move_to(10,1)
-                    lcd.putstr(entered)
-                    if ''.join(entered) == str(solution):
-                        counter += 1
-                        rgb.color = (0, 255, 0)
-                        sleep(1)
-                        lcd.clear()
-                        rgb.color = (0, 0, 0)
-                        break
+#                 while i == 1:
+#                     if player.is_playing() == False:
+#                         player.playTrack(2, int(saved_sound[0]))
+#                     scankeys()
+#                     lcd.move_to(10,1)
+#                     lcd.putstr(entered)
+#                     if ''.join(entered) == solution:
+#                         counter += 1
+#                         rgb.color = (0, 255, 0)
+#                         sleep(1)
+#                         lcd.clear()
+#                         rgb.color = (0, 0, 0)
+#                         break
+#                     elif ''.join(entered) != solution and len(''.join(entered)) == len(solution):
+#                         rgb.color = (255, 0, 0)
+#                         
+#                     
+#                 entered = []    
+#                 while i == 2:
+#                     if player.is_playing() == False:
+#                         player.playTrack(2, int(saved_sound[0]))
+#                     scankeys()
+#                     lcd.move_to(10,1)
+#                     lcd.putstr(entered)
+#                     if ''.join(entered) == str(solution):
+#                         counter += 1
+#                         rgb.color = (0, 255, 0)
+#                         sleep(1)
+#                         lcd.clear()
+#                         rgb.color = (0, 0, 0)
+#                         break
+#                     
+#                 entered = []
+#                 while i == 3:
+#                     if player.is_playing() == False:
+#                         player.playTrack(2, int(saved_sound[0]))
+#                     scankeys()
+#                     lcd.move_to(10,1)
+#                     lcd.putstr(entered)
+#                     if ''.join(entered) == str(solution):
+#                         counter += 1
+#                         rgb.color = (0, 255, 0)
+#                         sleep(1)
+#                         lcd.clear()
+#                         rgb.color = (0, 0, 0)
+#                         break
                        
 #Create custom characters for LCD
 def custom_characters():

@@ -89,6 +89,17 @@ def show_datetime():
 #List of the alarm sounds and the saved sound
 sounds = [" Chalet ", "Arpeggio", "Breaking", " Sencha ", " Summit "]
 
+#Get red or green light
+def RGB(n, t=1):
+    if n == 0:
+        rgb.color = (255, 0, 0)
+        sleep(t)
+        rgb.color = (0, 0, 0)
+    elif n == 1:
+        rgb.color = (0, 255, 0)
+        sleep(t)
+        rgb.color = (0, 0, 0)
+        
 #Select your alarm sound from the available options
 def alarm_sounds():
     global saved_sound
@@ -146,15 +157,13 @@ def alarm_sounds():
             saved_sound = [i, sounds[i-1]]
             player.pause()
             lcd.clear()
-            rgb.color = (0, 255, 0)
             lcd.move_to(1,0)
             lcd.putstr("Sound selected")
             lcd.move_to(4,1)
             lcd.putstr(saved_sound[1])
             lcd.move_to(12,1)
             lcd.putchar(chr(3))
-            sleep(3)
-            rgb.color = (0, 0, 0)
+            RGB(1, 3)
             lcd.clear()
             break
 
@@ -266,7 +275,6 @@ def set_alarm():
                 sleep(0.5)
                 lcd.clear()
     if counter == 2:
-        rgb.color = (0, 255, 0)
         lcd.move_to(1,0)
         lcd.putstr("Time selected:")
         lcd.move_to(5,1)
@@ -275,9 +283,8 @@ def set_alarm():
         if len(set_time[1]) == 1:
             set_time[1] = "0" + str(set_time[1])
         lcd.putstr(f"{set_time[0]}:{set_time[1]}")
-        sleep(3)
+        RGB(1, 3)
         lcd.clear()
-        rgb.color = (0, 0, 0)
 
 #Get random mathematical equation
 def get_random_task(i):
@@ -317,61 +324,27 @@ def deactivate_alarm():
         while score < 3:
             get_random_task(score)            
             while len(scankeys()) != len(solution):
+                if player.is_playing() == False:
+                    player.playTrack(2, int(saved_sound[0]))
                 lcd.move_to(10,1)
                 lcd.putstr(entered)
             if ''.join(entered) == solution:
                 score += 1                
                 lcd.move_to(10,1)
                 lcd.putstr(entered)
-                sleep(1)
+                RGB(1)
                 entered = []
-#                 while i == 1:
-#                     if player.is_playing() == False:
-#                         player.playTrack(2, int(saved_sound[0]))
-#                     scankeys()
-#                     lcd.move_to(10,1)
-#                     lcd.putstr(entered)
-#                     if ''.join(entered) == solution:
-#                         counter += 1
-#                         rgb.color = (0, 255, 0)
-#                         sleep(1)
-#                         lcd.clear()
-#                         rgb.color = (0, 0, 0)
-#                         break
-#                     elif ''.join(entered) != solution and len(''.join(entered)) == len(solution):
-#                         rgb.color = (255, 0, 0)
-#                         
-#                     
-#                 entered = []    
-#                 while i == 2:
-#                     if player.is_playing() == False:
-#                         player.playTrack(2, int(saved_sound[0]))
-#                     scankeys()
-#                     lcd.move_to(10,1)
-#                     lcd.putstr(entered)
-#                     if ''.join(entered) == str(solution):
-#                         counter += 1
-#                         rgb.color = (0, 255, 0)
-#                         sleep(1)
-#                         lcd.clear()
-#                         rgb.color = (0, 0, 0)
-#                         break
-#                     
-#                 entered = []
-#                 while i == 3:
-#                     if player.is_playing() == False:
-#                         player.playTrack(2, int(saved_sound[0]))
-#                     scankeys()
-#                     lcd.move_to(10,1)
-#                     lcd.putstr(entered)
-#                     if ''.join(entered) == str(solution):
-#                         counter += 1
-#                         rgb.color = (0, 255, 0)
-#                         sleep(1)
-#                         lcd.clear()
-#                         rgb.color = (0, 0, 0)
-#                         break
-                       
+            else:
+                lcd.move_to(10,1)
+                lcd.putstr(entered)
+                RGB(0)
+                entered = []
+        lcd.clear()
+        lcd.move_to(0, 0)
+        lcd.putstr("Alarm turned off")
+        sleep(3)
+        lcd.clear()
+        
 #Create custom characters for LCD
 def custom_characters():
     #Character '<'

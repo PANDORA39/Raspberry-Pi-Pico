@@ -56,11 +56,14 @@ entered = []
 
 #Function that outputs the pressed button 
 def scankeys():
+    global row
+    global col
+    
     for row in range(4):
         for col in range(4):
             row_pins[row].high()
             key = None
-
+            
             if col_pins[col].value() == 1:
                 entered.append(matrix_keys[row][col])
                 sleep(0.3)
@@ -90,18 +93,19 @@ def show_datetime():
 sounds = [" Chalet ", "Arpeggio", "Breaking", " Sencha ", " Summit "]
 
 #Get red or green light
-def RGB(n, t=1):
-    if n == 0:
+def RGB(color_ID, t=1):
+    if color_ID == 0:
         rgb.color = (255, 0, 0)
         sleep(t)
         rgb.color = (0, 0, 0)
-    elif n == 1:
+    elif color_ID == 1:
         rgb.color = (0, 255, 0)
         sleep(t)
         rgb.color = (0, 0, 0)
         
 #Select your alarm sound from the available options
 def alarm_sounds():
+    lcd.clear()
     global saved_sound
     saved_sound = []
     i = 1
@@ -169,6 +173,7 @@ def alarm_sounds():
 
 #Set up an alarm clock
 def set_alarm():
+    lcd.clear()
     (Y, M, D, day, hr, m, s) = ds.date_time()
     if m < 10:
         m = "0" + str(m)
@@ -312,6 +317,7 @@ def get_random_task(i):
     
 #Alarm gets activated --> deactivate an alarm
 def deactivate_alarm():
+    lcd.clear()
     global set_time
     global saved_sound
     global solution
@@ -431,7 +437,14 @@ def custom_characters():
         0x00
     ]))
 
+
+funs = [show_datetime, alarm_sounds, set_alarm]
 while True:
-    alarm_sounds()
-    set_alarm()
-    deactivate_alarm()
+    scankeys()
+    funs[0]()
+    if matrix_keys[row][col] == "A":
+        funs[0]()
+    elif matrix_keys[row][col] == "B":
+        funs[1]()
+    elif matrix_keys[row][col] == "C":
+        funs[2]()

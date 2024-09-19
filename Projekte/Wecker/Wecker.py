@@ -66,7 +66,19 @@ def scankeys():
             
             if col_pins[col].value() == 1:
                 entered.append(matrix_keys[row][col])
-                sleep(0.3)
+                sleep(0.2)
+                if matrix_keys[row][col] == "A":
+                    print("here A")
+                    player.pause()
+                    funs[0]()
+                elif matrix_keys[row][col] == "B":
+                    print("here B")
+                    player.pause()
+                    funs[1]()
+                elif matrix_keys[row][col] == "C":
+                    print("here C")
+                    player.pause()
+                    funs[2]()
 
         row_pins[row].low()
     return entered
@@ -109,7 +121,7 @@ def alarm_sounds():
     global saved_sound
     saved_sound = []
     i = 1
-    player.setVolume(20)
+    player.setVolume(12)
     
     custom_characters()
     lcd.move_to(0,0)
@@ -135,29 +147,32 @@ def alarm_sounds():
     lcd.move_to(5,1)
     lcd.putstr("Chalet")
     player.playTrack(2,1)
+    print("here8 ", player.is_playing())
     while player.is_playing():
+        scankeys()
         sleep(0.1)
+        print("here1")
         if button_3.value() == 1 and i != 5:
             lcd.move_to(4,1)
             lcd.putstr(sounds[i])
             player.playTrack(2,(i+1))
             i += 1
-        if button_3.value() == 1 and i == 5:
+        elif button_3.value() == 1 and i == 5:
             lcd.move_to(4,1)
             lcd.putstr(sounds[0])
             player.playTrack(2,1)
             i = 1
-        if button_1.value() == 1 and i != 1:
+        elif button_1.value() == 1 and i != 1:
             lcd.move_to(4,1)
             lcd.putstr(sounds[i-2])
             player.playTrack(2, (i-1))
             i -= 1
-        if button_1.value() == 1 and i == 1:
+        elif button_1.value() == 1 and i == 1:
             lcd.move_to(4,1)
             lcd.putstr(sounds[4])
             player.playTrack(2, 5)
             i = 5
-        if button_2.value() == 1:
+        elif button_2.value() == 1:
             saved_sound = [i, sounds[i-1]]
             player.pause()
             lcd.clear()
@@ -285,7 +300,7 @@ def set_alarm():
         lcd.move_to(5,1)
         if len(set_time[0]) == 1:
             set_time[0] = "0" + str(set_time[0])
-        if len(set_time[1]) == 1:
+        elif len(set_time[1]) == 1:
             set_time[1] = "0" + str(set_time[1])
         lcd.putstr(f"{set_time[0]}:{set_time[1]}")
         RGB(1, 3)
@@ -440,11 +455,6 @@ def custom_characters():
 
 funs = [show_datetime, alarm_sounds, set_alarm]
 while True:
-    scankeys()
+    print("here0")
     funs[0]()
-    if matrix_keys[row][col] == "A":
-        funs[0]()
-    elif matrix_keys[row][col] == "B":
-        funs[1]()
-    elif matrix_keys[row][col] == "C":
-        funs[2]()
+    scankeys()

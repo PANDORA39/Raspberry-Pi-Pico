@@ -66,7 +66,19 @@ def scankeys():
             
             if col_pins[col].value() == 1:
                 entered.append(matrix_keys[row][col])
-                sleep(0.3)
+                sleep(0.2)
+                if matrix_keys[row][col] == "A":
+                    print("A")
+                    player.pause()
+                    main_func()
+                elif matrix_keys[row][col] == "B":
+                    print("B")
+                    player.pause()
+                    funcs[1]()
+                elif matrix_keys[row][col] == "C":
+                    print("C")
+                    player.pause()
+                    funcs[2]()
 
         row_pins[row].low()
     return entered
@@ -109,7 +121,7 @@ def alarm_sounds():
     global saved_sound
     saved_sound = []
     i = 1
-    player.setVolume(20)
+    player.setVolume(5)
     
     custom_characters()
     lcd.move_to(0,0)
@@ -135,29 +147,31 @@ def alarm_sounds():
     lcd.move_to(5,1)
     lcd.putstr("Chalet")
     player.playTrack(2,1)
-    while player.is_playing():
+    while True:
+        print("alarm_sounds")
+        scankeys()
         sleep(0.1)
         if button_3.value() == 1 and i != 5:
             lcd.move_to(4,1)
             lcd.putstr(sounds[i])
             player.playTrack(2,(i+1))
             i += 1
-        if button_3.value() == 1 and i == 5:
+        elif button_3.value() == 1 and i == 5:
             lcd.move_to(4,1)
             lcd.putstr(sounds[0])
             player.playTrack(2,1)
             i = 1
-        if button_1.value() == 1 and i != 1:
+        elif button_1.value() == 1 and i != 1:
             lcd.move_to(4,1)
             lcd.putstr(sounds[i-2])
             player.playTrack(2, (i-1))
             i -= 1
-        if button_1.value() == 1 and i == 1:
+        elif button_1.value() == 1 and i == 1:
             lcd.move_to(4,1)
             lcd.putstr(sounds[4])
             player.playTrack(2, 5)
             i = 5
-        if button_2.value() == 1:
+        elif button_2.value() == 1:
             saved_sound = [i, sounds[i-1]]
             player.pause()
             lcd.clear()
@@ -224,6 +238,8 @@ def set_alarm():
     lcd.putchar(chr(1))
     while counter != 2:
         while len(set_time) != 1:
+            print("set_alarm 1")
+            scankeys()
             sleep(0.2)
             if button_3.value() == 1 and hr != 24:
                 lcd.move_to(10,0)
@@ -251,6 +267,8 @@ def set_alarm():
                 set_time.append(str(hr))
                 counter += 1
         while len(set_time) != 2:
+            print("set_alarm 2")
+            scankeys()
             sleep(0.2)
             if button_3.value() == 1 and m != 60:
                 lcd.move_to(12,1)
@@ -285,11 +303,13 @@ def set_alarm():
         lcd.move_to(5,1)
         if len(set_time[0]) == 1:
             set_time[0] = "0" + str(set_time[0])
-        if len(set_time[1]) == 1:
+        elif len(set_time[1]) == 1:
             set_time[1] = "0" + str(set_time[1])
         lcd.putstr(f"{set_time[0]}:{set_time[1]}")
         RGB(1, 3)
         lcd.clear()
+        return
+        
 
 #Get random mathematical equation
 def get_random_task(i):
@@ -325,9 +345,13 @@ def deactivate_alarm():
     score = 0
     (Y, M, D, day, hr, m, s) = ds.date_time()
     
+    print("deactivate_alarm")
     if hr == int(set_time[0]) and m == int(set_time[1]):
         player.playTrack(2, int(saved_sound[0]))
+        print("deactivate_alarm 1")
         while score < 3:
+            print("deactivate_alarm 2")
+            scankeys()
             get_random_task(score)            
             while len(scankeys()) != len(solution):
                 if player.is_playing() == False:
@@ -437,14 +461,13 @@ def custom_characters():
         0x00
     ]))
 
+funcs = [show_datetime, alarm_sounds, set_alarm, deactivate_alarm]
 
-funs = [show_datetime, alarm_sounds, set_alarm]
-while True:
-    scankeys()
-    funs[0]()
-    if matrix_keys[row][col] == "A":
-        funs[0]()
-    elif matrix_keys[row][col] == "B":
-        funs[1]()
-    elif matrix_keys[row][col] == "C":
-        funs[2]()
+#Main function
+def main_func():
+    while True:
+        print("main")
+        funcs[0]()
+        scankeys()
+
+main_func()

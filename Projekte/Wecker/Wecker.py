@@ -68,17 +68,17 @@ def scankeys():
                 entered.append(matrix_keys[row][col])
                 sleep(0.2)
                 if matrix_keys[row][col] == "A":
-                    print("here A")
+                    print("A")
                     player.pause()
-                    funs[0]()
+                    main_func()
                 elif matrix_keys[row][col] == "B":
-                    print("here B")
+                    print("B")
                     player.pause()
-                    funs[1]()
+                    funcs[1]()
                 elif matrix_keys[row][col] == "C":
-                    print("here C")
+                    print("C")
                     player.pause()
-                    funs[2]()
+                    funcs[2]()
 
         row_pins[row].low()
     return entered
@@ -121,7 +121,7 @@ def alarm_sounds():
     global saved_sound
     saved_sound = []
     i = 1
-    player.setVolume(12)
+    player.setVolume(5)
     
     custom_characters()
     lcd.move_to(0,0)
@@ -147,11 +147,10 @@ def alarm_sounds():
     lcd.move_to(5,1)
     lcd.putstr("Chalet")
     player.playTrack(2,1)
-    print("here8 ", player.is_playing())
-    while player.is_playing():
+    while True:
+        print("alarm_sounds")
         scankeys()
         sleep(0.1)
-        print("here1")
         if button_3.value() == 1 and i != 5:
             lcd.move_to(4,1)
             lcd.putstr(sounds[i])
@@ -239,6 +238,8 @@ def set_alarm():
     lcd.putchar(chr(1))
     while counter != 2:
         while len(set_time) != 1:
+            print("set_alarm 1")
+            scankeys()
             sleep(0.2)
             if button_3.value() == 1 and hr != 24:
                 lcd.move_to(10,0)
@@ -266,6 +267,8 @@ def set_alarm():
                 set_time.append(str(hr))
                 counter += 1
         while len(set_time) != 2:
+            print("set_alarm 2")
+            scankeys()
             sleep(0.2)
             if button_3.value() == 1 and m != 60:
                 lcd.move_to(12,1)
@@ -305,6 +308,8 @@ def set_alarm():
         lcd.putstr(f"{set_time[0]}:{set_time[1]}")
         RGB(1, 3)
         lcd.clear()
+        return
+        
 
 #Get random mathematical equation
 def get_random_task(i):
@@ -340,9 +345,13 @@ def deactivate_alarm():
     score = 0
     (Y, M, D, day, hr, m, s) = ds.date_time()
     
+    print("deactivate_alarm")
     if hr == int(set_time[0]) and m == int(set_time[1]):
         player.playTrack(2, int(saved_sound[0]))
+        print("deactivate_alarm 1")
         while score < 3:
+            print("deactivate_alarm 2")
+            scankeys()
             get_random_task(score)            
             while len(scankeys()) != len(solution):
                 if player.is_playing() == False:
@@ -452,9 +461,13 @@ def custom_characters():
         0x00
     ]))
 
+funcs = [show_datetime, alarm_sounds, set_alarm, deactivate_alarm]
 
-funs = [show_datetime, alarm_sounds, set_alarm]
-while True:
-    print("here0")
-    funs[0]()
-    scankeys()
+#Main function
+def main_func():
+    while True:
+        print("main")
+        funcs[0]()
+        scankeys()
+
+main_func()

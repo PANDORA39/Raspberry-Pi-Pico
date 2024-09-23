@@ -26,7 +26,7 @@ I2C_ADDR = 39
 I2C_i_ROWS = 2
 I2C_i_COLS = 16
 
-i2c = I2C(1, sda=machine.Pin(6), scl=machine.Pin(7), freq=400000)
+i2c = I2C(1, sda=machine.Pin(6), scl=machine.Pin(7), freq=600000)
 lcd = I2cLcd(i2c, I2C_ADDR, I2C_i_ROWS, I2C_i_COLS)
 
 ds = DS1302(Pin(0), Pin(1), Pin(2))
@@ -66,7 +66,7 @@ def scankeys():
             
             if col_pins[col].value() == 1:
                 entered.append(matrix_keys[row][col])
-                sleep(0.2)
+                sleep(0.1)
                 if matrix_keys[row][col] == "A":
                     print("A")
                     player.pause()
@@ -95,7 +95,7 @@ def show_datetime():
         D = "0" + str(D)
     if M < 10:
         M = "0" + str(M)
-
+        
     lcd.move_to(0, 0)
     lcd.putstr("Time: " + str(hr) + ":" + str(m) + ":" + str(s))
     lcd.move_to(0, 1)
@@ -149,7 +149,9 @@ def alarm_sounds():
     player.playTrack(2,1)
     while True:
         print("alarm_sounds")
-        scankeys()
+        if scankeys()[-1] != 'B' or scankeys().count('B') > 1:
+            print("return alarm_sounds")
+            return
         sleep(0.1)
         if button_3.value() == 1 and i != 5:
             lcd.move_to(4,1)
@@ -239,8 +241,10 @@ def set_alarm():
     while counter != 2:
         while len(set_time) != 1:
             print("set_alarm 1")
-            scankeys()
-            sleep(0.2)
+            if scankeys()[-1] != 'C' or scankeys().count('C') > 1:
+                print("return set_alarm")
+                return
+            sleep(0.1)
             if button_3.value() == 1 and hr != 24:
                 lcd.move_to(10,0)
                 lcd.putstr(str(hr+1))
@@ -269,7 +273,7 @@ def set_alarm():
         while len(set_time) != 2:
             print("set_alarm 2")
             scankeys()
-            sleep(0.2)
+            sleep(0.1)
             if button_3.value() == 1 and m != 60:
                 lcd.move_to(12,1)
                 lcd.putstr(str(m+1))
@@ -351,7 +355,6 @@ def deactivate_alarm():
         print("deactivate_alarm 1")
         while score < 3:
             print("deactivate_alarm 2")
-            scankeys()
             get_random_task(score)            
             while len(scankeys()) != len(solution):
                 if player.is_playing() == False:
@@ -471,3 +474,6 @@ def main_func():
         scankeys()
 
 main_func()
+
+#Problem 1: rechtzeitiger Aufruf von 'deactivate_alarm'
+#Problem 2: B/C(nicht abgeschlossen) --> B/C(abgeschlossen) --> B/C statt A

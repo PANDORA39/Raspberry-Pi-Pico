@@ -26,7 +26,7 @@ I2C_ADDR = 39
 I2C_i_ROWS = 2
 I2C_i_COLS = 16
 
-i2c = I2C(1, sda=machine.Pin(6), scl=machine.Pin(7), freq=600000)
+i2c = I2C(1, sda=machine.Pin(6), scl=machine.Pin(7), freq=400000)
 lcd = I2cLcd(i2c, I2C_ADDR, I2C_i_ROWS, I2C_i_COLS)
 
 ds = DS1302(Pin(0), Pin(1), Pin(2))
@@ -119,8 +119,9 @@ def RGB(color_ID, t=1):
 def alarm_sounds():
     lcd.clear()
     global saved_sound
-    saved_sound = []
+    saved_sound = []   
     i = 1
+    global is_Done
     player.setVolume(5)
     
     custom_characters()
@@ -149,7 +150,7 @@ def alarm_sounds():
     player.playTrack(2,1)
     while True:
         print("alarm_sounds")
-        if scankeys()[-1] != 'B' or scankeys().count('B') > 1:
+        if scankeys()[-1] != 'B' or is_Done:
             print("return alarm_sounds")
             return
         sleep(0.1)
@@ -185,6 +186,7 @@ def alarm_sounds():
             lcd.putchar(chr(3))
             RGB(1, 3)
             lcd.clear()
+            is_Done = True
             break
 
 #Set up an alarm clock
@@ -198,6 +200,7 @@ def set_alarm():
     
     global set_time
     set_time = []
+    global is_Done
     counter = 0
     
     custom_characters()
@@ -241,7 +244,7 @@ def set_alarm():
     while counter != 2:
         while len(set_time) != 1:
             print("set_alarm 1")
-            if scankeys()[-1] != 'C' or scankeys().count('C') > 1:
+            if scankeys()[-1] != 'C' or is_Done:
                 print("return set_alarm")
                 return
             sleep(0.1)
@@ -312,6 +315,7 @@ def set_alarm():
         lcd.putstr(f"{set_time[0]}:{set_time[1]}")
         RGB(1, 3)
         lcd.clear()
+        is_Done = True
         return
         
 
@@ -465,10 +469,11 @@ def custom_characters():
     ]))
 
 funcs = [show_datetime, alarm_sounds, set_alarm, deactivate_alarm]
-
 #Main function
 def main_func():
     while True:
+        global is_Done
+        is_Done = False
         print("main")
         funcs[0]()
         scankeys()
@@ -476,4 +481,3 @@ def main_func():
 main_func()
 
 #Problem 1: rechtzeitiger Aufruf von 'deactivate_alarm'
-#Problem 2: B/C(nicht abgeschlossen) --> B/C(abgeschlossen) --> B/C statt A

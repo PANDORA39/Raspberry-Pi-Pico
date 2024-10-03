@@ -480,8 +480,4 @@ def main_func():
 
 main_func()
 
-<<<<<<< HEAD
-#Problem 1: rechtzeitiger Aufruf von 'deactivate_alarm'
-=======
-#Problem 1: rechtzeitiger Aufruf von 'deactivate_alarm'
->>>>>>> 07a5ddf8ea3e0dca275f59ee72f39f8b568ff6dd
+

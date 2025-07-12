@@ -122,7 +122,7 @@ def alarm_sounds():
     saved_sound = []   
     i = 1
     global is_Done
-    player.setVolume(5)
+    player.setVolume(15)
     
     custom_characters()
     lcd.move_to(0,0)
@@ -276,6 +276,9 @@ def set_alarm():
         while len(set_time) != 2:
             print("set_alarm 2")
             scankeys()
+            if scankeys()[-1] != 'C' or is_Done:
+                print("return set_alarm")
+                return
             sleep(0.1)
             if button_3.value() == 1 and m != 60:
                 lcd.move_to(12,1)
@@ -469,15 +472,23 @@ def custom_characters():
     ]))
 
 funcs = [show_datetime, alarm_sounds, set_alarm, deactivate_alarm]
+
 #Main function
 def main_func():
+    global is_Done
     while True:
-        global is_Done
-        is_Done = False
+        #global is_Done
+        #is_Done = False
+        global set_time
+        set_time = []
         print("main")
+        print(set_time)
         funcs[0]()
         scankeys()
+        if set_time != []:
+            deactivate_alarm()
 
 main_func()
 
+#1 Wenn selber HOUR auswählen, set_alarm wird sofort abgeschlossen
 

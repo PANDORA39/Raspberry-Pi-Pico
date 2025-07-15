@@ -30,11 +30,13 @@ class LCD_2inch(framebuf.FrameBuffer):
         super().__init__(self.buffer, self.width, self.height, framebuf.RGB565)
         self.init_display()
         
-        self.RED   =   0x07E0
-        self.GREEN =   0x001f
-        self.BLUE  =   0xf800
-        self.WHITE =   0xffff
-        self.BALCK =   0x0000
+        self.WHITE  =   0xFFFF
+        self.BLACK  =  0x0000
+        self.GREEN  =  0x001F
+        self.RED    =  0xF800
+        self.BLUE   = 0x07E0
+        self.GBLUE = 0X07FF
+        self.YELLOW = 0xFFE0
         
     def write_cmd(self, cmd):
         self.cs(1)
@@ -180,7 +182,7 @@ if __name__=='__main__':
     LCD.fill_rect(0,72,320,24,0X07FF)
     LCD.rect(0,72,320,24,0X07FF)
 
-    LCD.fill_rect(0,96,320,24,0xF81F)
+    LCD.fill_rect(0,96,320,24,LCD.GREEN)
     LCD.rect(0,96,320,24,0xF81F)
 
     LCD.fill_rect(0,120,320,24,0x7FFF)
@@ -206,35 +208,35 @@ if __name__=='__main__':
     key2 = Pin(2 ,Pin.IN,Pin.PULL_UP)
     key3 = Pin(3 ,Pin.IN,Pin.PULL_UP)
    
-    while(1):      
-        if(key0.value() == 0):
-            LCD.fill_rect(12,12,20,20,LCD.RED)
-        else :
-            LCD.fill_rect(12,12,20,20,LCD.WHITE)
-            LCD.rect(12,12,20,20,LCD.RED)
-            
-        if(key1.value() == 0):
-            LCD.fill_rect(288,12,20,20,LCD.RED)
-        else :
-            LCD.fill_rect(288,12,20,20,LCD.WHITE)
-            LCD.rect(288,12,20,20,LCD.RED)
-            
-        if(key2.value() == 0):
-            LCD.fill_rect(288,208,20,20,LCD.RED)
-        else :
-            LCD.fill_rect(288,208,20,20,LCD.WHITE)
-            LCD.rect(288,208,20,20,LCD.RED)
-        if(key3.value() == 0):
-            
-            LCD.fill_rect(12,208,20,20,LCD.RED)
-        else :
-            LCD.fill_rect(12,208,20,20,LCD.WHITE)
-            LCD.rect(12,208,20,20,LCD.RED) 
-                      
-        LCD.show()
-    time.sleep(1)
-    
-    LCD.fill(0xFFFF)
+#     while(1):      
+#         if(key0.value() == 0):
+#             LCD.fill_rect(12,12,20,20,LCD.RED)
+#         else :
+#             LCD.fill_rect(12,12,20,20,LCD.WHITE)
+#             LCD.rect(12,12,20,20,LCD.RED)
+#             
+#         if(key1.value() == 0):
+#             LCD.fill_rect(288,12,20,20,LCD.RED)
+#         else :
+#             LCD.fill_rect(288,12,20,20,LCD.WHITE)
+#             LCD.rect(288,12,20,20,LCD.RED)
+#             
+#         if(key2.value() == 0):
+#             LCD.fill_rect(288,208,20,20,LCD.RED)
+#         else :
+#             LCD.fill_rect(288,208,20,20,LCD.WHITE)
+#             LCD.rect(288,208,20,20,LCD.RED)
+#         if(key3.value() == 0):
+#             
+#             LCD.fill_rect(12,208,20,20,LCD.RED)
+#         else :
+#             LCD.fill_rect(12,208,20,20,LCD.WHITE)
+#             LCD.rect(12,208,20,20,LCD.RED) 
+#                       
+#         LCD.show()
+#     time.sleep(1)
+#     
+#     LCD.fill(0xFFFF)
 
 
 

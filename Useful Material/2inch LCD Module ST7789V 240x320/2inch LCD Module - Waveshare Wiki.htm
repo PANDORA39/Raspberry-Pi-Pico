@@ -1,0 +1,2194 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>2inch LCD Module - Waveshare Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"9e96d8b4959b7ecef9570fa3","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"2inch_LCD_Module","wgTitle":"2inch LCD Module","wgCurRevisionId":101113,"wgRevisionId":101113,"wgArticleId":6039,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["SPI interface"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"2inch_LCD_Module","wgRelevantArticleId":6039,"wgIsProbablyEditable":!1,"wgRelevantPageIsProbablyEditable":!1,"wgRestrictionEdit":[],"wgRestrictionMove":[]};RLSTATE={"ext.gadget.tabber":"ready","site.styles":
+"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","mediawiki.toc.styles":"ready","skins.tweeki.styles":"ready","skins.tweeki.bootstraptheme.styles":"ready","skins.tweeki.externallinks.styles":"ready","skins.tweeki.awesome.styles":"ready"};RLPAGEMODULES=["site","mediawiki.page.startup","mediawiki.page.ready","mediawiki.toc","ext.FancyBoxThumbs","ext.HighlightjsIntegration","skins.tweeki.messages","skins.tweeki.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/Uy8Yw0y/aAdkk0o.php?lang=en&amp;modules=mediawiki.toc.styles%7Cskins.tweeki.awesome.styles%7Cskins.tweeki.bootstraptheme.styles%7Cskins.tweeki.externallinks.styles%7Cskins.tweeki.styles&amp;only=styles&amp;skin=tweeki"/>
+<script async="" src="/w/Uy8Yw0y/aAdkk0o.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=tweeki"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/Uy8Yw0y/aAdkk0o.php?lang=en&amp;modules=ext.gadget.tabber&amp;only=styles&amp;skin=tweeki"/>
+<link rel="stylesheet" href="/w/Uy8Yw0y/aAdkk0o.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=tweeki"/>
+<meta name="generator" content="MediaWiki 1.35.5"/>
+<meta property="og:image" content="https://www.waveshare.com/w/upload/thumb/a/a1/2inch-LCD-Module-6.jpg/1200px-2inch-LCD-Module-6.jpg"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="shortcut icon" href="/w/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Waveshare Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://www.waveshare.com/w/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="Waveshare Wiki Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-2inch_LCD_Module rootpage-2inch_LCD_Module skin-tweeki action-view tweeki-animateLayout tweeki-non-advanced tweeki-user-anon">			<!-- navbar -->
+			<div id="mw-navigation" class="navbar navbar-default navbar-fixed-top navbar-expand-lg fixed-top navbar-light bg-light" role="navigation">
+				<h2>Navigation menu</h2>
+				<div id="mw-head" class="navbar-inner">
+					<div class="container">
+
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+
+							<a href="/wiki/Main_Page" class="navbar-brand"><img src="https://www.waveshare.com/w/upload/a/a7/Ws-watermark-en.svg" alt="Waveshare Wiki" /></a>
+						</div>
+
+						<div id="navbar" class="navbar-collapse collapse">
+													<ul class="nav navbar-nav">
+							<li class="nav"><a href="#" id="n-raspberry-pi" class="dropdown-toggle" data-toggle="dropdown">Raspberry Pi <b class="caret"></b></a><ul class="dropdown-menu " role="menu"><li id="n-main_page.2523rpi-boards"><a href="/wiki/Main_Page#RPi-Boards" tabindex="-1">Boards/Kits</a></li><li id="n-main_page.2523rpi-displays"><a href="/wiki/Main_Page#RPi-Displays" tabindex="-1">Displays</a></li><li id="n-main_page.2523rpi-cameras"><a href="/wiki/Main_Page#RPi-Cameras" tabindex="-1">Cameras</a></li><li id="n-main_page.2523rpi-expansions"><a href="/wiki/Main_Page#RPi-Expansions" tabindex="-1">Expansions</a></li><li id="n-main_page.2523rpi-laptops"><a href="/wiki/Main_Page#RPi-Laptops" tabindex="-1">All-in-one</a></li><li id="n-main_page.2523rpi-robots"><a href="/wiki/Main_Page#RPi-Robots" tabindex="-1">Robots</a></li><li id="n-main_page.2523rpi-games"><a href="/wiki/Main_Page#RPi-Games" tabindex="-1">Portable Gaming</a></li><li id="n-main_page.2523rpi-acces"><a href="/wiki/Main_Page#RPi-Acces" tabindex="-1">Accessories</a></li><li id="n-main_page.2523android-linux-boards"><a href="/wiki/Main_Page#Android-Linux-Boards" tabindex="-1">Other Android/Linux Boards</a></li></ul></li><li class="nav"><a href="#" id="n-ai" class="dropdown-toggle" data-toggle="dropdown">AI <b class="caret"></b></a><ul class="dropdown-menu " role="menu"><li id="n-main_page.2523jetson-ai-boards"><a href="/wiki/Main_Page#Jetson-AI-Boards" tabindex="-1">Boards/Kits</a></li><li id="n-main_page.2523jetson-ai-displays"><a href="/wiki/Main_Page#Jetson-AI-Displays" tabindex="-1">Displays</a></li><li id="n-main_page.2523jetson-ai-cameras"><a href="/wiki/Main_Page#Jetson-AI-Cameras" tabindex="-1">Cameras</a></li><li id="n-main_page.2523jetson-ai-hat"><a href="/wiki/Main_Page#Jetson-AI-HAT" tabindex="-1">Expansions</a></li><li id="n-main_page.2523jetson-ai-robots"><a href="/wiki/Main_Page#Jetson-AI-Robots" tabindex="-1">Robots</a></li></ul></li><li class="nav"><a href="#" id="n-displays" class="dropdown-toggle" data-toggle="dropdown">Displays <b class="caret"></b></a><ul class="dropdown-menu " role="menu"><li id="n-main_page.2523display-lcd-oleds"><a href="/wiki/Main_Page#Display-LCD-OLEDs" tabindex="-1">LCD/OLED</a></li><li id="n-main_page.2523display-e-paper"><a href="/wiki/Main_Page#Display-e-Paper" tabindex="-1">e-Paper</a></li></ul></li><li class="nav"><a href="#" id="n-iot" class="dropdown-toggle" data-toggle="dropdown">IoT <b class="caret"></b></a><ul class="dropdown-menu " role="menu"><li id="n-main_page.2523long-range-wireless-comm"><a href="/wiki/Main_Page#Long-range-wireless-comm" tabindex="-1">Long Range Wireless</a></li><li id="n-main_page.2523short-range-wireless-comm"><a href="/wiki/Main_Page#Short-range-wireless-comm" tabindex="-1">Short Range Wireless</a></li><li id="n-main_page.2523wired-communication"><a href="/wiki/Main_Page#Wired-communication" tabindex="-1">Wired Comm / Converter</a></li><li id="n-main_page.2523misc-cameras-av"><a href="/wiki/Main_Page#Misc-cameras-av" tabindex="-1">Cameras / Audio / Video</a></li><li id="n-main_page.2523misc-sensor-modules"><a href="/wiki/Main_Page#Misc-sensor-modules" tabindex="-1">Sensors</a></li><li id="n-main_page.2523misc-servos-motors"><a href="/wiki/Main_Page#Misc-servos-motors" tabindex="-1">Motors / Servos</a></li><li id="n-main_page.2523misc-other-modules"><a href="/wiki/Main_Page#Misc-other-modules" tabindex="-1">others</a></li></ul></li><li class="nav"><a href="#" id="n-robotics" class="dropdown-toggle" data-toggle="dropdown">Robotics <b class="caret"></b></a><ul class="dropdown-menu " role="menu"><li id="n-main_page.2523robotics-cars"><a href="/wiki/Main_Page#Robotics-cars" tabindex="-1">Mobile Robots</a></li><li id="n-main_page.2523dog-like-robots"><a href="/wiki/Main_Page#Dog-like-Robots" tabindex="-1">Dog-like Robots</a></li><li id="n-main_page.2523robotics-drivers-sensors"><a href="/wiki/Main_Page#Robotics-drivers-sensors" tabindex="-1">Drivers / Sensors</a></li><li id="n-main_page.2523robotics-robot-arms"><a href="/wiki/Main_Page#Robotics-robot-arms" tabindex="-1">Robot Arm / Control</a></li></ul></li><li class="nav"><a href="#" id="n-mcu.252Ffpga" class="dropdown-toggle" data-toggle="dropdown">MCU/FPGA <b class="caret"></b></a><ul class="dropdown-menu " role="menu"><li id="n-main_page.2523arduino-main-boards"><a href="/wiki/Main_Page#Arduino-main-boards" tabindex="-1">Arduino</a></li><li id="n-main_page.2523micro.253Abit"><a href="/wiki/Main_Page#micro:bit" tabindex="-1">micro:bit</a></li><li id="n-main_page.2523mcu.2farm" class="LPC"><a href="/wiki/Main_Page#MCU.2FARM" tabindex="-1">STM32</a></li><li id="n-main_page.2523fpga"><a href="/wiki/Main_Page#FPGA" tabindex="-1">FPGA</a></li></ul></li><li class="nav"><a href="https://service.waveshare.com" id="n-https.253A.252F.252Fservice.waveshare.com" rel="nofollow" target="_blank">Support</a></li><li class="nav"><a href="https://www.klayers.net/" id="n-https.253A.252F.252Fwww.klayers.net.252F" rel="nofollow" target="_blank">IC</a></li>							</ul>
+						
+													<ul class="nav navbar-nav navbar-right">
+							</ul>
+				<form class="navbar-form navbar-right" action="/w/index.php" id="searchform">
+					<div class="form-group"><input type="search" name="search" placeholder="Product name search" title="Search Waveshare Wiki [f]" accesskey="f" id="searchInput" class="search-query form-control"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="mw-searchButton" class="searchButton btn hidden"/>
+					</div>
+				</form><ul class="nav navbar-nav navbar-right">							</ul>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<!-- /navbar -->
+					<div id="mw-page-base"></div>
+			<div id="mw-head-base"></div>
+			<a id="top"></a>
+
+			<!-- content -->
+			<div id="contentwrapper" class="user-loggedout not-editable container with-navbar with-navbar-fixed">
+
+				
+				<div class="row">
+					<div class="col-md-offset-2 col-md-10" role="main">
+								<div class="mw-body" id="content">
+			<div id="mw-js-message" style="display:none;"></div>
+									<h1 id="firstHeading" class="firstHeading page-header" lang="en"><span dir="auto">2inch LCD Module</span></h1>
+									<!-- bodyContent -->
+			<div id="bodyContent">
+								<div id="siteSub">From Waveshare Wiki</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="wiki-pages jet-green-color">
+<table class="a-r at-c roundy bgd-green bl-white" style="margin-left: 5px; margin-bottom: 5px; width: 30%;">
+
+<tbody><tr>
+<td>
+<table class="at-c roundy" style="background: transparent;width:100%;">
+
+<tbody><tr>
+<td class="at-c textwhite"><b>2inch LCD Module</b>
+</td></tr>
+<tr>
+<td class="at-c bgwhite" style="margin:5px;"><a href="https://www.waveshare.com/2inch-lcd-module.htm" target="_blank" rel="nofollow noreferrer noopener"><img alt="2inch-LCD-Module-6.jpg" src="/w/upload/thumb/a/a1/2inch-LCD-Module-6.jpg/400px-2inch-LCD-Module-6.jpg" decoding="async" loading="lazy" width="400" height="300" srcset="/w/upload/thumb/a/a1/2inch-LCD-Module-6.jpg/600px-2inch-LCD-Module-6.jpg 1.5x, /w/upload/thumb/a/a1/2inch-LCD-Module-6.jpg/800px-2inch-LCD-Module-6.jpg 2x" /></a><br />
+</td></tr></tbody></table>
+</td></tr>
+<tr style="display:none;">
+<td>
+<table class="roundy" style="background: transparent;width:100%;">
+
+<tbody><tr>
+<td class="at-c textwhite"><b>{{{name2}}}</b>
+</td></tr>
+<tr>
+<td class="at-c bgwhite" style="margin:5px;"><br />
+</td></tr></tbody></table>
+</td></tr>
+<tr style="display:none;">
+<td>
+<table class="roundy" style="background: transparent;width:100%;">
+
+<tbody><tr>
+<td class="at-c textwhite"><b>{{{name3}}}</b>
+</td></tr>
+<tr>
+<td class="at-c bgwhite" style="margin:5px;"><br />
+</td></tr></tbody></table>
+</td></tr>
+<tr style="display:none;">
+<td>
+<table class="roundy" style="background: transparent;width:100%;">
+
+<tbody><tr>
+<td class="at-c textwhite"><b>{{{name4}}}</b>
+</td></tr>
+<tr>
+<td class="at-c bgwhite" style="margin:5px;"><br />
+</td></tr></tbody></table>
+</td></tr>
+<tr style="display:none;">
+<td>
+<table class="roundy" style="background: transparent;width:100%;">
+
+<tbody><tr>
+<td class="at-c textwhite"><b>{{{name5}}}</b>
+</td></tr>
+<tr>
+<td class="at-c bgwhite" style="margin:5px;"><br />
+</td></tr></tbody></table>
+</td></tr>
+<tr style="display:none;">
+<td>
+<table class="roundy" style="background: transparent;width:100%;">
+
+<tbody><tr>
+<td class="at-c textwhite"><b>{{{name6}}}</b>
+</td></tr>
+<tr>
+<td class="at-c bgwhite" style="margin:5px;"><br />
+</td></tr></tbody></table>
+</td></tr>
+<tr>
+<td>
+<table class="roundy" style="display:none;">
+<tbody><tr>
+<td style="width:2%;">
+</td>
+<td style="width:3%;">
+</td>
+<th colspan="2" width="90%" class="at-c roundytop bgl-white">Primary Attribute
+</th>
+<td style="width:3%;">
+</td>
+<td style="width:2%;">
+</td></tr>
+<tr>
+<td colspan="6" width="90px" class="at-c roundytl roundytr bgwhite b-green" style="border-width: 0 0 1px 0;"><b>Category:</b> <a href="/wiki/Category:Modules" title="Category:Modules">LCD/OLEDs/LCD</a>
+</td></tr>
+<tr style="display:none;">
+<th colspan="3" width="90px" class="at-r bgwhite b-green" style="border-width: 0 0 1px 0;">{{{userDefinedInfo}}}:
+</th>
+<td colspan="3" class="at-l b-green bgwhite" style="border-width: 0 0 1px 0;">{{{userdefinedvalue}}}
+</td></tr>
+<tr style="display:none;">
+<td colspan="6" width="90px" class="at-c roundybl roundybr bgwhite"><b>Brand:</b> Waveshare
+</td></tr></tbody></table>
+</td></tr>
+<tr>
+<td>
+<table class="a-r roundy" style="display:none;">
+<tbody><tr>
+<td style="width:2%;">
+</td>
+<td style="width:3%;">
+</td>
+<th colspan="2" width="90%" class="at-c roundytop bgl-white">Website
+</th>
+<td style="width:3%;">
+</td>
+<td style="width:2%;">
+</td></tr>
+<tr>
+<td colspan="6" width="90px" class="at-c roundytl roundytr bgwhite b-green" style="border-width: 0 0 1px 0;"><b>International:</b> <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.waveshare.com/2inch-lcd-module.htm">Website</a>
+</td></tr>
+<tr>
+<td colspan="6" width="90px" class="at-c roundybl roundybr bgwhite"><b>Chinese:</b> <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="http://www.waveshare.net">中文官网</a>
+</td></tr></tbody></table>
+</td></tr>
+<tr>
+<td>
+<table class="a-r roundy" style="background: transparent; border-collapse:collapse;width:100%;display:none;">
+<tbody><tr>
+<td style="width:2%;">
+</td>
+<td style="width:3%;">
+</td>
+<th colspan="2" width="90%" class="at-c roundytop bgl-white">Onboard Interfaces
+</th>
+<td style="width:3%;">
+</td>
+<td style="width:2%;">
+</td></tr>
+<tr>
+<td colspan="6" width="90px" class="at-l roundy bgwhite b-green" style="border-width: 0 0 1px 0;">
+<table class="roundy bgwhite fulltable" style="text-align:center;">
+
+<tbody><tr>
+<td class="roundy bl-gray bw-1" style="width:25%;;"><small><b><a href="/wiki/Category:SPI_interface" title="Category:SPI interface">SPI</a></b></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td></tr>
+<tr>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td></tr>
+<tr>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td></tr>
+<tr>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td></tr>
+<tr>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr style="display:none;">
+<td>
+<table class="a-r roundy" style="background: transparent; border-collapse:collapse;width:100%;;display:none;">
+<tbody><tr>
+<td style="width:2%;">
+</td>
+<td style="width:3%;">
+</td>
+<th colspan="2" width="90%" class="at-c roundytop bgl-white">Related Products
+</th>
+<td style="width:3%;">
+</td>
+<td style="width:2%;">
+</td></tr>
+<tr>
+<td colspan="6" width="90px" class="at-l roundy bgwhite b-green" style="border-width: 0 0 1px 0;">
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<div class="tabber">
+<div class="tabbertab" title="Instruction">
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Feature"><span class="tocnumber">1.1</span> <span class="toctext">Feature</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Specifications"><span class="tocnumber">1.2</span> <span class="toctext">Specifications</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Interface_Description"><span class="tocnumber">2</span> <span class="toctext">Interface Description</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Raspberry_Pi_hardware_connection"><span class="tocnumber">2.1</span> <span class="toctext">Raspberry Pi hardware connection</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#STM32_hardware_connection"><span class="tocnumber">2.2</span> <span class="toctext">STM32 hardware connection</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Arduino_Hardware_Connection"><span class="tocnumber">2.3</span> <span class="toctext">Arduino Hardware Connection</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Hardware_Description"><span class="tocnumber">3</span> <span class="toctext">Hardware Description</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#LCD_.26_Controller"><span class="tocnumber">3.1</span> <span class="toctext">LCD &amp; Controller</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Communication_Protocol"><span class="tocnumber">3.2</span> <span class="toctext">Communication Protocol</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Working_with_Raspberry_Pi"><span class="tocnumber">4</span> <span class="toctext">Working with Raspberry Pi</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="#Enable_SPI_interface"><span class="tocnumber">4.1</span> <span class="toctext">Enable SPI interface</span></a>
+<ul>
+<li class="toclevel-3"><a href="#BCM2835"><span class="tocnumber">4.1.1</span> <span class="toctext">BCM2835</span></a></li>
+<li class="toclevel-3"><a href="#wiringPi"><span class="tocnumber">4.1.2</span> <span class="toctext">wiringPi</span></a></li>
+<li class="toclevel-3"><a href="#lgpio"><span class="tocnumber">4.1.3</span> <span class="toctext">lgpio</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Python"><span class="tocnumber">4.1.4</span> <span class="toctext">Python</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-14"><a href="#Download_Examples"><span class="tocnumber">4.2</span> <span class="toctext">Download Examples</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Run_the_demo_codes"><span class="tocnumber">4.3</span> <span class="toctext">Run the demo codes</span></a>
+<ul>
+<li class="toclevel-3 tocsection-16"><a href="#C_codes"><span class="tocnumber">4.3.1</span> <span class="toctext">C codes</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#python_2"><span class="tocnumber">4.3.2</span> <span class="toctext">python</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#FBCP_Porting"><span class="tocnumber">5</span> <span class="toctext">FBCP Porting</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Download_Drivers"><span class="tocnumber">5.1</span> <span class="toctext">Download Drivers</span></a></li>
+<li class="toclevel-2"><a href="#Method_1:_Use_a_script_.28recommended.29"><span class="tocnumber">5.2</span> <span class="toctext">Method 1: Use a script (recommended)</span></a></li>
+<li class="toclevel-2"><a href="#Method_2:_Manual_Configuration"><span class="tocnumber">5.3</span> <span class="toctext">Method 2: Manual Configuration</span></a>
+<ul>
+<li class="toclevel-3"><a href="#Environment_Configuration"><span class="tocnumber">5.3.1</span> <span class="toctext">Environment Configuration</span></a></li>
+<li class="toclevel-3"><a href="#Compile_and_run"><span class="tocnumber">5.3.2</span> <span class="toctext">Compile and run</span></a></li>
+<li class="toclevel-3"><a href="#Set_up_to_start_automatically"><span class="tocnumber">5.3.3</span> <span class="toctext">Set up to start automatically</span></a></li>
+<li class="toclevel-3"><a href="#Set_the_Display_Resolution"><span class="tocnumber">5.3.4</span> <span class="toctext">Set the Display Resolution</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#API_Description"><span class="tocnumber">6</span> <span class="toctext">API Description</span></a>
+<ul>
+<li class="toclevel-2"><a href="#C"><span class="tocnumber">6.1</span> <span class="toctext">C</span></a>
+<ul>
+<li class="toclevel-3"><a href="#Hardware_Interface"><span class="tocnumber">6.1.1</span> <span class="toctext">Hardware Interface</span></a></li>
+<li class="toclevel-3"><a href="#Upper_application"><span class="tocnumber">6.1.2</span> <span class="toctext">Upper application</span></a></li>
+<li class="toclevel-3"><a href="#Testing_Code_for_Users"><span class="tocnumber">6.1.3</span> <span class="toctext"><b>Testing Code for Users</b></span></a></li>
+</ul>
+</li>
+<li class="toclevel-2"><a href="#Python_.28for_Raspberry_Pi.29"><span class="tocnumber">6.2</span> <span class="toctext">Python (for Raspberry Pi)</span></a>
+<ul>
+<li class="toclevel-3"><a href="#lcdconfig.py"><span class="tocnumber">6.2.1</span> <span class="toctext">lcdconfig.py</span></a></li>
+<li class="toclevel-3"><a href="#About_Rotation_Settings"><span class="tocnumber">6.2.2</span> <span class="toctext">About Rotation Settings</span></a></li>
+<li class="toclevel-3"><a href="#GUI_Functions"><span class="tocnumber">6.2.3</span> <span class="toctext"><b>GUI Functions</b></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-18"><a href="#Working_with_STM32"><span class="tocnumber">7</span> <span class="toctext">Working with STM32</span></a>
+<ul>
+<li class="toclevel-2 tocsection-19"><a href="#Software_description"><span class="tocnumber">7.1</span> <span class="toctext">Software description</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Program_Description"><span class="tocnumber">7.2</span> <span class="toctext">Program Description</span></a>
+<ul>
+<li class="toclevel-3 tocsection-21"><a href="#Underlying_hardware_interface"><span class="tocnumber">7.2.1</span> <span class="toctext">Underlying hardware interface</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="#The_upper_application"><span class="tocnumber">7.2.2</span> <span class="toctext">The upper application</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-23"><a href="#Arduino_Software_Description"><span class="tocnumber">8</span> <span class="toctext">Arduino Software Description</span></a>
+<ul>
+<li class="toclevel-2 tocsection-24"><a href="#Arduino_IDE_Installation_Steps"><span class="tocnumber">8.1</span> <span class="toctext">Arduino IDE Installation Steps</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#Run_program"><span class="tocnumber">8.2</span> <span class="toctext">Run program</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#Program_Description_2"><span class="tocnumber">8.3</span> <span class="toctext">Program Description</span></a>
+<ul>
+<li class="toclevel-3 tocsection-27"><a href="#Document_Introduction"><span class="tocnumber">8.3.1</span> <span class="toctext">Document Introduction</span></a></li>
+<li class="toclevel-3 tocsection-28"><a href="#Underlying_Hardware_Interface_2"><span class="tocnumber">8.3.2</span> <span class="toctext">Underlying Hardware Interface</span></a></li>
+<li class="toclevel-3 tocsection-29"><a href="#The_Upper_Application_2"><span class="tocnumber">8.3.3</span> <span class="toctext">The Upper Application</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#VisionFive2"><span class="tocnumber">9</span> <span class="toctext">VisionFive2</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Adaptive_Model"><span class="tocnumber">9.1</span> <span class="toctext">Adaptive Model</span></a></li>
+<li class="toclevel-2"><a href="#Hardware_Connection"><span class="tocnumber">9.2</span> <span class="toctext">Hardware Connection</span></a></li>
+<li class="toclevel-2"><a href="#Install_Corresponding_Libraries"><span class="tocnumber">9.3</span> <span class="toctext">Install Corresponding Libraries</span></a></li>
+<li class="toclevel-2"><a href="#Demo_Download"><span class="tocnumber">9.4</span> <span class="toctext">Demo Download</span></a></li>
+<li class="toclevel-2"><a href="#Run_the_Corresponding_Demo_According_to_the_Screen_You_Purchased"><span class="tocnumber">9.5</span> <span class="toctext">Run the Corresponding Demo According to the Screen You Purchased</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-30"><a href="#Resources"><span class="tocnumber">10</span> <span class="toctext">Resources</span></a>
+<ul>
+<li class="toclevel-2 tocsection-31"><a href="#Document"><span class="tocnumber">10.1</span> <span class="toctext">Document</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="#Software"><span class="tocnumber">10.2</span> <span class="toctext">Software</span></a></li>
+<li class="toclevel-2 tocsection-33"><a href="#Demo_codes"><span class="tocnumber">10.3</span> <span class="toctext">Demo codes</span></a></li>
+<li class="toclevel-2 tocsection-34"><a href="#2D_Drawing"><span class="tocnumber">10.4</span> <span class="toctext">2D Drawing</span></a></li>
+<li class="toclevel-2 tocsection-35"><a href="#3D_Drawings"><span class="tocnumber">10.5</span> <span class="toctext">3D Drawings</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-36"><a href="#FAQ"><span class="tocnumber">11</span> <span class="toctext">FAQ</span></a></li>
+<li class="toclevel-1 tocsection-37"><a href="#Support"><span class="tocnumber">12</span> <span class="toctext">Support</span></a></li>
+</ul>
+</div>
+
+<h1><span class="mw-headline" id="Introduction">Introduction</span></h1>
+<p><b>This product provides Raspberry Pi, STM32, Arduino examples.</b>
+</p>
+<h2><span class="mw-headline" id="Feature">Feature</span></h2>
+<ul><li>As a 2-inch IPS display module with a resolution of 240 * 320, it uses an SPI interface for communication. The LCD has an internal controller with basic functions, which can be used to draw points, lines, circles, and rectangles, and display English, Chinese as well as pictures.</li>
+<li>We provide complete supporting Raspberry Pi demos (BCM2835 library, WiringPi library, and Python demos), STM32 demos, and Arduino demos.</li></ul>
+<h2><span class="mw-headline" id="Specifications">Specifications</span></h2>
+<ul><li>Operating voltage: 3.3V/5V<font color="red"> (Please ensure that the power supply voltage and logic voltage are consistent, otherwise it will not work properly.)</font></li>
+<li>Interface: SPI</li>
+<li>LCD type: IPS</li>
+<li>Driver: ST7789V</li>
+<li>Resolution: 240(V) x 320 (H) RGB</li>
+<li>Display size: 30.60（H）x 40.80（V）mm</li>
+<li>Pixel size: 0.0975（H）x 0.0975（V）mm</li>
+<li>Dimension: 58 x 35 (mm)</li></ul>
+<h1><span class="mw-headline" id="Interface_Description">Interface Description</span></h1>
+<h2><span class="mw-headline" id="Raspberry_Pi_hardware_connection">Raspberry Pi hardware connection</span></h2>
+<p>Please connect the LCD to your Raspberry Pi by the 8PIN cable according to the table below:<br />
+Use the pin header or PH2.0 8PIN interface, you need to connect according to the following table:<br />
+</p>
+<table border="1;" style="width:700px;" align="center">
+<caption>Connect to Raspberry Pi
+</caption>
+<tbody><tr style="background:green; color:white;" align="center">
+<td rowspan="2">LCD
+</td>
+<td colspan="2">Raspberry Pi
+</td></tr>
+<tr style="background:green; color:white;" align="center">
+<td>BCM2835
+</td>
+<td>Board
+</td></tr>
+<tr align="center">
+<td>VCC</td>
+<td>3.3V</td>
+<td>3.3V
+</td></tr>
+<tr align="center">
+<td>GND</td>
+<td>GND</td>
+<td>GND
+</td></tr>
+<tr align="center">
+<td>DIN</td>
+<td>MOSI</td>
+<td>19
+</td></tr>
+<tr align="center">
+<td>CLK</td>
+<td>SCLK</td>
+<td>23
+</td></tr>
+<tr align="center">
+<td>CS</td>
+<td>CE0</td>
+<td>24
+</td></tr>
+<tr align="center">
+<td>DS</td>
+<td>25</td>
+<td>22
+</td></tr>
+<tr align="center">
+<td>RST</td>
+<td>27</td>
+<td>13
+</td></tr>
+<tr align="center">
+<td>BL</td>
+<td>18</td>
+<td>12
+</td></tr></tbody></table>
+<p>The 2inch LCD uses the PH2.0 8PIN interface, which can be connected to the Raspberry Pi according to the above table: <span style="color:#FF0000;"> (Please connect according to the pin definition table. The color of the wiring in the picture is for reference only, and the actual color shall prevail.)</span><br />
+</p>
+<div class="center"><div class="floatnone"><a href="/wiki/File:2-rpi.jpg" class="image"><img alt="2-rpi.jpg" src="/w/upload/thumb/4/4b/2-rpi.jpg/800px-2-rpi.jpg" decoding="async" loading="lazy" width="800" height="500" srcset="/w/upload/4/4b/2-rpi.jpg 1.5x" /></a></div></div><br />
+<h2><span class="mw-headline" id="STM32_hardware_connection">STM32 hardware connection</span></h2>
+<p>The example we provide is based on STM32F103RBT6, and the connection method provided is also the corresponding pin of STM32F103RBT6. If you need to transplant the program, please connect according to the actual pin.
+</p>
+<table border="1;" style="width:600px;" align="center">
+<caption>STM32F103ZET connection pin correspondence
+</caption>
+<tbody><tr style="background:green; color:white;" align="center">
+<td>LCD</td>
+<td>STM32
+</td></tr>
+<tr align="center">
+<td>VCC</td>
+<td>3.3V
+</td></tr>
+<tr align="center">
+<td>GND</td>
+<td>GND
+</td></tr>
+<tr align="center">
+<td>DIN</td>
+<td>PA7
+</td></tr>
+<tr align="center">
+<td>CLK</td>
+<td>PA5
+</td></tr>
+<tr align="center">
+<td>CS</td>
+<td>PB6
+</td></tr>
+<tr align="center">
+<td>DC</td>
+<td>PA8
+</td></tr>
+<tr align="center">
+<td>RST</td>
+<td>PA9
+</td></tr>
+<tr align="center">
+<td>BL</td>
+<td>PC7
+</td></tr></tbody></table>
+<p>Take the <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.waveshare.com/xnucleo-f103rb.htm">XNUCLEO-F103RB development board</a> developed by our company as an example, the connection is as follows:<br />
+</p>
+<div class="center"><div class="floatnone"><a href="/wiki/File:2-STM32.jpg" class="image"><img alt="2-STM32.jpg" src="/w/upload/5/5e/2-STM32.jpg" decoding="async" loading="lazy" width="800" height="500" /></a></div></div><br />
+<h2><span class="mw-headline" id="Arduino_Hardware_Connection">Arduino Hardware Connection</span></h2>
+<table border="1;" style="width:600px;" align="center">
+<caption>Arduino UNO Connection pin correspondence
+</caption>
+<tbody><tr style="background:green; color:white;" align="center">
+<td>LCD</td>
+<td>UNO
+</td></tr>
+<tr align="center">
+<td>VCC</td>
+<td>5V
+</td></tr>
+<tr align="center">
+<td>GND</td>
+<td>GND
+</td></tr>
+<tr align="center">
+<td>DIN</td>
+<td>D11
+</td></tr>
+<tr align="center">
+<td>CLK</td>
+<td>D13
+</td></tr>
+<tr align="center">
+<td>CS</td>
+<td>D10
+</td></tr>
+<tr align="center">
+<td>DC</td>
+<td>D7
+</td></tr>
+<tr align="center">
+<td>RST</td>
+<td>D8
+</td></tr>
+<tr align="center">
+<td>BL</td>
+<td>D9
+</td></tr></tbody></table>
+<p>The connection diagram is as follows (click to enlarge):<br />
+</p>
+<div class="center"><div class="floatnone"><a href="/wiki/File:2-Aduino.jpg" class="image"><img alt="2-Aduino.jpg" src="/w/upload/2/21/2-Aduino.jpg" decoding="async" loading="lazy" width="800" height="500" /></a></div></div><br />
+<h1><span class="mw-headline" id="Hardware_Description">Hardware Description</span></h1>
+<h2><span id="LCD_&amp;_Controller"></span><span class="mw-headline" id="LCD_.26_Controller">LCD &amp; Controller</span></h2>
+<p>The LCD supports 12-bit, 16-bit, and 18-bit input color formats per pixel, namely RGB444, RGB565, and RGB666 three color formats, this demo uses RGB565 color format, which is also a commonly used RGB format.<br />
+For most LCD controllers, the communication mode of the controller can be configured, usually with an 8080 parallel interface, three-wire SPI, four-wire SPI, and other communication methods. This LCD uses a four-wire SPI communication interface, which can greatly save the GPIO port, and the communication speed will be faster.<br />
+</p>
+<h2><span class="mw-headline" id="Communication_Protocol">Communication Protocol</span></h2>
+<p><a href="/wiki/File:0.96inch_lcd_module_spi.png" class="image"><img alt="0.96inch lcd module spi.png" src="/w/upload/1/10/0.96inch_lcd_module_spi.png" decoding="async" loading="lazy" width="900" height="568" /></a><br />
+Note: Different from the traditional SPI protocol, the data line from the slave to the master is hidden since the device only has display requirements.<br />
+RESX: the reset pin, should be low when powering the module and be higher at other times;<br />
+CSX: slave chip selects, when CS is low, the chip is enabled.<br />
+D/CX: data/command control pin, when DC = 0, write command, when DC = 1, write data<br />
+SDA: the data pin for transmitting RGB data, it works as the MOSI pin of SPI interface;<br />
+SCL works as the SCLK pins of the SPI interface.<br />
+SPI communication has data transfer timing, which is combined by CPHA and CPOL.<br />
+CPOL determines the level of the serial synchronous clock at an idle state. When CPOL = 0, the level is Low. However, CPOL has little effect on the transmission.<br />
+CPHA determines whether data is collected at the first clock edge or at the second clock edge of the serial synchronous clock; when CPHL = 0, data is collected at the first clock edge.<br />
+There are 4 SPI communication modes. SPI0 is commonly used, in which CPHL = 0, CPOL = 0.<br />
+</p>
+<h1><span class="mw-headline" id="Working_with_Raspberry_Pi">Working with Raspberry Pi</span></h1>
+<h2><span class="mw-headline" id="Enable_SPI_interface">Enable SPI interface</span></h2>
+<div class="cautionSec">PS: If you are using the system of the Bullseye branch, you need to change "apt-get" to "apt", the system of the Bullseye branch only supports Python3. </div>
+<ul><li>Open the terminal, and use the command to enter the configuration page.<br /></li></ul>
+<pre>sudo raspi-config
+Choose Interfacing Options -&gt; SPI -&gt; Yes  to enable the SPI interface
+</pre>
+<p><a href="/wiki/File:RPI_open_spi.png" class="image"><img alt="RPI open spi.png" src="/w/upload/1/1e/RPI_open_spi.png" decoding="async" loading="lazy" width="900" height="838" /></a><br />
+Reboot Raspberry Pi：<br />
+</p>
+<pre>sudo reboot
+</pre>
+<p>Please make sure the SPI is not occupied by other devices, you can check in the middle of /boot/config.txt.<br />
+</p><p><span style="color:#FF0000;"><b> <big>If you use bookworm system, only the lgpio library is available, bcm2835 and wiringPi libarary cannot be installed or used. Please note that the python library does not need to be installed, you can directly run the demo.</big></b></span>
+</p>
+<h3><span class="mw-headline" id="BCM2835">BCM2835</span></h3>
+<pre>#Open the Raspberry Pi terminal and run the following commands:
+wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.71.tar.gz
+tar zxvf bcm2835-1.71.tar.gz 
+cd bcm2835-1.71/
+sudo ./configure &amp;&amp; sudo make &amp;&amp; sudo make check &amp;&amp; sudo make install
+# For more information, please refer to the official website: http://www.airspayce.com/mikem/bcm2835/
+</pre>
+<h3><span class="mw-headline" id="wiringPi">wiringPi</span></h3>
+<pre>#Open the Raspberry Pi terminal and run the following commands:
+cd
+sudo apt-get install wiringpi
+#For Raspberry Pi systems after May 2019 (those earlier may not require execution), an upgrade may be necessary:
+wget https://project-downloads.drogon.net/wiringpi-latest.deb
+sudo dpkg -i wiringpi-latest.deb
+gpio -v
+# Run gpio -v and version 2.52 will appear. If it does not appear, there is an installation error
+
+#Bullseye branch system uses the following command:
+git clone https://github.com/WiringPi/WiringPi
+cd WiringPi
+./build
+gpio -v
+# Run gpio -v and version 2.70 will appear. If it does not appear, there is an installation error
+</pre>
+<h3><span class="mw-headline" id="lgpio">lgpio</span></h3>
+<pre>sudo su
+wget https://github.com/joan2937/lg/archive/master.zip
+unzip master.zip
+cd lg-master
+sudo make install 
+# For more information, please refer to the official website: https://github.com/gpiozero/lg
+</pre>
+<h3><span class="mw-headline" id="Python">Python</span></h3>
+<pre>sudo apt-get update
+sudo apt-get install python3-pip
+sudo apt-get install python3-pil
+sudo apt-get install python3-numpy
+sudo pip3 install spidev
+</pre>
+<h2><span class="mw-headline" id="Download_Examples">Download Examples</span></h2>
+<p>Open the Raspberry Pi terminal and run the following command:<br />
+</p>
+<pre>sudo apt-get install unzip -y
+sudo wget https://files.waveshare.com/upload/8/8d/LCD_Module_RPI_code.zip
+sudo unzip ./LCD_Module_RPI_code.zip 
+cd LCD_Module_RPI_code/RaspberryPi/
+</pre>
+<h2><span class="mw-headline" id="Run_the_demo_codes">Run the demo codes</span></h2>
+<p>Please go into the RaspberryPi directory (demo codes) first and run the commands in the terminal.<br />
+</p>
+<h3><span class="mw-headline" id="C_codes">C codes</span></h3>
+<ul><li>Re-compile the demo codes.<br /></li></ul>
+<pre>cd c
+sudo make clean
+sudo make -j 8
+</pre>
+<ul><li>The test program of all screens can be called directly by entering the corresponding size.</li></ul>
+<pre>sudo ./main Screen Size
+</pre>
+<p>Depending on the LCD, one of the following commands should be entered:
+</p>
+<pre>#0.96inch LCD Module
+sudo ./main 0.96
+#1.14inch LCD Module
+sudo ./main 1.14
+#1.28inch LCD Module
+sudo ./main 1.28
+#1.3inch LCD Module
+sudo ./main 1.3
+#1.47inch LCD Module
+sudo ./main 1.47
+#1.54inch LCD Module
+sudo ./main 1.54
+#1.8inch LCD Module
+sudo ./main 1.8
+#2inch LCD Module
+sudo ./main 2
+#2.4inch LCD Module
+sudo ./main 2.4
+</pre>
+<h3><span class="mw-headline" id="python_2">python</span></h3>
+<ul><li>Enter the Python program directory and run the command ls -l.<br /></li></ul>
+<pre>cd python/examples
+ls -l
+</pre>
+<p><a href="/wiki/File:LCD_rpi_python_examples.png" class="image"><img alt="LCD rpi python examples.png" src="/w/upload/f/f6/LCD_rpi_python_examples.png" decoding="async" loading="lazy" width="1000" height="217" /></a><br />
+Test programs for all screens can be viewed, sorted by size:<br />
+0inch96_LCD_test.py: 0.96inch LCD test program<br />
+1inch14_LCD_test.py: 1.14inch LCD test program<br />
+1inch28_LCD_test.py: 1.28inch LCD test program<br />
+1inch3_LCD_test.py: 1.3inch LCD test program<br />
+1inch47_LCD_test.py: 1.47inch LCD test program<br />
+1inch54_LCD_test.py: 1.54inchLCD test program<br />
+1inch8_LCD_test.py: 1.8inch LCD test program<br />
+2inch_LCD_test.py: 2inch LCD test program<br />
+2inch4_LCD_test.py: 2inch4 LCD test program<br />
+</p>
+<ul><li>Just run the program corresponding to the screen, the program supports python2/3.</li></ul>
+<pre># python2
+sudo python 0inch96_LCD_test.py
+sudo python 1inch14_LCD_test.py
+sudo python 1inch28_LCD_test.py
+sudo python 1inch3_LCD_test.py
+sudo python 1inch47_LCD_test.py
+sudo python 1inch54_LCD_test.py
+sudo python 1inch8_LCD_test.py
+sudo python 2inch_LCD_test.py
+sudo python 2inch4_LCD_test.py
+# python3
+sudo python3 0inch96_LCD_test.py
+sudo python3 1inch14_LCD_test.py
+sudo python3 1inch28_LCD_test.py
+sudo python3 1inch3_LCD_test.py
+sudo python3 1inch47_LCD_test.py
+sudo python3 1inch54_LCD_test.py
+sudo python3 1inch8_LCD_test.py
+sudo python3 2inch_LCD_test.py
+sudo python3 2inch4_LCD_test.py
+</pre>
+<p><br />
+</p>
+<h1><span class="mw-headline" id="FBCP_Porting">FBCP Porting</span></h1>
+<div class="cautionSec">PS: FBCP is currently not compatible with the Raspberry Pi bookworm system, and the bullseye system is recommended.</div>
+<p>Framebuffer uses a video output device to drive a video display device from a memory buffer containing complete frame data. Simply put, a memory area is used to store the display content, and the display content can be changed by changing the data in the memory. <br />
+There is an open source project on Git Hub: fbcp-ili9341. Compared with other fbcp projects, this project uses partial refresh and DMA to achieve a speed of up to 60fps.<br />
+</p>
+<h2><span class="mw-headline" id="Download_Drivers">Download Drivers</span></h2>
+<pre>sudo apt-get install cmake -y
+cd ~
+wget https://files.waveshare.com/upload/1/18/Waveshare_fbcp.zip
+unzip Waveshare_fbcp.zip
+cd Waveshare_fbcp/
+sudo chmod +x ./shell/*
+</pre>
+<h2><span id="Method_1:_Use_a_script_(recommended)"></span><span class="mw-headline" id="Method_1:_Use_a_script_.28recommended.29">Method 1: Use a script (recommended)</span></h2>
+<p>Here we have written several scripts that allow users to quickly use fbcp and run corresponding commands according to their own screen.<br />
+If you use a script and do not need to modify it, you can ignore the second method below. <br />
+<font color="#FF0000">Note: The script will replace the corresponding /boot/config.txt and /etc/rc.local and restart, if the user needs, please back up the relevant files in advance.</font>
+<br />
+</p>
+<pre>#0.96inch LCD Module
+sudo ./shell/waveshare-0inch96
+#1.14inch LCD Module
+sudo ./shell/waveshare-1inch14
+#1.3inch LCD Module
+sudo ./shell/waveshare-1inch3
+#1.44inch LCD Module
+sudo ./shell/waveshare-1inch44
+#1.54inch LCD Module
+sudo ./shell/waveshare-1inch54
+#1.8inch LCD Module
+sudo ./shell/waveshare-1inch8
+#2inch LCD Module
+sudo ./shell/waveshare-2inch
+#2.4inch LCD Module
+sudo ./shell/waveshare-2inch4
+</pre>
+<h2><span class="mw-headline" id="Method_2:_Manual_Configuration">Method 2: Manual Configuration</span></h2>
+<h3><span class="mw-headline" id="Environment_Configuration">Environment Configuration</span></h3>
+<p>Raspberry Pi's vc4-kms-v3d will cause fbcp to fail, so we need to close vc4-kms-v3d before installing it in fbcp.
+</p>
+<pre>sudo nano /boot/config.txt
+</pre>
+<p>Just block the statement corresponding to the picture below.<br />
+<a href="/wiki/File:FBCP_CLOSE.jpg" class="image"><img alt="FBCP CLOSE.jpg" src="/w/upload/3/38/FBCP_CLOSE.jpg" decoding="async" loading="lazy" width="900" height="252" /></a><br />
+A reboot is then required.<br />
+</p>
+<pre>sudo reboot
+</pre>
+<h3><span class="mw-headline" id="Compile_and_run">Compile and run</span></h3>
+<pre>mkdir build
+cd build
+cmake [options] ..
+sudo make -j
+sudo ./fbcp
+</pre>
+<p>Replace it by yourself according to the LCD Module you use, above cmake [options] ..
+</p>
+<pre>#0.96inch LCD Module
+sudo cmake -DSPI_BUS_CLOCK_DIVISOR=20 -DWAVESHARE_0INCH96_LCD=ON -DBACKLIGHT_CONTROL=ON -DSTATISTICS=0 ..
+#1.14inch LCD Module
+sudo cmake -DSPI_BUS_CLOCK_DIVISOR=20 -DWAVESHARE_1INCH14_LCD=ON -DBACKLIGHT_CONTROL=ON -DSTATISTICS=0 ..
+#1.3inch LCD Module
+sudo cmake -DSPI_BUS_CLOCK_DIVISOR=20 -DWAVESHARE_1INCH3_LCD=ON -DBACKLIGHT_CONTROL=ON -DSTATISTICS=0 ..
+#1.54inch LCD Module
+sudo cmake -DSPI_BUS_CLOCK_DIVISOR=20 -DWAVESHARE_1INCH54_LCD=ON -DBACKLIGHT_CONTROL=ON -DSTATISTICS=0 ..
+#1.8inch LCD Module
+sudo cmake -DSPI_BUS_CLOCK_DIVISOR=20 -DWAVESHARE_1INCH8_LCD=ON -DBACKLIGHT_CONTROL=ON -DSTATISTICS=0 ..
+#2inch LCD Module
+sudo cmake -DSPI_BUS_CLOCK_DIVISOR=20 -DWAVESHARE_2INCH_LCD=ON -DBACKLIGHT_CONTROL=ON -DSTATISTICS=0 ..
+#2.4inch LCD Module
+sudo cmake -DSPI_BUS_CLOCK_DIVISOR=20 -DWAVESHARE_2INCH4_LCD=ON -DBACKLIGHT_CONTROL=ON -DSTATISTICS=0 ..
+</pre>
+<h3><span class="mw-headline" id="Set_up_to_start_automatically">Set up to start automatically</span></h3>
+<div class="floatright"><a href="/wiki/File:1in3_lcd_fb5.png" class="image"><img alt="1in3 lcd fb5.png" src="/w/upload/thumb/d/dd/1in3_lcd_fb5.png/380px-1in3_lcd_fb5.png" decoding="async" loading="lazy" width="380" height="184" srcset="/w/upload/d/dd/1in3_lcd_fb5.png 1.5x" /></a></div>
+<pre>sudo cp ~/Waveshare_fbcp/build/fbcp /usr/local/bin/fbcp
+sudo nano /etc/rc.local
+</pre>
+<p>Add fbcp&amp; before exit 0. Note that you must add "&amp;" to run in the background. Otherwise, the system may not be able to start.<br />
+</p>
+<h3><span class="mw-headline" id="Set_the_Display_Resolution">Set the Display Resolution</span></h3>
+<p>Set the user interface display size in the /boot/config.txt file.
+</p>
+<pre>sudo nano /boot/config.txt
+</pre>
+<p>Then add the following lines at the end of the config.txt.
+</p>
+<pre>hdmi_force_hotplug=1
+hdmi_cvt=[options]
+hdmi_group=2
+hdmi_mode=1
+hdmi_mode=87
+display_rotate=0
+</pre>
+<p>Replace the above hdmi_cvt=[options] according to the LCD Module you are using.
+</p>
+<pre>#2.4inchinch LCD Module &amp; 2inchinch LCD Module
+hdmi_cvt=640 480 60 1 0 0 0
+
+#1.8inch LCD Module
+hdmi_cvt=400 300 60 1 0 0 0
+
+#1.3inch LCD Module &amp; 1.54inch LCD Module
+hdmi_cvt=300 300 60 1 0 0 0
+
+#1.14inch LCD Module
+hdmi_cvt=300 170 60 1 0 0 0
+
+#0.96inch LCD Module
+hdmi_cvt=300 150 60 1 0 0 0
+</pre>
+<p><font color="red">Note: for Pi4B, you need to comment out [pi4] sentences, and modify them as shown below:</font>
+</p>
+<pre>[pi4]
+# Enable DRM VC4 V3D driver on top of the dispmanx display stack
+#dtoverlay=vc4-fkms-v3d
+#max_framebuffers=2
+</pre>
+<p><br />
+And then reboot the system:
+</p>
+<pre>sudo reboot
+</pre>
+<p>After rebooting the system, the Raspberry Pi OS user interface will be displayed.
+</p><p><a href="/wiki/File:2inch_LCD_Module_fbcp02.png" class="image"><img alt="2inch LCD Module fbcp02.png" src="/w/upload/thumb/9/98/2inch_LCD_Module_fbcp02.png/600px-2inch_LCD_Module_fbcp02.png" decoding="async" loading="lazy" width="600" height="505" srcset="/w/upload/9/98/2inch_LCD_Module_fbcp02.png 1.5x" /></a>
+</p>
+<h1><span class="mw-headline" id="API_Description">API Description</span></h1>
+<p>The RaspberryPi series can share a set of programs, because they are all embedded systems, and the compatibility is relatively strong.<br />
+The program is divided into bottom-layer hardware interface, middle-layer LCD screen driver, and upper-layer application;
+</p>
+<h3><span class="mw-headline" id="C">C</span></h3>
+<h4><span class="mw-headline" id="Hardware_Interface">Hardware Interface</span></h4>
+<p>We have carried out the low-level encapsulation, if you need to know the internal implementation can go to the corresponding directory to check, for the reason the hardware platform and the internal implementation are different. <br />
+You can open DEV_Config.c(.h) to see definitions, which in the directory RaspberryPi\c\lib\Config.<br />
+</p>
+<pre>1. There are three ways for C to drive: BCM2835 library, WiringPi library, and Dev library respectively
+2. We use Dev libraries by default. If you need to change to BCM2835 or WiringPi libraries, please open RaspberryPi\c\Makefile and modify lines 13-15 as follows:  
+</pre>
+<p><a href="/wiki/File:RPI_open_spi1.png" class="image"><img alt="RPI open spi1.png" src="/w/upload/6/65/RPI_open_spi1.png" decoding="async" loading="lazy" width="900" height="384" /></a><br />
+</p>
+<ul><li>Data type:</li></ul>
+<pre>#define UBYTE      uint8_t
+#define UWORD      uint16_t
+#define UDOUBLE    uint32_t
+</pre>
+<ul><li>Module initialization and exit processing.</li></ul>
+<pre>void DEV_Module_Init(void);
+void DEV_Module_Exit(void);
+Note: 
+  Here is some GPIO processing before and after using the LCD screen.
+</pre>
+<ul><li>GPIO read and write:</li></ul>
+<pre>void 	DEV_Digital_Write(UWORD Pin, UBYTE Value);
+UBYTE 	DEV_Digital_Read(UWORD Pin);
+</pre>
+<ul><li>SPI write data:</li></ul>
+<pre>void DEV_SPI_WriteByte(UBYTE Value);
+</pre>
+<h4><span class="mw-headline" id="Upper_application">Upper application</span></h4>
+<p>If you need to draw pictures or display Chinese and English characters, we provide some basic functions here about some graphics processing in the directory RaspberryPi\c\lib\GUI\GUI_Paint.c(.h).<br />
+<a href="/wiki/File:LCD_rpi_GUI.png" class="image"><img alt="LCD rpi GUI.png" src="/w/upload/2/25/LCD_rpi_GUI.png" decoding="async" loading="lazy" width="900" height="159" /></a><br />
+The fonts can be found in RaspberryPi\c\lib\Fonts directory.<br />
+<a href="/wiki/File:RPI_open_spi3.png" class="image"><img alt="RPI open spi3.png" src="/w/upload/2/2b/RPI_open_spi3.png" decoding="async" loading="lazy" width="900" height="308" /></a><br />
+</p>
+<ul><li>New Image Properties: Create a new image buffer, this property includes the image buffer name, width, height, flip Angle, and color.<br /></li></ul>
+<pre>void Paint_NewImage(UBYTE *image, UWORD Width, UWORD Height, UWORD Rotate, UWORD Color)
+Parameters:
+      Image: the name of the image buffer, which is actually a pointer to the first address of the image buffer;
+      Width: image buffer Width;
+      Height: the Height of the image buffer;
+      Rotate: Indicates the rotation Angle of an image
+      Color: the initial Color of the image;
+</pre>
+<ul><li>Select image buffer: The purpose of the selection is that you can create multiple image attributes, there can be multiple images buffer, you can select each image you create.<br /></li></ul>
+<pre>void Paint_SelectImage(UBYTE *image)
+Parameters:
+       Image: the name of the image buffer, which is actually a pointer to the first address of the image buffer;
+</pre>
+<ul><li>Image Rotation: Set the rotation Angle of the selected image, preferably after Paint_SelectImage(), you can choose to rotate 0, 90, 180, 270.<br /></li></ul>
+<p><a href="/wiki/File:Rotation-lcd.png" class="image"><img alt="Rotation-lcd.png" src="/w/upload/a/a4/Rotation-lcd.png" decoding="async" loading="lazy" width="919" height="219" /></a><br />
+</p>
+<pre>void Paint_SetRotate(UWORD Rotate)
+Parameters:
+        Rotate: ROTATE_0, ROTATE_90, ROTATE_180, and ROTATE_270 correspond to 0, 90, 180, and 270 degrees.
+</pre>
+<ul><li>Image mirror flip: Set the mirror flip of the selected image. You can choose no mirror, horizontal mirror, vertical mirror, or image center mirror.<br /></li></ul>
+<pre>void Paint_SetMirroring(UBYTE mirror)
+Parameters:
+        Mirror: indicates the image mirroring mode. MIRROR_NONE, MIRROR_HORIZONTAL, MIRROR_VERTICAL, MIRROR_ORIGIN correspond to no mirror, horizontal mirror, vertical mirror, and image center mirror respectively.
+</pre>
+<ul><li>Set points of the display position and color in the buffer: here is the core GUI function, processing points display position and color in the buffer.<br /></li></ul>
+<pre>void Paint_SetPixel(UWORD Xpoint, UWORD Ypoint, UWORD Color)
+Parameters:
+        Xpoint: the X position of a point in the image buffer
+        Ypoint: Y position of a point in the image buffer
+        Color: indicates the Color of the dot
+</pre>
+<ul><li>Image buffer fill color: Fills the image buffer with a color, usually used to flash the screen into blank.</li></ul>
+<pre>void Paint_Clear(UWORD Color)
+Parameters:
+        Color: fill Color
+</pre>
+<ul><li>The fill color of a certain window in the image buffer: the image buffer part of the window filled with a certain color, usually used to fresh the screen into blank, often used for time display, fresh the last second of the screen.</li></ul>
+<pre>void Paint_ClearWindows(UWORD Xstart, UWORD Ystart, UWORD Xend, UWORD Yend, UWORD Color)
+Parameters:
+        Xstart: the x-starting coordinate of the window
+        Ystart: the y-starting coordinate of the window
+        Xend: the x-end coordinate of the window
+        Yend: the y-end coordinate of the window
+        Color: fill Color
+</pre>
+<ul><li>Draw point: In the image buffer, draw points on (Xpoint, Ypoint), you can choose the color, the size of the point, the style of the point.<br /></li></ul>
+<pre>void Paint_DrawPoint(UWORD Xpoint, UWORD Ypoint, UWORD Color, DOT_PIXEL Dot_Pixel, DOT_STYLE Dot_Style)
+Parameters:
+        Xpoint: indicates the X coordinate of a point.
+        Ypoint: indicates the Y coordinate of a point.
+        Color: fill Color
+        Dot_Pixel: The size of the dot, the demo provides 8 size pointss by default.
+              typedef enum {
+                 DOT_PIXEL_1X1  = 1,	// 1 x 1
+                 DOT_PIXEL_2X2  , 		// 2 X 2
+                 DOT_PIXEL_3X3  , 	 	// 3 X 3
+                 DOT_PIXEL_4X4  , 	 	// 4 X 4
+                 DOT_PIXEL_5X5  , 		// 5 X 5
+                 DOT_PIXEL_6X6  , 		// 6 X 6
+                 DOT_PIXEL_7X7  , 		// 7 X 7
+                 DOT_PIXEL_8X8  , 		// 8 X 8
+               } DOT_PIXEL;
+        Dot_Style: the size of a point that expands from the center of the point or from the bottom left corner of the point to the right and up.
+                 typedef enum {
+                     DOT_FILL_AROUND  = 1,
+                     DOT_FILL_RIGHTUP,
+                  } DOT_STYLE;
+</pre>
+<ul><li>Draw line: In the image buffer, draw line from (Xstart, Ystart) to (Xend, Yend), you can choose the color, the width and the style of the line.<br /></li></ul>
+<pre>void Paint_DrawLine(UWORD Xstart, UWORD Ystart, UWORD Xend, UWORD Yend, UWORD Color, LINE_STYLE Line_Style ,  LINE_STYLE Line_Style)
+Parameters:
+        Xstart: the x-starting coordinate of a line
+        Ystart: the y-starting coordinate of the a line
+        Xend: the x-end coordinate of a line
+        Yend: the y-end coordinate of a line
+        Color: fill Color
+        Line_width: The width of the line, the demo provides 8 sizes of width by default.
+              typedef enum {
+                 DOT_PIXEL_1X1  = 1,	// 1 x 1
+                 DOT_PIXEL_2X2  , 		// 2 X 2
+                 DOT_PIXEL_3X3  ,		// 3 X 3
+                 DOT_PIXEL_4X4  ,		// 4 X 4
+                 DOT_PIXEL_5X5  , 		// 5 X 5
+                 DOT_PIXEL_6X6  , 		// 6 X 6
+                 DOT_PIXEL_7X7  , 		// 7 X 7
+                 DOT_PIXEL_8X8  , 		// 8 X 8
+              } DOT_PIXEL;
+        Line_Style: line style. Select whether the lines are joined in a straight or dashed way.
+              typedef enum {
+                 LINE_STYLE_SOLID = 0,
+                 LINE_STYLE_DOTTED,
+              } LINE_STYLE;
+</pre>
+<ul><li>Draw rectangle: In the image buffer, draw a rectangle from (Xstart, Ystart) to (Xend, Yend), you can choose the color, the width of the line, whether to fill the inside of the rectangle.<br /></li></ul>
+<pre>void Paint_DrawRectangle(UWORD Xstart, UWORD Ystart, UWORD Xend, UWORD Yend, UWORD Color, DOT_PIXEL Line_width,  DRAW_FILL Draw_Fill)
+Parameters:
+	Xstart: the starting X coordinate of the rectangle
+	Ystart: the starting Y coordinate of the rectangle
+	Xend: the x-end coordinate of the rectangle
+        Yend: the y-end coordinate of the rectangle
+	Color: fill Color
+	Line_width: The width of the four sides of a rectangle. And the demo provides 8 sizes of width by default.
+		typedef enum {
+			DOT_PIXEL_1X1  = 1,	// 1 x 1
+			DOT_PIXEL_2X2  , 		// 2 X 2
+			DOT_PIXEL_3X3  ,		// 3 X 3
+			DOT_PIXEL_4X4  ,	        // 4 X 4
+			DOT_PIXEL_5X5  , 		// 5 X 5
+ 			DOT_PIXEL_6X6  , 		// 6 X 6
+                        DOT_PIXEL_7X7  , 		// 7 X 7
+                        DOT_PIXEL_8X8  , 		// 8 X 8
+                 } DOT_PIXEL;
+         Draw_Fill: Fill, whether to fill the inside of the rectangle
+              typedef enum {
+                 	DRAW_FILL_EMPTY = 0,
+                 	DRAW_FILL_FULL,
+              } DRAW_FILL;
+</pre>
+<ul><li>Draw circle: In the image buffer, draw a circle of Radius with (X_Center Y_Center) as the center. You can choose the color, the width of the line, and whether to fill the inside of the circle.<br /></li></ul>
+<pre>void Paint_DrawCircle(UWORD X_Center, UWORD Y_Center, UWORD Radius, UWORD Color, DOT_PIXEL Line_width,  DRAW_FILL Draw_Fill)
+Parameters:
+	X_Center: the x-coordinate of the center of the circle
+	Y_Center: the y-coordinate of the center of the circle
+	Radius: indicates the Radius of a circle
+	Color: fill Color
+	Line_width: The width of the arc, with a default of 8 widths
+		typedef enum {
+        		DOT_PIXEL_1X1  = 1,	// 1 x 1
+        		DOT_PIXEL_2X2  , 		// 2 X 2
+        		DOT_PIXEL_3X3  ,		// 3 X 3
+        		DOT_PIXEL_4X4  ,		// 4 X 4
+        		DOT_PIXEL_5X5  , 		// 5 X 5
+        		DOT_PIXEL_6X6  , 		// 6 X 6
+        		DOT_PIXEL_7X7  , 		// 7 X 7
+        		DOT_PIXEL_8X8  , 		// 8 X 8
+		} DOT_PIXEL;
+	Draw_Fill: fill, whether to fill the inside of the circle
+              typedef enum {
+              		DRAW_FILL_EMPTY = 0,
+                 	DRAW_FILL_FULL,
+              } DRAW_FILL;
+</pre>
+<ul><li>Write Ascii character: In the image buffer, use (Xstart Ystart) as the left vertex, write an Ascii character, you can select Ascii visual character library, font foreground color, font background color.</li></ul>
+<pre>void Paint_DrawChar(UWORD Xstart, UWORD Ystart, const char Ascii_Char, sFONT* Font, UWORD Color_Foreground,  UWORD Color_Background)
+Parameters:
+	Xstart: the x-coordinate of the left vertex of a character
+	Ystart: the Y-coordinate of the left vertex of a character
+	Ascii_Char: indicates the Ascii character
+	Font: Ascii visual character library, in the Fonts folder the demo provides the following Fonts:
+  		Font8: 5*8 font
+    		Font12: 7*12 font
+    		Font16: 11*16 font
+    		Font20: 14*20 font
+    		Font24: 17*24 font
+  	Color_Foreground: Font color
+  	Color_Background: indicates the background color
+</pre>
+<ul><li>Write English string: In the image buffer, use (Xstart Ystart) as the left vertex, write a string of English characters, you can choose Ascii visual character library, font foreground color, font background color.<br /></li></ul>
+<pre>void Paint_DrawString_EN(UWORD Xstart, UWORD Ystart, const char * pString, sFONT* Font, UWORD Color_Foreground,  UWORD Color_Background)
+Parameters:
+	Xstart: the x-coordinate of the left vertex of a character
+	Ystart: the Y coordinate of the font's left vertex
+	PString: string, string is a pointer
+	Font: Ascii visual character library, in the Fonts folder the demo provides the following Fonts:
+     		Font8: 5*8 font
+     		Font12: 7*12 font
+     		Font16: 11*16 font
+     		Font20: 14*20 font
+     		Font24: 17*24 font
+	Color_Foreground: Font color
+  	Color_Background: indicates the background color
+</pre>
+<ul><li>Write Chinese string: in the image buffer, use (Xstart Ystart) as the left vertex, write a string of Chinese characters, you can choose character font, font foreground color, and font background color of the GB2312 encoding.</li></ul>
+<pre>void Paint_DrawString_CN(UWORD Xstart, UWORD Ystart, const char * pString, cFONT* font, UWORD Color_Foreground,  UWORD Color_Background)
+Parameters:
+	Xstart: the x-coordinate of the left vertex of a character
+	Ystart: the Y coordinate of the font's left vertex
+	PString: string, string is a pointer
+  	Font: GB2312 encoding character Font library, in the Fonts folder the demo provides the following Fonts:
+     		Font12CN: ASCII font 11*21, Chinese font 16*21
+     		Font24CN: ASCII font24 *41, Chinese font 32*41
+	Color_Foreground: Font color
+	Color_Background: indicates the background color
+</pre>
+<ul><li>Write numbers: In the image buffer,use (Xstart Ystart) as the left vertex, write a string of numbers, you can choose Ascii visual character library, font foreground color, font background color.</li></ul>
+<pre>void Paint_DrawNum(UWORD Xpoint, UWORD Ypoint, double Nummber, sFONT* Font, UWORD Digit, UWORD Color_Foreground,   UWORD Color_Background)
+Parameters:
+	Xpoint: the x-coordinate of the left vertex of a character
+	Ypoint: the Y coordinate of the left vertex of the font
+	Nummber: indicates the number displayed, which can be a decimal
+	Digit: It's a decimal number
+ 	Font: Ascii visual character library, in the Fonts folder the demo provides the following Fonts:
+   		Font8: 5*8 font
+   		Font12: 7*12 font
+   		Font16: 11*16 font
+		Font20: 14*20 font
+   		Font24: 17*24 font
+	Color_Foreground: Font color
+	Color_Background: indicates the background color
+</pre>
+<ul><li>Display time: in the image buffer,use (Xstart Ystart) as the left vertex, display time,you can choose Ascii visual character font, font foreground color, font background color.</li></ul>
+<pre>void Paint_DrawTime(UWORD Xstart, UWORD Ystart, PAINT_TIME *pTime, sFONT* Font, UWORD Color_Background,  UWORD Color_Foreground)
+Parameters:
+	Xstart: the x-coordinate of the left vertex of a character
+ 	Ystart: the Y coordinate of the font's left vertex
+	PTime: display time, A time structure is defined here, as long as the hours, minutes, and seconds are passed to the parameters;
+	Font: Ascii visual character library, in the Fonts folder the demo provides the following Fonts:
+     		Font8: 5*8 font
+     		Font12: 7*12 font
+     		Font16: 11*16 font
+     		Font20: 14*20 font
+     		Font24: 17*24 font
+  	Color_Foreground: Font color
+  	Color_Background: indicates the background color
+</pre>
+<ul><li>Read the local bmp image and write it to the cache.</li></ul>
+<p>For Linux operating systems such as Raspberry Pi, you can read and write pictures.
+For Raspberry Pi, in the directory: RaspberryPi\c\lib\GUI\GUI_BMPfile.c(.h).
+</p>
+<pre>UBYTE GUI_ReadBmp(const char *path, UWORD Xstart, UWORD Ystart)
+parameter:
+       path: the relative path of the BMP image
+       Xstart: The X coordinate of the left vertex of the image, generally 0 is passed by default
+       Ystart: The Y coordinate of the left vertex of the picture, generally 0 by default
+</pre>
+<h4><span class="mw-headline" id="Testing_Code_for_Users"><b>Testing Code for Users</b></span></h4>
+<p>For Raspberry Pi, in the directory: RaspberryPi\c\examples, for all the test code;
+</p>
+<dl><dd><a href="/wiki/File:LCD_rpi_c_examples%26128.png" class="image"><img alt="LCD rpi c examples&amp;128.png" src="/w/upload/e/e0/LCD_rpi_c_examples%26128.png" decoding="async" loading="lazy" width="1000" height="435" /></a><br /></dd></dl>
+<p>If you need to run the 0.96-inch LCD test program, you need to add 0.96 as a parameter when running the main demo.<br />
+Re-execute in Linux command mode as follows:<br />
+</p>
+<pre>make clean
+make
+sudo ./main 0.96
+</pre>
+<h3><span id="Python_(for_Raspberry_Pi)"></span><span class="mw-headline" id="Python_.28for_Raspberry_Pi.29">Python (for Raspberry Pi)</span></h3>
+<p>Works with python and python3.<br />
+For python, his calls are not as complicated as C.<br />
+Raspberry Pi: RaspberryPi\python\lib\<br />
+</p>
+<dl><dd><a href="/wiki/File:LCD_rpi_python_lib.png" class="image"><img alt="LCD rpi python lib.png" src="/w/upload/7/7d/LCD_rpi_python_lib.png" decoding="async" loading="lazy" width="800" height="288" /></a><br /></dd></dl>
+<h4><span class="mw-headline" id="lcdconfig.py">lcdconfig.py</span></h4>
+<ul><li>Module initialization and exit processing.</li></ul>
+<pre>def module_init()
+def module_exit()
+Note:
+1. Here is some GPIO processing before and after using the LCD screen.
+2. The module_init() function is automatically called in the INIT () initializer on the LCD, but the module_exit() function needs to be called by itself.
+</pre>
+<ul><li>GPIO read and write:</li></ul>
+<pre>def  digital_write(pin, value)
+def  digital_read(pin)
+</pre>
+<ul><li>SPI write data.</li></ul>
+<pre>def spi_writebyte(data)
+</pre>
+<ul><li>xxx_LCD_test.py (xxx indicates the size, if it is a 0.96inch LCD, it is 0inch96_LCD_test.py, and so on)</li></ul>
+<p>python is in the following directory:<br />
+Raspberry Pi: RaspberryPi\python\examples\
+</p>
+<dl><dd><a href="/wiki/File:LCD_rpi_python_examples2.png" class="image"><img alt="LCD rpi python examples2.png" src="/w/upload/6/66/LCD_rpi_python_examples2.png" decoding="async" loading="lazy" width="800" height="211" /></a><br /></dd></dl>
+<p>If your python version is python2 and you need to run the 0.96inch LCD test program, re-execute it as follows in linux command mode:
+</p>
+<pre>sudo python 0inch96_LCD_test.py
+</pre>
+<p>If your python version is python3 and you need to run the 0.96inch LCD test program, re-execute the following in linux command mode:
+</p>
+<pre>sudo python3 0inch96_LCD_test.py
+</pre>
+<h4><span class="mw-headline" id="About_Rotation_Settings">About Rotation Settings</span></h4>
+<p>If you need to set the screen rotation in the python program, you can set it by the statement im_r= image1.rotate(270).
+</p>
+<pre>im_r= image1.rotate(270)
+</pre>
+<dl><dd>Rotation effect, take 1.54 as an example, the order is 0°, 90°, 180°, 270°</dd>
+<dd><a href="/wiki/File:LCD_Rotate.jpg" class="image"><img alt="LCD Rotate.jpg" src="/w/upload/thumb/a/a6/LCD_Rotate.jpg/1000px-LCD_Rotate.jpg" decoding="async" loading="lazy" width="1000" height="270" srcset="/w/upload/thumb/a/a6/LCD_Rotate.jpg/1500px-LCD_Rotate.jpg 1.5x, /w/upload/thumb/a/a6/LCD_Rotate.jpg/2000px-LCD_Rotate.jpg 2x" /></a><br /></dd></dl>
+<h4><span class="mw-headline" id="GUI_Functions"><b>GUI Functions</b></span></h4>
+<p>Python has an image library <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="http://effbot.org/imagingbook">PIL official library link</a>, it does not need to write code from the logical layer like C and can directly call to the image library for image processing. The following will take a 1.54-inch LCD as an example, we provide a brief description of the demo.
+</p>
+<ul><li>It needs to use the image library and install the library.</li></ul>
+<pre>sudo apt-get install python3-pil  
+</pre>
+<p>And then import the library<br />
+</p>
+<pre>from PIL import Image,ImageDraw,ImageFont.
+</pre>
+<p>Among them, Image is the basic library, ImageDraw is the drawing function, and ImageFont is the text function.
+</p>
+<ul><li>Define an image cache to facilitate drawing, writing, and other functions on the picture.</li></ul>
+<pre>image1 = Image.new("RGB", (disp.width, disp.height), "WHITE")
+</pre>
+<p>The first parameter defines the color depth of the image, which is defined as "1" to indicate the bitmap of one-bit depth. The second parameter is a tuple that defines the width and height of the image. The third parameter defines the default color of the buffer, which is defined as "WHITE".
+</p>
+<ul><li>Create a drawing object based on Image1 on which all drawing operations will be performed on here.</li></ul>
+<pre>draw = ImageDraw.Draw(image1)
+</pre>
+<ul><li>Draw a line.</li></ul>
+<pre>draw.line([(20, 10),(70, 60)], fill = "RED",width = 1)
+</pre>
+<p>The first parameter is a four-element tuple starting at (0, 0) and ending at (127,0). Draw a line. Fill ="0" means the color of the line is white.
+</p>
+<ul><li>Draw a rectangle.</li></ul>
+<pre>draw.rectangle([(20,10),(70,60)],fill = "WHITE",outline="BLACK")
+</pre>
+<p>The first argument is a tuple of four elements. (20,10) is the coordinate value in the upper left corner of the rectangle, and (70,60) is the coordinate value in the lower right corner of the rectangle. Fill =" WHITE" means BLACK inside, and outline="BLACK" means the color of the outline is black.
+</p>
+<ul><li>Draw a circle.</li></ul>
+<pre>draw.arc((150,15,190,55),0, 360, fill =(0,255,0)
+</pre>
+<p>Draw an inscribed circle in the square, the first parameter is a tuple of 4 elements, with (150, 15) as the upper left corner vertex of the square, (190, 55) as the lower right corner vertex of the square, specifying the level median line of the rectangular frame is the angle of 0 degrees, the second parameter indicates the starting angle, the third parameter indicates the ending angle, and fill = 0 indicates that the color of the line is white.
+If the figure is not square according to the coordination, you will get an ellipse.
+</p><p>Besides the arc function, you can also use the chord function for drawing a solid circle.
+</p>
+<pre>draw.ellipse((150,65,190,105), fill = 0)
+</pre>
+<p>The first parameter is the coordination of the enclosing rectangle. The second and third parameters are the beginning and end degrees of the circle. The fourth parameter is the fill color of the circle.
+</p>
+<ul><li>Character.</li></ul>
+<p>The ImageFont module needs to be imported and instantiated:
+</p>
+<pre>Font1 = ImageFont.truetype("../Font/Font01.ttf",25)
+Font2 = ImageFont.truetype("../Font/Font01.ttf",35)
+Font3 = ImageFont.truetype("../Font/Font02.ttf",32)
+</pre>
+<p>You can use the fonts of Windows or other fonts which is in ttc format..<br />
+Note: Each character library contains different characters; If some characters cannot be displayed, it is recommended that you can refer to the encoding set ro used.
+To draw English characters, you can directly use the fonts; for Chinese characters, you need to add a symbol u:
+</p>
+<pre>draw.text((40, 50), 'WaveShare', fill = (128,255,128),font=Font2)
+text= u"微雪电子"
+draw.text((74, 150),text, fill = "WHITE",font=Font3)
+</pre>
+<p>The first parameter is a tuple of 2 elements, with (40, 50) as the left vertex, the font is Font2, and the fill is the font color. You can directly make fill = "WHITE", because the regular color value is already defined Well, of course, you can also use fill = (128,255,128), the parentheses correspond to the values of the three RGB colors so that you can precisely control the color you want. The second sentence shows Waveshare Electronics, using Font3, the font color is white.<br />
+</p>
+<ul><li>read local image</li></ul>
+<pre>image = Image.open('../pic/LCD_1inch28.jpg')
+</pre>
+<p>The parameter is the image path.
+</p>
+<ul><li>Other functions.</li></ul>
+<p>For more information, you can refer to <a target="_blank" rel="nofollow noreferrer noopener" class="external free" href="http://effbot.org/imagingbook">http://effbot.org/imagingbook</a> pil
+</p>
+</div>
+<div class="tabbertab" title="Guides for Arduino">
+</div>
+<div class="tabbertab" title="Guides for STM32">
+<h1><span class="mw-headline" id="Working_with_STM32">Working with STM32</span></h1>
+<h2><span class="mw-headline" id="Software_description">Software description</span></h2>
+<ul><li>The demo is developed based on the HAL library. Download the demo, find the STM32 program file directory, and open the LCD_demo.uvprojx in the STM32\STM32F103RBT6\MDK-ARM directory to check the program.</li></ul>
+<dl><dd><a href="/wiki/File:LCD_STM32_CODE1.png" class="image"><img alt="LCD STM32 CODE1.png" src="/w/upload/thumb/4/40/LCD_STM32_CODE1.png/500px-LCD_STM32_CODE1.png" decoding="async" loading="lazy" width="500" height="156" srcset="/w/upload/thumb/4/40/LCD_STM32_CODE1.png/750px-LCD_STM32_CODE1.png 1.5x, /w/upload/4/40/LCD_STM32_CODE1.png 2x" /></a></dd></dl>
+<ul><li>Open main.c, you can see all the test programs, remove the comments in front of the test programs on the corresponding screen, and recompile and download.</li></ul>
+<dl><dd><a href="/wiki/File:LCD_STM32_CODE128.png" class="image"><img alt="LCD STM32 CODE128.png" src="/w/upload/thumb/9/92/LCD_STM32_CODE128.png/600px-LCD_STM32_CODE128.png" decoding="async" loading="lazy" width="600" height="597" srcset="/w/upload/thumb/9/92/LCD_STM32_CODE128.png/900px-LCD_STM32_CODE128.png 1.5x, /w/upload/9/92/LCD_STM32_CODE128.png 2x" /></a></dd></dl>
+<p>LCD_0in96_test() 0.96inch LCD test program<br />
+LCD_1in14_test() 1.14inch LCD test program<br />
+LCD_1in28_test() 1.28inch LCD test program<br />
+LCD_1in3_test() 1.3 inch LCD test program<br />
+LCD_1in54_test() 1.54inch LCD test program<br />
+LCD_1in8_test() 1.8inch LCD test program<br />
+LCD_2in_test() 2inch LCD test program<br />
+</p>
+<h2><span class="mw-headline" id="Program_Description">Program Description</span></h2>
+<h3><span class="mw-headline" id="Underlying_hardware_interface">Underlying hardware interface</span></h3>
+<ul><li>Data type</li></ul>
+<pre>#define UBYTE      uint8_t
+#define UWORD      uint16_t
+#define UDOUBLE    uint32_t
+</pre>
+<ul><li>Module initialization and exit processing</li></ul>
+<pre>UBYTE	System_Init(void);
+void    System_Exit(void);
+Note: 
+1. Here is some GPIO processing before and after using the LCD screen.
+2. After the System_Exit(void) function is used, the OLED display will be turned off;
+</pre>
+<ul><li>Write and read GPIO</li></ul>
+<pre>void 	DEV_Digital_Write(UWORD Pin, UBYTE Value);
+UBYTE 	DEV_Digital_Read(UWORD Pin);
+</pre>
+<ul><li>SPI writes data</li></ul>
+<pre>UBYTE	 SPI4W_Write_Byte(uint8_t value);
+</pre>
+<h3><span class="mw-headline" id="The_upper_application">The upper application</span></h3>
+<p>For the screen, if you need to draw pictures, display Chinese and English characters, display pictures, etc., you can use the upper application to do, and we provide some basic functions here about some graphics processing in the directory STM32\STM32F103RB\User\GUI_DEV\GUI_Paint.c(.h)<br />
+Note: Because of the size of the internal RAM of STM32 and Arduino, the GUI is directly written to the RAM of the LCD.<br />
+<a href="/wiki/File:LCD_rpi_GUI.png" class="image"><img alt="LCD rpi GUI.png" src="/w/upload/thumb/2/25/LCD_rpi_GUI.png/500px-LCD_rpi_GUI.png" decoding="async" loading="lazy" width="500" height="88" srcset="/w/upload/thumb/2/25/LCD_rpi_GUI.png/750px-LCD_rpi_GUI.png 1.5x, /w/upload/2/25/LCD_rpi_GUI.png 2x" /></a><br />
+The character font GUI dependent is in the directory STM32\STM32F103RB\User\Fonts<br />
+<a href="/wiki/File:LCD_rpi_Font.png" class="image"><img alt="LCD rpi Font.png" src="/w/upload/thumb/a/a6/LCD_rpi_Font.png/500px-LCD_rpi_Font.png" decoding="async" loading="lazy" width="500" height="171" srcset="/w/upload/a/a6/LCD_rpi_Font.png 1.5x" /></a><br />
+</p>
+<ul><li>New Image Properties: Create a new image property, this property includes the image buffer name, width, height, flip Angle, and color.<br /></li></ul>
+<pre>void Paint_NewImage(UWORD Width, UWORD Height, UWORD Rotate, UWORD Color)
+Parameters:
+    Width: image buffer Width;
+    Height: the Height of the image buffer;
+    Rotate: Indicates the rotation Angle of an image
+    Color: the initial Color of the image;
+</pre>
+<ul><li>Set the clear screen function, usually call the clear function of LCD directly.</li></ul>
+<pre>void Paint_SetClearFuntion(void (*Clear)(UWORD));
+parameter:
+    Clear: Pointer to the clear screen function used to quickly clear the screen to a certain color;
+</pre>
+<ul><li>Set the drawing pixel function</li></ul>
+<pre>void Paint_SetDisplayFuntion(void (*Display)(UWORD,UWORD,UWORD));
+parameter:
+    Display: Pointer to the pixel drawing function, which is used to write data to the specified location in the internal RAM of the LCD;
+</pre>
+<ul><li>Select image buffer: the purpose of the selection is that you can create multiple image attributes, image buffer can exist multiple, and you can select each image you create.</li></ul>
+<pre>void Paint_SelectImage(UBYTE *image)
+Parameters:
+    Image: the name of the image cache, which is actually a pointer to the first address of the image buffer
+</pre>
+<ul><li>Image Rotation: Set the selected image rotation Angle, preferably after Paint_SelectImage(), you can choose to rotate 0, 90, 180, 270.</li></ul>
+<pre>void Paint_SetRotate(UWORD Rotate)
+Parameters:
+    Rotate: ROTATE_0, ROTATE_90, ROTATE_180, and ROTATE_270 correspond to 0, 90, 180, and 270 degrees respectively;
+</pre>
+<ul><li>Image mirror flip: Set the mirror flip of the selected image. You can choose no mirror, horizontal mirror, vertical mirror, or image center mirror.</li></ul>
+<pre>void Paint_SetMirroring(UBYTE mirror)
+Parameters:
+    Mirror: indicates the image mirroring mode. MIRROR_NONE, MIRROR_HORIZONTAL, MIRROR_VERTICAL, MIRROR_ORIGIN correspond to no mirror, horizontal mirror, vertical mirror, and about image center mirror respectively.
+</pre>
+<ul><li>Set points of display position and color in the buffer: here is the core GUI function, processing points display position and color in the buffer.</li></ul>
+<pre>void Paint_SetPixel(UWORD Xpoint, UWORD Ypoint, UWORD Color)
+Parameters:
+    Xpoint: the X position of a point in the image buffer
+    Ypoint: Y position of a point in the image buffer
+    Color: indicates the Color of the dot
+</pre>
+<ul><li>Image buffer fill color: Fills the image buffer with a color, usually used to flash the screen into blank.</li></ul>
+<pre>void Paint_Clear(UWORD Color)
+Parameters:
+    Color: fill Color
+</pre>
+<ul><li>Image buffer part of the window filling color: the image buffer part of the window filled with a certain color, generally as a window whitewashing function, often used for time display, whitewashing on a second</li></ul>
+<pre>void Paint_ClearWindows(UWORD Xstart, UWORD Ystart, UWORD Xend, UWORD Yend, UWORD Color)
+Parameters:
+    Xstart: the x-starting coordinate of the window
+    Ystart: indicates the Y starting point of the window
+    Xend: the x-end coordinate of the window
+    Yend: indicates the y-end coordinate of the window
+    Color: fill Color
+</pre>
+<ul><li>Draw points: In the image buffer, draw points on (Xpoint, Ypoint), you can choose the color, the size of the point, and the style of the point.</li></ul>
+<pre>void Paint_DrawPoint(UWORD Xpoint, UWORD Ypoint, UWORD Color, DOT_PIXEL Dot_Pixel, DOT_STYLE Dot_Style)
+Parameters:
+    Xpoint: indicates the X coordinate of a point
+    Ypoint: indicates the Y coordinate of a point
+    Color: fill Color
+    Dot_Pixel: The size of the dot, providing a default of eight size points
+        typedef enum {
+            DOT_PIXEL_1X1   = 1,	// 1 x 1
+            DOT_PIXEL_2X2  , 		// 2 X 2
+            DOT_PIXEL_3X3  , 	 	// 3 X 3
+            DOT_PIXEL_4X4  , 	 	// 4 X 4
+            DOT_PIXEL_5X5  , 		// 5 X 5
+            DOT_PIXEL_6X6  , 		// 6 X 6
+            DOT_PIXEL_7X7  , 		// 7 X 7
+            DOT_PIXEL_8X8  , 		// 8 X 8
+        } DOT_PIXEL;
+    Dot_Style: the size of a point that expands from the center of the point or from the bottom left corner of the point to the right and up
+        typedef enum {
+            DOT_FILL_AROUND  = 1,
+            DOT_FILL_RIGHTUP,
+        } DOT_STYLE;
+</pre>
+<ul><li>Line drawing: In the image buffer, the line from (Xstart, Ystart) to (Xend, Yend), you can choose the color, line width, and line style.</li></ul>
+<pre>void Paint_DrawLine(UWORD Xstart, UWORD Ystart, UWORD Xend, UWORD Yend, UWORD Color, LINE_STYLE Line_Style ,  LINE_STYLE Line_Style)
+Parameters:
+    Xstart: the x-starting coordinate of a line
+    Ystart: indicates the Y starting point of a line
+    Xend: x-terminus of a line
+    Yend: the y-end coordinate of a line
+    Color: fill Color
+    Line_width: The width of the line, which provides a default of eight widths
+        typedef enum {
+            DOT_PIXEL_1X1   = 1,	// 1 x 1
+            DOT_PIXEL_2X2  , 		// 2 X 2
+            DOT_PIXEL_3X3  ,		// 3 X 3
+            DOT_PIXEL_4X4  ,		// 4 X 4
+            DOT_PIXEL_5X5  , 		// 5 X 5
+            DOT_PIXEL_6X6  , 		// 6 X 6
+            DOT_PIXEL_7X7  , 		// 7 X 7
+            DOT_PIXEL_8X8  , 		// 8 X 8
+        } DOT_PIXEL;
+    Line_Style: line style. Select whether the lines are joined in a straight or dashed way
+        typedef enum {
+            LINE_STYLE_SOLID = 0,
+            LINE_STYLE_DOTTED,
+        } LINE_STYLE;
+</pre>
+<ul><li>Draw a rectangle: In the image buffer, draw a rectangle from (Xstart, Ystart) to (Xend, Yend), you can choose the color, the width of the line, and whether to fill the inside of the rectangle.</li></ul>
+<pre>void Paint_DrawRectangle(UWORD Xstart, UWORD Ystart, UWORD Xend, UWORD Yend, UWORD Color, DOT_PIXEL Line_width,  DRAW_FILL Draw_Fill)
+Parameters:
+        Xstart: the starting X coordinate of the rectangle
+        Ystart: indicates the Y starting point of the rectangle
+        Xend: X terminus of the rectangle
+        Yend: specifies the y-end coordinate of the rectangle
+        Color: fill Color
+        Line_width: The width of the four sides of a rectangle. Default eight widths are provided
+            typedef enum {
+                DOT_PIXEL_1X1   = 1,	// 1 x 1
+                DOT_PIXEL_2X2  , 		// 2 X 2
+                DOT_PIXEL_3X3  ,		// 3 X 3
+                DOT_PIXEL_4X4  ,		// 4 X 4
+                DOT_PIXEL_5X5  , 		// 5 X 5
+                DOT_PIXEL_6X6  , 		// 6 X 6
+                DOT_PIXEL_7X7  , 		// 7 X 7
+                DOT_PIXEL_8X8  , 		// 8 X 8
+            } DOT_PIXEL;
+        Draw_Fill: Fill, whether to fill the inside of the rectangle
+            typedef enum {
+                DRAW_FILL_EMPTY = 0,
+                DRAW_FILL_FULL,
+            } DRAW_FILL;
+</pre>
+<ul><li>Draw circle: In the image buffer, draw a circle of Radius with (X_Center Y_Center) as the center. You can choose the color, the width of the line, and whether to fill the inside of the circle.</li></ul>
+<pre>void Paint_DrawCircle(UWORD X_Center, UWORD Y_Center, UWORD Radius, UWORD Color, DOT_PIXEL Line_width,  DRAW_FILL Draw_Fill)
+Parameters:
+    X_Center: the x-coordinate of the center of a circle
+    Y_Center: Y coordinate of the center of a circle
+    Radius: indicates the Radius of a circle
+    Color: fill Color
+    Line_width: The width of the arc, with a default of 8 widths
+        typedef enum {
+            DOT_PIXEL_1X1  = 1,	        // 1 x 1
+            DOT_PIXEL_2X2  , 		// 2 X 2
+            DOT_PIXEL_3X3  ,		// 3 X 3
+            DOT_PIXEL_4X4  ,		// 4 X 4
+            DOT_PIXEL_5X5  , 		// 5 X 5
+            DOT_PIXEL_6X6  , 		// 6 X 6
+            DOT_PIXEL_7X7  , 		// 7 X 7
+            DOT_PIXEL_8X8  , 		// 8 X 8
+        } DOT_PIXEL;
+    Draw_Fill: fill, whether to fill the inside of the circle
+        typedef enum {
+            DRAW_FILL_EMPTY = 0,
+            DRAW_FILL_FULL,
+        } DRAW_FILL;
+</pre>
+<ul><li>Write Ascii character: In the image buffer, at (Xstart Ystart) as the left vertex, write an Ascii character, you can select Ascii visual character library, font foreground color, and font background color.</li></ul>
+<pre>void Paint_DrawChar(UWORD Xstart, UWORD Ystart, const char Ascii_Char, sFONT* Font, UWORD Color_Foreground,  UWORD Color_Background)
+Parameters:
+    Xstart: the x-coordinate of the left vertex of a character
+    Ystart: the Y coordinate of the font's left vertex
+    Ascii_Char: indicates the Ascii character
+    Font: Ascii visual character library, in the Fonts folder provides the following Fonts:
+        Font8: 5*8 font
+        Font12: 7*12 font
+        Font16: 11*16 font
+        Font20: 14*20 font
+        Font24: 17*24 font
+    Color_Foreground: Font color
+    Color_Background: indicates the background color
+</pre>
+<ul><li>Write English string: In the image buffer, use (Xstart Ystart) as the left vertex, write a string of English characters, can choose Ascii visual character library, font foreground color, and font background color.</li></ul>
+<pre>void Paint_DrawString_EN(UWORD Xstart, UWORD Ystart, const char * pString, sFONT* Font, UWORD Color_Foreground,  UWORD Color_Background)
+Parameters:
+    Xstart: the x-coordinate of the left vertex of a character
+    Ystart: the Y coordinate of the font's left vertex
+    PString: string, string is a pointer
+    Font: Ascii visual character library, in the Fonts folder provides the following Fonts:
+        Font8: 5*8 font
+        Font12: 7*12 font
+        Font16: 11*16 font
+        Font20: 14*20 font
+        Font24: 17*24 font
+     Color_Foreground: Font color
+     Color_Background: indicates the background color
+</pre>
+<ul><li>Write Chinese string: in the image buffer, use (Xstart Ystart) as the left vertex, and write a string of Chinese characters, you can choose GB2312 encoding character font, font foreground color, and font background color.</li></ul>
+<pre>void Paint_DrawString_CN(UWORD Xstart, UWORD Ystart, const char * pString, cFONT* font, UWORD Color_Foreground,  UWORD Color_Background)
+Parameters:
+    Xstart: the x-coordinate of the left vertex of a character
+    Ystart: the Y coordinate of the font's left vertex
+    PString: string, string is a pointer
+    Font: GB2312 encoding character Font library, in the Fonts folder provides the following Fonts:
+        Font12CN: ASCII font 11*21, Chinese font 16*21
+        Font24CN: ASCII font24 *41, Chinese font 32*41
+    Color_Foreground: Font color
+    Color_Background: indicates the background color
+</pre>
+<ul><li>Write numbers: In the image buffer, use (Xstart Ystart) as the left vertex, and write a string of numbers, you can choose Ascii visual character library, font foreground color, or font background color.</li></ul>
+<pre>void Paint_DrawNum(UWORD Xpoint, UWORD Ypoint, double Nummber, sFONT* Font, UWORD Digit, UWORD Color_Foreground,   UWORD Color_Background)
+Parameters:
+    Xpoint: the x-coordinate of the left vertex of a character
+    Ypoint: the Y coordinate of the left vertex of the font
+    Nummber: indicates the number displayed, which can be a decimal
+    Digit: It's a decimal number
+    Font: Ascii visual character library, in the Fonts folder provides the following Fonts:
+        Font8: 5*8 font
+        Font12: 7*12 font
+        Font16: 11*16 font
+        Font20: 14*20 font
+        Font24: 17*24 font
+    Color_Foreground: Font color
+    Color_Background: indicates the background color
+</pre>
+<ul><li>Display time: in the image buffer, use (Xstart Ystart) as the left vertex, display time, you can choose Ascii visual character font, font foreground color, and font background color.</li></ul>
+<pre>void Paint_DrawTime(UWORD Xstart, UWORD Ystart, PAINT_TIME *pTime, sFONT* Font, UWORD Color_Background,  UWORD Color_Foreground)
+Parameters:
+    Xstart: the x-coordinate of the left vertex of a character
+    Ystart: the Y coordinate of the font's left vertex
+    PTime: display time, here defined a good time structure, as long as the hour, minute and second bits of data to the parameter;
+    Font: Ascii visual character library, in the Fonts folder provides the following Fonts:
+        Font8: 5*8 font
+        Font12: 7*12 font
+        Font16: 11*16 font
+        Font20: 14*20 font
+        Font24: 17*24 font
+    Color_Foreground: Font color
+    Color_Background: indicates the background color
+</pre>
+<h1><span class="mw-headline" id="Arduino_Software_Description">Arduino Software Description</span></h1>
+<p>Note: The demos are all tested on Arduino uno. If you need other types of Arduino, you need to determine whether the connected pins are correct. <br />
+</p>
+<h2><span class="mw-headline" id="Arduino_IDE_Installation_Steps">Arduino IDE Installation Steps</span></h2>
+<p><a href="/wiki/Template:Arduino_IDE_Installation_Steps" title="Template:Arduino IDE Installation Steps">Arduino IDE Installation Steps</a>
+</p>
+<h2><span class="mw-headline" id="Run_program">Run program</span></h2>
+<p>In the product encyclopedia interface download <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/upload/e/e9/LCD_Module_code.7z">the program</a>, and then unzip it. The Arduino program is located at ~/Arduino/… <br />
+<a href="/wiki/File:LCD_arduino_cede1.png" class="image"><img alt="LCD arduino cede1.png" src="/w/upload/7/7a/LCD_arduino_cede1.png" decoding="async" loading="lazy" width="700" height="151" /></a><br />
+</p><p>Please select the corresponding program according to the LCD screen model to open.<br />
+<a href="/wiki/File:1.28inch_LCD_Arduino.png" class="image"><img alt="1.28inch LCD Arduino.png" src="/w/upload/1/16/1.28inch_LCD_Arduino.png" decoding="async" loading="lazy" width="700" height="281" /></a><br />
+You can view test programs for all screen sizes, sorted by size:<br />
+</p><p><br />
+For example, a 1.54-inch LCD Module. Open the LCD_1inch54 folder and run the LCD_1inch54.ino file. <br />
+Open the program, and select the development board model Arduino UNO.<br />
+<a href="/wiki/File:Arduino_for_1.69inch_lcd_module03.jpg" class="image"><img alt="Arduino for 1.69inch lcd module03.jpg" src="/w/upload/f/f5/Arduino_for_1.69inch_lcd_module03.jpg" decoding="async" loading="lazy" width="700" height="645" /></a><br />
+Select the corresponding COM port.<br />
+<a href="/wiki/File:Arduino_for_1.69inch_lcd_module04.jpg" class="image"><img alt="Arduino for 1.69inch lcd module04.jpg" src="/w/upload/f/fa/Arduino_for_1.69inch_lcd_module04.jpg" decoding="async" loading="lazy" width="700" height="484" /></a><br />
+Then click to compile and download.<br />
+<a href="/wiki/File:LCD_arduino_cede5.png" class="image"><img alt="LCD arduino cede5.png" src="/w/upload/thumb/2/25/LCD_arduino_cede5.png/700px-LCD_arduino_cede5.png" decoding="async" loading="lazy" width="700" height="713" srcset="/w/upload/2/25/LCD_arduino_cede5.png 1.5x" /></a><br />
+</p>
+<h2><span class="mw-headline" id="Program_Description_2">Program Description</span></h2>
+<h3><span class="mw-headline" id="Document_Introduction">Document Introduction</span></h3>
+<p>Take Arduino UNO controlling a 1.54-inch LCD as an example, open the Arduino\LCD_1inch54 directory:<br />
+<a href="/wiki/File:LCD_arduino_ide_codeDescription1.png" class="image"><img alt="LCD arduino ide codeDescription1.png" src="/w/upload/4/4f/LCD_arduino_ide_codeDescription1.png" decoding="async" loading="lazy" width="800" height="446" /></a><br />
+Of which: <br />
+LCD_1inch54.ino: open with Arduino IDE;<br />
+LCD_Driver.cpp(.h): is the driver of the LCD screen;<br />
+DEV_Config.cpp(.h): It is the hardware interface definition, which encapsulates the read and write pin levels, SPI transmission data, and pin initialization;<br />
+font8.cpp, font12.cpp, font16.cpp, font20.cpp, font24.cpp, font24CN.cpp, fonts.h: fonts for characters of different sizes;<br />
+image.cpp(.h): is the image data, which can convert any BMP image into a 16-bit true color image array through Img2Lcd (downloadable in the development data). <br />
+The program is divided into bottom-layer hardware interface, middle-layer LCD screen driver, and upper-layer application;<br />
+</p>
+<h3><span class="mw-headline" id="Underlying_Hardware_Interface_2">Underlying Hardware Interface</span></h3>
+<p>The hardware interface is defined in the two files DEV_Config.cpp(.h), and functions such as read and write pin level, delay, and SPI transmission are encapsulated. <br />
+</p>
+<ul><li>write pin level</li></ul>
+<pre>void DEV_Digital_Write(int pin, int value)
+</pre>
+<p>The first parameter is the pin, and the second is the high and low level. <br />
+</p>
+<ul><li>Read pin level</li></ul>
+<pre>int DEV_Digital_Read(int pin)
+</pre>
+<p>The parameter is the pin, and the return value is the level of the read pin. <br />
+</p>
+<ul><li>Delay</li></ul>
+<pre>DEV_Delay_ms(unsigned int delaytime)
+</pre>
+<p>millisecond level delay. <br />
+</p>
+<ul><li>SPI output data</li></ul>
+<pre>DEV_SPI_WRITE(unsigned char data)
+</pre>
+<p>The parameter is char type, occupying 8 bits. <br />
+</p>
+<h3><span class="mw-headline" id="The_Upper_Application_2">The Upper Application</span></h3>
+<p>For the screen, if you need to draw pictures, display Chinese and English characters, display pictures, etc., you can use the upper application to do, and we provide some basic functions here about some graphics processing in the directory GUI_Paint.c(.h)<br />
+Note: Because of the size of the internal RAM of STM32 and Arduino, the GUI is directly written to the RAM of the LCD. <br />
+<a href="/wiki/File:LCD_arduino_ide_codeDescription_GUI.png" class="image"><img alt="LCD arduino ide codeDescription GUI.png" src="/w/upload/thumb/4/49/LCD_arduino_ide_codeDescription_GUI.png/700px-LCD_arduino_ide_codeDescription_GUI.png" decoding="async" loading="lazy" width="700" height="390" srcset="/w/upload/4/49/LCD_arduino_ide_codeDescription_GUI.png 1.5x" /></a><br />
+The fonts used by the GUI all depend on the font*.cpp(h) files under the same file<br />
+<a href="/wiki/File:LCD_arduino_ide_codeDescription_font.png" class="image"><img alt="LCD arduino ide codeDescription font.png" src="/w/upload/thumb/2/2a/LCD_arduino_ide_codeDescription_font.png/700px-LCD_arduino_ide_codeDescription_font.png" decoding="async" loading="lazy" width="700" height="390" srcset="/w/upload/2/2a/LCD_arduino_ide_codeDescription_font.png 1.5x" /></a><br />
+</p>
+<ul><li>New Image Properties: Create a new image property, this property includes the image buffer name, width, height, flip Angle, and color.</li></ul>
+<pre>void Paint_NewImage(UWORD Width, UWORD Height, UWORD Rotate, UWORD Color)
+Parameters:
+    Width: image buffer Width;
+    Height: the Height of the image buffer;
+    Rotate: Indicates the rotation Angle of an image
+    Color: the initial Color of the image;
+</pre>
+<ul><li>Set the clear screen function, usually call the clear function of LCD directly.</li></ul>
+<pre>void Paint_SetClearFuntion(void (*Clear)(UWORD));
+parameter:
+    Clear: Pointer to the clear screen function, used to quickly clear the screen to a certain color;
+</pre>
+<ul><li>Set the drawing pixel function.</li></ul>
+<pre>void Paint_SetDisplayFuntion(void (*Display)(UWORD,UWORD,UWORD));
+parameter:
+    Display: Pointer to the pixel drawing function, which is used to write data to the specified location in the internal RAM of the LCD;
+</pre>
+<ul><li>Select image buffer: the purpose of the selection is that you can create multiple image attributes, image buffers can exist multiple, and you can select each image you create.</li></ul>
+<pre>void Paint_SelectImage(UBYTE *image)
+Parameters:
+    Image: the name of the image cache, which is actually a pointer to the first address of the image buffer
+</pre>
+<ul><li>Image Rotation: Set the selected image rotation Angle, preferably after Paint_SelectImage(), you can choose to rotate 0, 90, 180, 270.</li></ul>
+<pre>void Paint_SetRotate(UWORD Rotate)
+Parameters:
+    Rotate: ROTATE_0, ROTATE_90, ROTATE_180, and ROTATE_270 correspond to 0, 90, 180, and 270 degrees respectively;
+</pre>
+<ul><li>Image mirror flip: Set the mirror flip of the selected image. You can choose no mirror,  horizontal mirror, vertical mirror, or image center mirror.</li></ul>
+<pre>void Paint_SetMirroring(UBYTE mirror)
+Parameters:
+    Mirror: indicates the image mirroring mode. MIRROR_NONE, MIRROR_HORIZONTAL, MIRROR_VERTICAL, MIRROR_ORIGIN correspond to no mirror, horizontal mirror, vertical mirror, and about image center mirror respectively.
+</pre>
+<ul><li>Set points of display position and color in the buffer: here is the core GUI function, processing points display position and color in the buffer.</li></ul>
+<pre>void Paint_SetPixel(UWORD Xpoint, UWORD Ypoint, UWORD Color)
+Parameters:
+    Xpoint: the X position of a point in the image buffer
+    Ypoint: Y position of a point in the image buffer
+    Color: indicates the Color of the dot
+</pre>
+<ul><li>Image buffer fill color: Fills the image buffer with a color, usually used to flash the screen into blank.</li></ul>
+<pre>void Paint_ClearWindows(UWORD Xstart, UWORD Ystart, UWORD Xend, UWORD Yend, UWORD Color)
+Parameters:
+    Xstart: the x-starting coordinate of the window
+    Ystart: indicates the Y starting point of the window
+    Xend: the x-end coordinate of the window
+    Yend: indicates the y-end coordinate of the window
+    Color: fill Color
+</pre>
+<ul><li>Draw points: In the image buffer, draw points on (Xpoint, Ypoint), you can choose the color, the size of the point, the style of the point.</li></ul>
+<pre>void Paint_DrawPoint(UWORD Xpoint, UWORD Ypoint, UWORD Color, DOT_PIXEL Dot_Pixel, DOT_STYLE Dot_Style)
+Parameters:
+    Xpoint: indicates the X coordinate of a point
+    Ypoint: indicates the Y coordinate of a point
+    Color: fill Color
+    Dot_Pixel: The size of the dot, providing a default of eight size points
+        typedef enum {
+                DOT_PIXEL_1X1  = 1,	        // 1 x 1
+                DOT_PIXEL_2X2  , 		// 2 X 2
+                DOT_PIXEL_3X3  , 	 	// 3 X 3
+                DOT_PIXEL_4X4  , 	 	// 4 X 4
+                DOT_PIXEL_5X5  , 		// 5 X 5
+                DOT_PIXEL_6X6  , 		// 6 X 6
+                DOT_PIXEL_7X7  , 		// 7 X 7
+                DOT_PIXEL_8X8  , 		// 8 X 8
+        } DOT_PIXEL;
+    Dot_Style: the size of a point that expands from the center of the point or from the bottom left corner of the point to the right and up
+        typedef enum {
+                DOT_FILL_AROUND  = 1,
+                DOT_FILL_RIGHTUP,
+        } DOT_STYLE;
+</pre>
+<ul><li>Line drawing: In the image buffer, a line from (Xstart, Ystart) to (Xend, Yend), you can choose the color, line width, and line style.</li></ul>
+<pre>void Paint_DrawLine(UWORD Xstart, UWORD Ystart, UWORD Xend, UWORD Yend, UWORD Color, LINE_STYLE Line_Style ,  LINE_STYLE Line_Style)
+Parameters:
+        Xstart: the x-starting coordinate of a line
+        Ystart: indicates the Y starting point of a line
+        Xend: x-terminus of a line
+        Yend: the y-end coordinate of a line
+        Color: fill Color
+        Line_width: The width of the line, which provides a default of eight widths
+                typedef enum {
+                        DOT_PIXEL_1X1  = 1,	        // 1 x 1
+                        DOT_PIXEL_2X2  , 		// 2 X 2
+                        DOT_PIXEL_3X3  ,		// 3 X 3
+                        DOT_PIXEL_4X4  ,		// 4 X 4
+                        DOT_PIXEL_5X5  , 		// 5 X 5
+                        DOT_PIXEL_6X6  , 		// 6 X 6
+                        DOT_PIXEL_7X7  , 		// 7 X 7
+                        DOT_PIXEL_8X8  , 		// 8 X 8
+                    } DOT_PIXEL;
+        Line_Style: line style. Select whether the lines are joined in a straight or dashed way
+                typedef enum {
+                        LINE_STYLE_SOLID = 0,
+                        LINE_STYLE_DOTTED,
+                } LINE_STYLE;
+</pre>
+<ul><li>Draw a rectangle: In the image buffer, draw a rectangle from (Xstart, Ystart) to (Xend, Yend), you can choose the color, the width of the line, and whether to fill the inside of the rectangle.</li></ul>
+<pre>void Paint_DrawRectangle(UWORD Xstart, UWORD Ystart, UWORD Xend, UWORD Yend, UWORD Color, DOT_PIXEL Line_width,  DRAW_FILL Draw_Fill)
+Parameters:
+        Xstart: the starting X coordinate of the rectangle
+        Ystart: indicates the Y starting point of the rectangle
+        Xend: X terminus of the rectangle
+        Yend: specifies the y-end coordinate of the rectangle
+        Color: fill Color
+        Line_width: The width of the four sides of a rectangle. Default eight widths are provided
+        typedef enum {
+                DOT_PIXEL_1X1  = 1,	        // 1 x 1
+                DOT_PIXEL_2X2  , 		// 2 X 2
+                DOT_PIXEL_3X3  ,		// 3 X 3
+                DOT_PIXEL_4X4  ,		// 4 X 4
+                DOT_PIXEL_5X5  , 		// 5 X 5
+                DOT_PIXEL_6X6  , 		// 6 X 6
+                DOT_PIXEL_7X7  , 		// 7 X 7
+                DOT_PIXEL_8X8  , 		// 8 X 8
+        } DOT_PIXEL;
+        Draw_Fill: Fill, whether to fill the inside of the rectangle
+        typedef enum {
+                DRAW_FILL_EMPTY = 0,
+                DRAW_FILL_FULL,
+        } DRAW_FILL;
+</pre>
+<ul><li>Draw circle: In the image buffer, draw a circle of Radius with (X_Center Y_Center) as the center. You can choose the color, the width of the line, and whether to fill the inside of the circle.</li></ul>
+<pre>void Paint_DrawCircle(UWORD X_Center, UWORD Y_Center, UWORD Radius, UWORD Color, DOT_PIXEL Line_width,  DRAW_FILL Draw_Fill)
+Parameters:
+        X_Center: the x-coordinate of the center of a circle
+        Y_Center: Y coordinate of the center of a circle
+        Radius: indicates the Radius of a circle
+        Color: fill Color
+        Line_width: The width of the arc, with a default of 8 widths
+        typedef enum {
+                DOT_PIXEL_1X1  = 1,	        // 1 x 1
+                DOT_PIXEL_2X2  , 		// 2 X 2
+                DOT_PIXEL_3X3  ,		// 3 X 3
+                DOT_PIXEL_4X4  ,		// 4 X 4
+                DOT_PIXEL_5X5  , 		// 5 X 5
+                DOT_PIXEL_6X6  , 		// 6 X 6
+                DOT_PIXEL_7X7  , 		// 7 X 7
+                DOT_PIXEL_8X8  , 		// 8 X 8
+        } DOT_PIXEL;
+        Draw_Fill: fill, whether to fill the inside of the circle
+        typedef enum {
+                DRAW_FILL_EMPTY = 0,
+                DRAW_FILL_FULL,
+        } DRAW_FILL;
+</pre>
+<ul><li>Write Ascii character: In the image buffer, at (Xstart Ystart) as the left vertex, write an Ascii character, you can select Ascii visual character library, font foreground color, and font background color.</li></ul>
+<pre>void Paint_DrawChar(UWORD Xstart, UWORD Ystart, const char Ascii_Char, sFONT* Font, UWORD Color_Foreground,  UWORD Color_Background)
+Parameters:
+        Xstart: the x-coordinate of the left vertex of a character
+        Ystart: the Y coordinate of the font's left vertex
+        Ascii_Char: indicates the Ascii character
+        Font: Ascii visual character library, in the Fonts folder provides the following Fonts:
+                Font8: 5*8 font
+                Font12: 7*12 font
+                Font16: 11*16 font
+                Font20: 14*20 font
+                Font24: 17*24 font
+        Color_Foreground: Font color
+        Color_Background: indicates the background color
+</pre>
+<ul><li>Write English string: In the image buffer, use (Xstart Ystart) as the left vertex, write a string of English characters, can choose Ascii visual character library, font foreground color, and font background color.</li></ul>
+<pre>void Paint_DrawString_EN(UWORD Xstart, UWORD Ystart, const char * pString, sFONT* Font, UWORD Color_Foreground,  UWORD Color_Background)
+Parameters:
+        Xstart: the x-coordinate of the left vertex of a character
+        Ystart: the Y coordinate of the font's left vertex
+        PString: string, string is a pointer
+        Font: Ascii visual character library, in the Fonts folder provides the following Fonts:
+                Font8: 5*8 font
+                Font12: 7*12 font
+                Font16: 11*16 font
+                Font20: 14*20 font
+                Font24: 17*24 font
+        Color_Foreground: Font color
+        Color_Background: indicates the background color
+</pre>
+<ul><li>Write Chinese string: in the image buffer, use (Xstart Ystart) as the left vertex, and write a string of Chinese characters, you can choose GB2312 encoding character font, font foreground color, and font background color.</li></ul>
+<pre>void Paint_DrawString_CN(UWORD Xstart, UWORD Ystart, const char * pString, cFONT* font, UWORD Color_Foreground,  UWORD Color_Background)
+Parameters:
+        Xstart: the x-coordinate of the left vertex of a character
+        Ystart: the Y coordinate of the font's left vertex
+        PString: string, string is a pointer
+        Font: GB2312 encoding character Font library, in the Fonts folder provides the following Fonts:
+                Font12CN: ASCII font 11*21, Chinese font 16*21
+                Font24CN: ASCII font24 *41, Chinese font 32*41
+                Color_Foreground: Font color
+                Color_Background: indicates the background color
+</pre>
+<ul><li>Write numbers: In the image buffer, use (Xstart Ystart) as the left vertex, and write a string of numbers, you can choose Ascii visual character library, font foreground color, or font background color.</li></ul>
+<pre>void Paint_DrawNum(UWORD Xpoint, UWORD Ypoint, double Nummber, sFONT* Font, UWORD Digit, UWORD Color_Foreground,   UWORD Color_Background)
+Parameters:
+        Xpoint: the x-coordinate of the left vertex of a character
+        Ypoint: the Y coordinate of the left vertex of the font
+        Nummber: indicates the number displayed, which can be a decimal
+        Digit: It's a decimal number
+        Font: Ascii visual character library, in the Fonts folder provides the following Fonts:
+                Font8: 5*8 font
+                Font12: 7*12 font
+                Font16: 11*16 font
+                Font20: 14*20 font
+                Font24: 17*24 font
+        Color_Foreground: Font color
+        Color_Background: indicates the background color
+</pre>
+<ul><li>Write numbers with decimals: at (Xstart Ystart) as the left vertex, write a string of numbers with decimals, you can choose Ascii code visual character font, font foreground color, font background color</li></ul>
+<pre>void Paint_DrawFloatNum(UWORD Xpoint, UWORD Ypoint, double Nummber, UBYTE Decimal_Point, sFONT* Font, UWORD Color_Foreground, UWORD Color_Background);
+parameter:
+         Xstart: the X coordinate of the left vertex of the character
+         Ystart: Y coordinate of the left vertex of the font
+         Nummber: the displayed number, which is saved in double type here
+         Decimal_Point: Displays the number of digits after the decimal point
+         Font: Ascii code visual character font library, the following fonts are provided in the Fonts folder:
+                Font8: 5*8 font
+                Font12: 7*12 font
+                Font16: 11*16 font
+                Font20: 14*20 font
+                Font24: 17*24 font
+        Color_Foreground: font color
+        Color_Background: background color
+</pre>
+<ul><li>Display time: in the image buffer, use (Xstart Ystart) as the left vertex, display time, you can choose Ascii visual character font, font foreground color, and font background color.</li></ul>
+<pre>void Paint_DrawTime(UWORD Xstart, UWORD Ystart, PAINT_TIME *pTime, sFONT* Font, UWORD Color_Background,  UWORD Color_Foreground)
+Parameters:
+        Xstart: the x-coordinate of the left vertex of a character
+        Ystart: the Y coordinate of the font's left vertex
+        PTime: display time, here defined as a good time structure, as long as the hour, minute, and second bits of data to the parameter;
+        Font: Ascii visual character library, in the Fonts folder provides the following Fonts:
+                Font8: 5*8 font
+                Font12: 7*12 font
+                Font16: 11*16 font
+                Font20: 14*20 font
+                Font24: 17*24 font
+        Color_Foreground: Font color
+        Color_Background: indicates the background color
+</pre>
+<ul><li>Display image: at (Xstart Ystart) as the left vertex, display an image whose width is W_Image and height is H_Image;</li></ul>
+<pre>void Paint_DrawImage(const unsigned char *image, UWORD xStart, UWORD yStart, UWORD W_Image, UWORD H_Image)
+parameter:
+       image: image address, pointing to the image information you want to display
+       Xstart: the X coordinate of the left vertex of the character
+       Ystart: Y coordinate of the left vertex of the font
+       W_Image: Image width
+       H_Image: Image height
+</pre>
+<div class="tabbertab" title="Resources">
+<h1><span class="mw-headline" id="VisionFive2">VisionFive2</span></h1>
+<h2><span class="mw-headline" id="Adaptive_Model">Adaptive Model</span></h2>
+<ul><li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.waveshare.com/0.96inch-lcd-module.htm">0.96inch LCD Module</a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.waveshare.com/1.14inch-lcd-module.htm">1.14inch LCD Module</a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.waveshare.com/1.28inch-lcd-module.htm">1.28inch LCD Module</a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.waveshare.com/1.3inch-lcd-module.htm">1.3inch LCD Module</a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.waveshare.com/1.54inch-lcd-module.htm">1.54inch LCD Module</a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.waveshare.com/1.8inch-lcd-module.htm">1.8inch LCD Module</a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.waveshare.com/2inch-lcd-module.htm">2inch LCD Module</a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.waveshare.com/2.4inch-lcd-module.htm">2.4inch LCD Module</a></li></ul>
+<h2><span class="mw-headline" id="Hardware_Connection">Hardware Connection</span></h2>
+<p><a href="/wiki/File:LCD_VisionFive201.jpg" class="image"><img alt="LCD VisionFive201.jpg" src="/w/upload/b/bf/LCD_VisionFive201.jpg" decoding="async" loading="lazy" width="960" height="600" /></a>
+</p>
+<table border="1;" style="width:700px;" align="center">
+<caption>VisionFive2 Pin Connection
+</caption>
+<tbody><tr style="background:green; color:white;" align="center">
+<td>LCD</td>
+<td>VisionFive2 Board Pin No.
+</td></tr>
+<tr align="center">
+<td>VCC</td>
+<td>3.3V
+</td></tr>
+<tr align="center">
+<td>GND</td>
+<td>GND
+</td></tr>
+<tr align="center">
+<td>DIN</td>
+<td>19
+</td></tr>
+<tr align="center">
+<td>CLK</td>
+<td>23
+</td></tr>
+<tr align="center">
+<td>CS</td>
+<td>24
+</td></tr>
+<tr align="center">
+<td>DC</td>
+<td>22
+</td></tr>
+<tr align="center">
+<td>RST</td>
+<td>13
+</td></tr>
+<tr align="center">
+<td>BL</td>
+<td>12
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Install_Corresponding_Libraries">Install Corresponding Libraries</span></h2>
+<pre>apt-get install pip
+pip install VisionFive.gpio
+apt-get install python3-numpy
+apt-get install python3-pil
+</pre>
+<h2><span class="mw-headline" id="Demo_Download">Demo Download</span></h2>
+<pre>apt-get install p7zip-full
+wget https://files.waveshare.com/upload/e/e9/LCD_Module_code.7z
+7z x LCD_Module_code.7z -o./LCD_Module_code
+cd LCD_Module_code/VisionFive/python/example/
+</pre>
+<h2><span class="mw-headline" id="Run_the_Corresponding_Demo_According_to_the_Screen_You_Purchased">Run the Corresponding Demo According to the Screen You Purchased</span></h2>
+<pre>python3 0inch96_LCD_test.py
+python3 1inch14_LCD_test.py
+python3 1inch28_LCD_test.py
+python3 1inch3_LCD_test.py
+python3 1inch54_LCD_test.py
+python3 1inch8_LCD_test.py
+python3 2inch_LCD_test.py
+python3 2inch4_LCD_test.py
+</pre>
+<h1><span class="mw-headline" id="Resources">Resources</span></h1>
+<h2><span class="mw-headline" id="Document">Document</span></h2>
+<ul><li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/upload/e/ee/2inch_LCD_Module_SchDoc.pdf">Schematic</a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/upload/a/ad/ST7789VW.pdf">Datasheet</a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/upload/b/b1/2inch_LCD_Module.pdf">2inch_LCD_Module Manual</a></li></ul>
+<h2><span class="mw-headline" id="Software">Software</span></h2>
+<ul><li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/upload/7/78/LcmZimo.zip">lcd</a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/upload/b/bd/Image2Lcd2.9.zip">Image2Lcd</a></li></ul>
+<h2><span class="mw-headline" id="Demo_codes">Demo codes</span></h2>
+<ul><li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/upload/8/8d/LCD_Module_code.zip">Demo codes</a><br /></li></ul>
+<h2><span class="mw-headline" id="2D_Drawing">2D Drawing</span></h2>
+<ul><li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/upload/6/6d/2inch_LCD_Module_2D_Drawing.pdf">2inch LCD Module 2D drawing</a></li></ul>
+<h2><span class="mw-headline" id="3D_Drawings">3D Drawings</span></h2>
+<ul><li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/wiki/2inch_LCD_Module/2inch_LCD_Module_3D_Drawing.zip">2inch LCD Module 3D drawing</a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/wiki/2inch_LCD_Module/2inch_LCD_Module_Preview.zip">2inch LCD Module 3D preview</a></li></ul>
+<h1><span class="mw-headline" id="FAQ">FAQ</span></h1>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#accordion1">
+								<b>Question:</b> The LCD keeps black when using it with Raspberry Pi?
+
+							</a>
+						</h4>
+					</div>
+					<div id="accordion1" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&#160;<b>Answer:</b></div>
+<div> 
+<p>a) Please check if you have enabled the SPI interface.<br />
+b) Check the BL pin, if the BL pin has no output value, you can try to disconnect the BL pin and test it again.
+</p>
+</div>
+<div style="display:none;">{{{3}}}</div>
+<div style="display:none;">{{{4}}}</div>
+<p><font color="red" style="display:none;">{{{5}}}</font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br />
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#accordion2">
+								<b>Question:</b> The python codes has error?
+
+							</a>
+						</h4>
+					</div>
+					<div id="accordion2" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&#160;<b>Answer:</b></div>
+<div>
+<p>Please install image libraries and test them again. Run the command: <b>sudo apt-get install python-imaging</b> to install it and test again.
+</p>
+</div>
+<div style="display:none;">{{{3}}}</div>
+<div style="display:none;">{{{4}}}</div>
+<p><font color="red" style="display:none;">{{{5}}}</font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br />
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#accordion3">
+								<b>Question:</b> Why doesn't the screen display properly when connected to an Arduino?
+
+							</a>
+						</h4>
+					</div>
+					<div id="accordion3" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&#160;<b>Answer:</b></div>
+<div>
+<p>When using an Arduino, please make sure it is plugged into a 5v power supply.
+</p>
+</div>
+<div style="display:none;">{{{3}}}</div>
+<div style="display:none;">{{{4}}}</div>
+<p><font color="red" style="display:none;">{{{5}}}</font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br />
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#accordion4">
+								<b>Question:</b> Incorrect use of Raspberry Pi controls may cause?
+
+							</a>
+						</h4>
+					</div>
+					<div id="accordion4" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&#160;<b>Answer:</b></div>
+<div>
+<p>If running the wiringPi demo is normal, then running Python or BCM2835 may cause the screen to fail to refresh normally, because the bcm2835 library is a library function of the Raspberry Pi CPU chip, and the bottom layer directly operates the registers, while the bottom layer of the wiringPi library and python are read and written by reading and writing. The device file of the Linux system operates the device, which may cause the GPIO port to be abnormal. Restarting the Raspberry Pi can solve it perfectly.
+</p>
+</div>
+<div style="display:none;">{{{3}}}</div>
+<div style="display:none;">{{{4}}}</div>
+<p><font color="red" style="display:none;">{{{5}}}</font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br />
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#accordion5">
+								<b>Question:</b> How to flip the image?
+
+							</a>
+						</h4>
+					</div>
+					<div id="accordion5" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&#160;<b>Answer:</b></div>
+<div>
+<p>C language control can use the function Paint_SetRotate(Rotate); But the flip angle in C language can only be 0, 90, 180, or 270 degrees; Python can call rotate(Rotate) to flip any angle.
+</p>
+</div>
+<div style="display:none;">{{{3}}}</div>
+<div style="display:none;">{{{4}}}</div>
+<p><font color="red" style="display:none;">{{{5}}}</font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br />
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#accordion6">
+								<b>Question:</b> What is the maximum power consumption of the 2inch LCD Module?
+
+							</a>
+						</h4>
+					</div>
+					<div id="accordion6" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&#160;<b>Answer:</b></div>
+<div>
+<p>3.3V 46mA
+</p>
+</div>
+<div style="display:none;">{{{3}}}</div>
+<div style="display:none;">{{{4}}}</div>
+<p><font color="red" style="display:none;">{{{5}}}</font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br />
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#accordion7">
+								<b>Question:</b>Do you have any Thonny micropython code and connection diagram for using the Module version of the 2-inch LCD module? How can I use it with my Pico projects?
+
+							</a>
+						</h4>
+					</div>
+					<div id="accordion7" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&#160;<b>Answer:</b></div>
+<div>
+<p>You can refer to the connection method and code of this product: <a target="_blank" rel="nofollow noreferrer noopener" class="external free" href="https://www.waveshare.com/wiki/Pico-LCD-2#Document">https://www.waveshare.com/wiki/Pico-LCD-2#Document</a>
+</p>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;">{{{5}}}</font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br />
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#accordion8">
+								<b>Question:</b>What is the size of the screw and hex standoff?
+
+							</a>
+						</h4>
+					</div>
+					<div id="accordion8" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&#160;<b>Answer:</b></div>
+<div>
+<p>This screen uses hexagonal copper pillars M2*6.
+</p>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;">{{{5}}}</font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br />
+</p>
+</div>
+<div class="tabbertab" title="Support">
+<h1><span class="mw-headline" id="Support">Support</span></h1>
+<p><br />
+<br />
+</p>
+<div style="background:linear-gradient(to bottom right,#91C942,#7DB036); border-radius:15px; width:100%;min-width:750px;">
+<div style="display:flex;flex-direction: row;align-items: flex-start;">
+<div style="flex:l; font-size:15px; width:70%; margin-top:20px; margin-bottom:20px; margin-right:40px;padding-left:40px;">
+<p style="font-size:20px; font-weight:bold;">
+Technical Support
+</p>
+<p>
+If you need technical support or have any feedback/review, please click the <b>Submit Now</b> button to submit a ticket, Our support team will check and reply to you within 1 to 2 working days. Please be patient as we make every effort to help you to resolve the issue. 
+<br /> 
+Working Time: 9 AM - 6 PM GMT+8 (Monday to Friday)
+</p>
+</div>
+<div style="margin-top:94px;">
+<div id="service" style="display:flex; flex:r; background-color:#393939; color:white; text-align:center; font-size:20px; border-radius:20px;">
+<p><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://service.waveshare.com/">Submit Now</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<!-- 
+NewPP limit report
+Cached time: 20250715101002
+Cache expiry: 0
+Dynamic content: true
+Complications: []
+CPU time usage: 0.357 seconds
+Real time usage: 0.453 seconds
+Preprocessor visited node count: 1312/1000000
+Post‐expand include size: 23424/2097152 bytes
+Template argument size: 3396/2097152 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 43083/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   91.728      1 -total
+ 34.34%   31.502      1 Template:Infobox_item
+ 24.00%   22.019      8 Template:FAQ
+ 11.90%   10.912      1 Template:LCD_Module_FBCP_Transplant
+  9.58%    8.787      1 Template:Amazon_nolink
+  8.37%    7.682      1 Template:Servicebox1
+  8.36%    7.673      1 Template:RPI_C_lib
+  7.82%    7.175      1 Template:VisionFive2
+-->
+</div></div>								<div class="printfooter">
+				Retrieved from "<a dir="ltr" href="https://www.waveshare.com/w/index.php?title=2inch_LCD_Module&amp;oldid=101113">https://www.waveshare.com/w/index.php?title=2inch_LCD_Module&amp;oldid=101113</a>"				</div>
+												<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden category: <ul><li><a href="/wiki/Category:SPI_interface" title="Category:SPI interface">SPI interface</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+			<!-- /bodyContent -->
+		</div>
+						</div>
+				</div>
+			</div>
+			<!-- /content -->
+
+			<!-- sidebar-left -->
+			<div class="sidebar-wrapper sidebar-left-wrapper">
+				<div class="sidebar-container container">
+					<div class="row">
+						<div id="sidebar-left" class="col-md-2 col-md-offset-0">
+							<div id="tweekiTOC"></div>						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /sidebar-left -->
+					<!-- footer -->
+			<div id="footer" role="contentinfo" class="footer container footer-sticky bg-light">
+			<ul id="footer-custom"><li class="dropup"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=2inch+LCD+Module" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Login / Create Account</a></li></ul><div style="clear:both"></div>			</div>
+			<!-- /footer -->
+		
+<script>
+var fbtFancyBoxOptions = {};
+</script>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.357","walltime":"0.453","ppvisitednodes":{"value":1312,"limit":1000000},"postexpandincludesize":{"value":23424,"limit":2097152},"templateargumentsize":{"value":3396,"limit":2097152},"expansiondepth":{"value":8,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":43083,"limit":5000000},"timingprofile":["100.00%   91.728      1 -total"," 34.34%   31.502      1 Template:Infobox_item"," 24.00%   22.019      8 Template:FAQ"," 11.90%   10.912      1 Template:LCD_Module_FBCP_Transplant","  9.58%    8.787      1 Template:Amazon_nolink","  8.37%    7.682      1 Template:Servicebox1","  8.36%    7.673      1 Template:RPI_C_lib","  7.82%    7.175      1 Template:VisionFive2"]},"cachereport":{"timestamp":"20250715101002","ttl":0,"transientcontent":true}}});mw.config.set({"wgBackendResponseTime":962});});</script>	</body>
+</html>

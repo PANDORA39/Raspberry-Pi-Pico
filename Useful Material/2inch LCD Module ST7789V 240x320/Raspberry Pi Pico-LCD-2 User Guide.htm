@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 88.9063px;"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=1920px, user-scalable=no"> -->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no">-->
+    <title>Raspberry Pi Pico-LCD-2 User Guide</title>
+    <meta name="keywords" content="Raspberry Pi Pico-LCD-2 User Guide">
+    <meta name="description" content="Raspberry Pi Pico-LCD-2 User Guide">
+
+    <link rel="shortcut icon" href="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/spotpear-logo-2.png">
+    <link rel="bookmark" href="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/spotpear-logo-2.png">
+
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900"> -->
+    <link rel="stylesheet" href="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/reset.css">
+    <link rel="stylesheet" href="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/iconfont.css">
+    <link rel="stylesheet" href="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/layui.css">
+    <link rel="stylesheet" href="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/swiper.css">
+    <link rel="stylesheet" href="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/animate.min.css">
+    <link rel="stylesheet" href="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/common.css">
+    
+<script async="" src="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CJKW0XKGBE');
+</script>
+    <script type="text/javascript" src="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/vue@2.js"></script>
+
+<link rel="stylesheet" href="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/other.css">
+<script id="LA_CODELESS" src="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/js-sdk-event.min.js" data-la-ev="K0qS1Mf3niJRHxnS" crossorigin="anonymous" charset="UTF-8"></script><link id="layuicss-layer" rel="stylesheet" href="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/layer.css" media="all"></head>
+
+
+
+<body>
+
+    <div class="container">
+
+        <div class="header_con">
+            <div class="header_div">
+                <div class="welcome user_link fl">
+
+                </div>
+                <div class="fr">
+                    <div class="login_info fl">
+                        <a href="https://spotpear.com/index/forum/index.html">Forum</a>
+                        <span style="margin: 10px;">|</span>
+                    </div>
+                    
+                                        <div class="login_btn fl">
+                                                <a href="https://spotpear.com/index/auth/login.html?next=/index/study/detail/id/856.html">Sign in</a>
+                                                <span>|</span>
+                                                <a href="https://spotpear.com/index/auth/login.html?type=register&amp;next=/index/study/detail/id/856.html">Register</a>
+                                            </div>
+                                        <div class="user_link fl">
+                        <span>|</span>
+                                                <a href="https://spotpear.com/index/auth/login.html?next=/index/study/detail/id/856.html" onclick="return is_login_link(this)">Account</a>
+                                                <span>|</span>
+                                                <a href="https://spotpear.com/index/auth/login.html?next=/index/study/detail/id/856.html" onclick="return is_login_link(this)">My Orders</a>
+                                                <div class="cart_nav_box">
+                            <a href="https://spotpear.com/index/pay/cart.html" class="cart_nav_link">Cart(<em class="cart-num">0</em>)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header" style="display:flex">
+
+            <div class="header_body">
+
+                <div class="left">
+
+                    <a href="https://spotpear.com/">
+
+                        <img src="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/spotpear-logo-2.png" alt="">
+
+                        <span>Spotpear</span>
+
+                    </a>
+
+                </div>
+
+                <div class="right">
+
+                    <ul class="father">
+
+                        <!-- class='active' -->
+
+                        
+                        <li>
+
+                            <a href="https://spotpear.com/index/product/new.html">NEW</a>
+
+                            <ul class="child">
+
+                                
+                            </ul>
+
+                        </li>
+
+                        
+                        <li>
+
+                            <a href="https://spotpear.com/index/product/index.html">PRODUCTS</a>
+
+                            <ul class="child">
+
+                                
+                            </ul>
+
+                        </li>
+
+                        
+                        <li class="active">
+
+                            <a href="https://spotpear.com/index/study/index.html">ARTICLES</a>
+
+                            <ul class="child">
+
+                                
+                            </ul>
+
+                        </li>
+
+                        
+                        <li>
+
+                            <a href="https://spotpear.com/index/about_us/index.html">ABOUT US</a>
+
+                            <ul class="child">
+
+                                
+                            </ul>
+
+                        </li>
+
+                        
+                        <li>
+
+                            <a href="https://spotpear.com/index/contact/index.html">CONTACT US</a>
+
+                            <ul class="child" style="display: block; opacity: 0;">
+
+                                
+                            </ul>
+
+                        </li>
+
+                        
+                        <li>
+
+                            <a href="https://spotpear.com/index/pay/index.html">SHOP</a>
+
+                            <ul class="child">
+
+                                
+                            </ul>
+
+                        </li>
+
+                                            </ul>
+	<style>
+	.search .sele{
+		border-radius: 0;
+  border: none;
+  border: 0;
+  outline: none;
+	}
+	</style>
+
+                    <form action="/index/search/index.html">
+					
+
+                        <div class="search">
+							<select class="sele" name="lx">
+								<option value="0" selected="selected">PRODUCTS</option>
+								<option value="1">ARTICLES</option>
+                                <option value="2">FORUM</option>
+							</select>
+
+      
+
+                            <input type="text" id="top_search" required="" name="keywords" placeholder="">
+								
+							 <div class="search_btn" id="top_search_img">
+                            
+                                <img src="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/search1.png" alt="">
+                            
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                    <div class="mobile_nav">
+
+                        <img class="slideDown" src="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/nav.png" alt="">
+
+                        <img class="close" src="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/nav_close.png" alt="">
+
+                    </div>
+
+                </div>
+
+                <div class="mobile_banner_nav">
+
+                    <div class="mobile_banner_nav_shadow">
+
+                        <ul>
+
+                            
+                            <li>
+
+                                <a href="https://spotpear.com/index/product/new.html">NEW</a>
+
+                                <ul class="child">
+
+                                    
+                                </ul>
+
+                            </li>
+
+                            
+                            <li>
+
+                                <a href="https://spotpear.com/index/product/index.html">PRODUCTS</a>
+
+                                <ul class="child">
+
+                                    
+                                </ul>
+
+                            </li>
+
+                            
+                            <li class="active">
+
+                                <a href="https://spotpear.com/index/study/index.html">ARTICLES</a>
+
+                                <ul class="child">
+
+                                    
+                                </ul>
+
+                            </li>
+
+                            
+                            <li>
+
+                                <a href="https://spotpear.com/index/about_us/index.html">ABOUT US</a>
+
+                                <ul class="child">
+
+                                    
+                                </ul>
+
+                            </li>
+
+                            
+                            <li>
+
+                                <a href="https://spotpear.com/index/contact/index.html">CONTACT US</a>
+
+                                <ul class="child">
+
+                                    
+                                </ul>
+
+                            </li>
+
+                            
+                            <li>
+
+                                <a href="https://spotpear.com/index/pay/index.html">SHOP</a>
+
+                                <ul class="child">
+
+                                    
+                                </ul>
+
+                            </li>
+
+                            
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="fixed_right">
+
+            <ul>
+
+                <li class="service" attr-show="qq_list">
+
+                    <a href="javasrcipt:;"><span class="iconfont icon-kefu"></span></a>
+
+                </li>
+
+                <li class="service" attr-show="phone_list">
+
+                    <a href="javasrcipt:;"><span class="iconfont icon-dianhua"></span></a>
+
+                </li>
+
+                <li class="service" attr-show="email_list">
+
+                    <a href="javasrcipt:;"><span class="iconfont icon-666666"></span></a>
+
+                </li>
+
+                <li class="service" attr-show="wx_list">
+
+                    <a href="javasrcipt:;"><span class="iconfont icon-weixin"></span></a>
+
+                </li>
+
+                <li class="qr_code">
+
+                    <a href="javascript:;"><span class="iconfont icon-erweima"></span></a>
+
+                    <div id="qr_code_box" style="display: none;">
+
+                        <img src="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/spotpear-web-erweima-09.jpg" alt="">
+
+                    </div>
+
+                </li>
+                <li class="service-gwc">
+                    <a href="https://spotpear.com/index/pay/cart.html"><span class="iconfont icon-gouwuche"></span><span class="icon-text" style="margin-top: -10px; margin-left: 5px;">(<em class="cart-num">0</em>)</span> </a>
+                </li>
+                <li class="service-user">
+                                            <a href="https://spotpear.com/index/auth/login.html?next=/index/study/detail/id/856.html"><span class="iconfont icon-user"></span><span class="icon-text">Account</span></a>
+                                        </li>
+                <li class="service-forum">
+                    <a href="https://spotpear.com/index/forum/index.html"><span class="iconfont icon-luntan"></span><span class="icon-text"><b>Forum</b></span></a>
+                </li>
+                <li class="go_top"><a href="#"><span class="iconfont icon-top"></span></a></li>
+
+            </ul>
+
+            <div class="fiexed_text">
+
+                <!-- QQ客服最多放12个 -->
+
+                <ul class="qq_list">
+
+                    
+                    <li><a href="javascript:;"><span class="iconfont icon-kefu"></span>sales/support</a>
+
+                        <p>Google Chat:  zj734465502@gmail.com</p>
+
+                    </li>
+
+                    
+                </ul>
+
+                <!-- 电话最多放6个 -->
+
+                <ul class="phone_list">
+
+                    
+                    <li><a href="javascript:;"><span class="iconfont icon-dianhua"></span>sales</a>
+
+                        <p>+86-0755-88291180</p>
+
+                    </li>
+
+                    
+                </ul>
+
+                <!-- 邮箱最多放6个 -->
+
+                <ul class="email_list">
+
+                    
+                    <li><a target="_blank" href="mailto:sales01@spotpear.com"><span class="iconfont icon-666666"></span>sales01</a>
+
+                        <p>sales01@spotpear.com</p>
+
+                    </li>
+
+                    
+                    <li><a target="_blank" href="mailto:dragon_manager@163.com"><span class="iconfont icon-666666"></span>sales02</a>
+
+                        <p>dragon_manager@163.com</p>
+
+                    </li>
+
+                    
+                    <li><a target="_blank" href="mailto:services01@spotpear.com"><span class="iconfont icon-666666"></span>support</a>
+
+                        <p>services01@spotpear.com</p>
+
+                    </li>
+
+                    
+                    <li><a target="_blank" href="mailto:manager01@spotpear.com"><span class="iconfont icon-666666"></span>CEO-Complaints</a>
+
+                        <p>manager01@spotpear.com</p>
+
+                    </li>
+
+                    
+                </ul>
+
+                <!-- 微信最多放6个 -->
+
+                <ul class="wx_list">
+
+                    
+                    <li><a href="javascript:;"><span class="iconfont icon-weixin"></span>sales/support</a>
+
+                        <p>WhatsApp:13246739196</p>
+
+                    </li>
+
+                    
+                </ul>
+
+            </div>
+
+        </div>
+<style>
+.detail_right_text div {
+    float: left;
+    font-size: 14px;
+}
+
+.detail_right_text .yc {
+    width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.detail_right_text .red {
+    color: red;
+}
+    /* 基础样式 */
+.article-directory {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.article-directory ul {
+  padding-left: 20px; /* 或使用margin，根据个人偏好调整 */
+}
+
+.article-directory a {
+  text-decoration: none;
+  color: #333; /* 文本颜色 */
+  display: block;
+  padding: 5px 0; /* 上下内边距，形成点击区域 */
+  transition: color 0.3s ease; /* 颜色过渡效果 */
+}
+
+/* 鼠标悬停效果 */
+.article-directory a:hover {
+  color: #007BFF; /* 鼠标悬停文本颜色 */
+}
+
+/* 当前选中项的样式 */
+.article-directory a.active {
+  font-weight: bold;
+  color: #007BFF; /* 或其他突出颜色 */
+}
+
+/* 可选：为不同级别的目录添加不同的样式 */
+.article-directory li ul a {
+  /* 在这里自定义二级及更深层次链接的样式，例如字体大小、颜色等 */
+}    
+.tag {
+        display:inline;
+		padding:5px;
+		font:14px/28px 'microsoft yahei';
+		background-color:#E8E8E8;
+		color:#666;
+		border-radius:4px;
+        line-height: 35px;
+		transition-duration:0.2s;
+    }
+    .stag {
+        /* display:block;
+		height:28px;
+		padding:0 10px;
+		float:left;
+		margin-right:6px;
+		margin-top:3px;
+		font:14px/28px 'microsoft yahei';
+		background-color:#E8E8E8;
+		color:#666;
+		border-radius:4px;
+		transition-duration:0.2s; */
+
+
+        padding: 3px 5px 3px 5px;
+        margin: 2px;
+        font: 14px/28px 'microsoft yahei';
+        background-color: #E8E8E8;
+        color: #666;
+        border-radius: 5px;
+        transition-duration: 0.2s;
+    }
+    .tag_label {
+		font:14px/28px 'microsoft yahei';
+		color:#666;
+    }
+</style>
+<div class="index_body">
+    <div class="study_body">
+        <div class="study_detail_content">
+            
+            <div class="product_detail_nav">
+
+                <ul>
+                    <li><a target="_blank" href="https://spotpear.com/">HOME</a></li>
+                    <li>&gt;</li>
+                    <li><a target="_blank" href="https://spotpear.com/index/study/index.html">ARTICLES</a></li>
+                                        <li>&gt;</li>
+                    <li><a target="_blank" href="https://spotpear.com/wiki-category/Raspberry-Pi.html">Raspberry Pi</a></li>
+                                        <li>&gt;</li>
+                    <li><a target="_blank" href="https://spotpear.com/wiki-category/Raspberry-Pi-Hat.html">Raspberry Pi HATs</a></li>
+                                        <li>&gt;</li>
+                    <li><a target="_blank" href="https://spotpear.com/wiki-category/Raspberry%20Pi-Hat-Pico-RP2040.html">Raspberry Pi Pico</a></li>
+                                    </ul>
+
+            </div>
+
+            <div class="study_detail_title">
+                <h1>Raspberry Pi Pico-LCD-2 User Guide</h1>
+            </div>
+            
+            <div class="study_detail_bottom">
+                <div class="study_detail_left">
+                    <div class="detail_left_nav">
+                        <ul>
+                                                        <li attr-id="1" class="active"><a href="javascript:;">User guide</a></li>
+                                                        <li attr-id="2"><a href="javascript:;">Resources</a></li>
+                                                        <li attr-id="4"><a href="javascript:;">Support</a></li>
+                                                        <li><a href="https://spotpear.com/index/forum/questions/product_id/791.html" style="color: red;">Ask a Question</a></li>
+
+                                                        
+                        </ul>
+                    </div>
+                    
+                    <div attr-id="1" class="detail_left_content rich_text">
+                        <div class="tabbertab" title="Introduction" style="color: rgb(51, 51, 51); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, Tahoma, &quot;Arial sans-serif&quot;; font-size: 16px;"><h2 style="font-family: inherit; line-height: 45px; color: rgb(51, 51, 51); margin: 5px; font-size: 22px; padding: 0px 10px; background-color: rgba(247, 247, 247, 0.4); text-shadow: none;"><span class="mw-headline" id="Features" style="text-shadow: none; color: rgb(126, 177, 40); margin-left: -10px; padding: 8px 12px; border-left: 10px solid rgb(126, 177, 40) !important;">Overview</span></h2><p style="margin: 7.5px 16px; overflow-wrap: break-word; line-height: 1.8;">This
+ 2inch LCD display module is designed for Raspberry Pi Pico, embedded 
+ST7789VW driver, 65K RGB colors, 320 x 240 Pixels. SPI interface.</p><h2 style="font-family: inherit; line-height: 45px; margin: 5px; font-size: 22px; padding: 0px 10px; background-color: rgba(247, 247, 247, 0.4); text-shadow: none;"><span class="mw-headline" id="Features" style="text-shadow: none; color: rgb(126, 177, 40); margin-left: -10px; padding: 8px 12px; border-left: 10px solid rgb(126, 177, 40) !important;">Features</span></h2><ul style="margin: 1em 0px 1em 1.2em; padding: 0px 0px 0px 1em;"><li style="margin: 0.5em;">320 × 240 resolution, IPS screen, 65K RGB colors, clear and colorful displaying effect.</li><li style="margin: 0.5em;">SPI interface requires minimal IO pins.</li><li style="margin: 0.5em;">4 x user buttons for easy interaction.</li></ul><h2 style="font-family: inherit; line-height: 45px; margin: 5px; font-size: 22px; padding: 0px 10px; background-color: rgba(247, 247, 247, 0.4); text-shadow: none;"><span class="mw-headline" id="Specifications" style="text-shadow: none; color: rgb(126, 177, 40); margin-left: -10px; padding: 8px 12px; border-left: 10px solid rgb(126, 177, 40) !important;">Specifications</span></h2><table border="1;" align="auto" style="max-width: 100%; height: auto; width: 700px;"><tbody><tr><td style="background: green; color: white; text-align: center;">Parameter name</td><td style="background: green; color: white; text-align: center;">Parameters</td></tr><tr><td style="text-align: center;">Power Supply</td><td style="text-align: center;">2.6V ~ 5.5V</td></tr><tr><td style="text-align: center;">Working Current</td><td style="text-align: center;">40mA</td></tr><tr><td style="text-align: center;">Screen Type</td><td style="text-align: center;">IPS</td></tr><tr><td style="text-align: center;">Control Chip</td><td style="text-align: center;">ST7789V</td></tr><tr><td style="text-align: center;">Communication Interface</td><td style="text-align: center;">4-wire SPI</td></tr><tr><td style="text-align: center;">Resolution</td><td style="text-align: center;">240 (V) RGB x 320 (H) Pixels</td></tr><tr><td style="text-align: center;">Pixel Size</td><td style="text-align: center;">0.0975 (H) x 0.0975 (V)mm</td></tr><tr><td style="text-align: center;">Display Size</td><td style="text-align: center;">30.6 (H) x 40.8 (V)mm</td></tr><tr><td style="text-align: center;">Product Size</td><td style="text-align: center;">35 (H) x 52.00 (V)mm</td></tr></tbody></table><h2 style="font-family: inherit; line-height: 45px; margin: 5px; font-size: 22px; padding: 0px 10px; background-color: rgba(247, 247, 247, 0.4); text-shadow: none;"><span class="mw-headline" id="Pinout" style="text-shadow: none; color: rgb(126, 177, 40); margin-left: -10px; padding: 8px 12px; border-left: 10px solid rgb(126, 177, 40) !important;">Pinout</span></h2><p style="margin: 7.5px 16px; overflow-wrap: break-word; line-height: 1.8;"><a href="https://www.waveshare.com/wiki/File:Pico-LCD-2-details-inter.jpg" class="image" style="color: rgb(51, 122, 183); line-height: 1.6;"></a><br><img src="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/pico-lcd-2-01_002.jpg" style="width: 100%;"><br></p><h2 style="font-family: inherit; line-height: 45px; margin: 5px; font-size: 22px; padding: 0px 10px; background-color: rgba(247, 247, 247, 0.4); text-shadow: none;"><span id="LCD_&amp;_Controller"></span><span class="mw-headline" id="LCD_.26_Controller" style="text-shadow: none; color: rgb(126, 177, 40); margin-left: -10px; padding: 8px 12px; border-left: 10px solid rgb(126, 177, 40) !important;">LCD &amp; Controller</span></h2><p style="margin: 7.5px 16px; overflow-wrap: break-word; line-height: 1.8;">The
+ built-in controller used in this LCD is ST7789VW, which is an LCD 
+controller with 240 x RGB x 320 pixels, while the pixels of this LCD 
+itself are 240 (H) RGB x 320 (V), and the internal RAMYIJ of the LCD has
+ been fully used.<br>The LCD supports 12-bit, 16-bit, and 18-bit input 
+color formats per pixel, namely RGB444, RGB565, and RGB666 three color 
+formats, this demo uses RGB565 color format, which is also a commonly 
+used RGB format.<br>The LCD uses a four-wire SPI communication 
+interface, which can greatly save the GPIO port, and the communication 
+speed will be faster.<br></p><h2 style="font-family: inherit; line-height: 45px; margin: 5px; font-size: 22px; padding: 0px 10px; background-color: rgba(247, 247, 247, 0.4); text-shadow: none;"><span class="mw-headline" id="Working_Protocol" style="text-shadow: none; color: rgb(126, 177, 40); margin-left: -10px; padding: 8px 12px; border-left: 10px solid rgb(126, 177, 40) !important;">Working Protocol</span></h2><p style="margin: 7.5px 16px; overflow-wrap: break-word; line-height: 1.8;"><a href="https://www.waveshare.com/wiki/File:0.96inch_lcd_module_spi.png" class="image" style="color: rgb(51, 122, 183); line-height: 1.6;"></a><br><br><img src="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/pico-lcd-2-02.png" style="width: 100%;"><br>Note:
+ Different from the traditional SPI protocol, the data line from the 
+slave to the master is hidden since the device only has a display 
+requirement.<br>RESX is the reset pin, it should be low when powering the module and be higher at other times;<br>CSX is a slave chip select, when CS is low, the chip is enabled.<br>D/CX is data/command control pin, when DC = 0, write command, when DC = 1, write data<br>SDA is the data pin for transmitting RGB data, it works as the MOSI pin of the SPI interface;<br>SCL works the SCLK pins of the SPI interface.<br>SPI communication has data transfer timing, which is combined by CPHA and CPOL.<br>CPOL
+ determines the level of the serial synchronous clock at an idle state. 
+When CPOL = 0, the level is Low. However, CPOL has little effect on the 
+transmission.<br>CPHA determines whether data is collected at the first 
+clock edge or at the second clock edge of the serial synchronous clock; 
+when CPHL = 0, data is collected at the first clock edge.<br>As can be 
+seen from the figure, when the first falling edge of SCLK starts to 
+transmit data, 8bit data is transmitted in one clock cycle. When using 
+SPI0, it is transmitted by bits, that is, high bit first, low bit last.<br></p></div><div class="tabbertab" title="User Guides" style="color: rgb(51, 51, 51); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, Tahoma, &quot;Arial sans-serif&quot;; font-size: 16px;"><div class="wiki-pages pink-color"><h1 style="font-size: 30px; margin-top: 16px; margin-bottom: 20px; font-family: inherit;"><span class="mw-headline" id="Pico_Quick_Start" style="text-shadow: none; color: rgb(126, 177, 40);">Pico Quick Start</span></h1><h2 style="font-family: inherit; line-height: 45px; margin: 5px; font-size: 22px; padding: 0px 10px; background-color: rgba(247, 247, 247, 0.4); text-shadow: none;"><span class="mw-headline" id="Download_Firmware" style="text-shadow: none; color: rgb(126, 177, 40); margin-left: -10px; padding: 8px 12px; border-left: 10px solid rgb(126, 177, 40) !important;">Download Firmware</span></h2><ul style="margin: 1em 0px 1em 1.2em; padding: 0px 0px 0px 1em;"><li style="margin: 0.5em;">MicroPython Firmware Download</li></ul><p style="margin: 0.5em;"><img src="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/pico-lcd-1.8-04.gif" style="width: 535px;"><br></p><p style="margin: 7.5px 16px; overflow-wrap: break-word; line-height: 1.8;"><a href="https://www.waveshare.com/wiki/File:MicroPython_Firmware_Download.gif" class="image" style="color: rgb(51, 122, 183); line-height: 1.6;"></a></p><ul style="margin: 1em 0px 1em 1.2em; padding: 0px 0px 0px 1em;"><li style="margin: 0.5em;">C_Blink Firmware Download</li></ul><p style="margin: 0.5em;"><img src="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/pico-lcd-1.8-05.gif" style="width: 535px;"><br></p><p style="margin: 7.5px 16px; overflow-wrap: break-word; line-height: 1.8;"><a href="https://www.waveshare.com/wiki/File:C_Blink_Download.gif" class="image" style="color: rgb(51, 122, 183); line-height: 1.6;"></a></p><h2 style="font-family: inherit; line-height: 45px; margin: 5px; font-size: 22px; padding: 0px 10px; background-color: rgba(247, 247, 247, 0.4); text-shadow: none;"><span class="mw-headline" id="Hardware_connection" style="text-shadow: none; color: rgb(126, 177, 40); margin-left: -10px; padding: 8px 12px; border-left: 10px solid rgb(126, 177, 40) !important;">Hardware connection</span></h2><p style="margin: 7.5px 16px; overflow-wrap: break-word; line-height: 1.8;">Please
+ take care of the direction when you connect Pico, an USB port is 
+printed to indicate . You can also check the pin of Pico and the LCD 
+board when connecting.<br>You can connect the display according to the table.<br></p><table border="1;" align="center" style="max-width: 700px; height: auto; width: 700px;"><tbody><tr align="center" style="background: green; color: white;"><td>LCD</td><td>Pico</td><td>Description</td></tr><tr align="center"><td>VCC</td><td>VSYS</td><td>Power Input</td></tr><tr align="center"><td>GND</td><td>GND</td><td>Ground</td></tr><tr align="center"><td>DIN</td><td>GP11</td><td>MOSI pin of SPI, data transmitted from Master t Slave</td></tr><tr align="center"><td>CLK</td><td>GP10</td><td>SCK pin of SPI, clock pin</td></tr><tr align="center"><td>CS</td><td>GP9</td><td>Chip selection of SPI, low active</td></tr><tr align="center"><td>DC</td><td>GP8</td><td>Data/Command control pin (High for data; Low for command)</td></tr><tr align="center"><td>RST</td><td>GP12</td><td>Reset pin, low active</td></tr><tr align="center"><td>BL</td><td>GP13</td><td>Backlight control</td></tr><tr align="center"><td>KEY0</td><td>GP15</td><td>User button KEY0</td></tr><tr align="center"><td>KEY1</td><td>GP17</td><td>User button KEY1</td></tr><tr align="center"><td>KEY2</td><td>GP2</td><td>User button KEY2</td></tr><tr align="center"><td>KEY3</td><td>GP3</td><td>User button KEY3</td></tr></tbody></table><h3 style="font-family: inherit; line-height: 35px; margin: 10px 8px 18px; font-size: 20px; padding: 0px; border-bottom: 1px solid rgb(126, 177, 40) !important;"><span class="mw-headline" id="Connection" style="text-shadow: none; color: rgb(126, 177, 40);">Connection</span></h3><p style="margin: 7.5px 16px; overflow-wrap: break-word; line-height: 1.8;"><a href="https://www.waveshare.com/wiki/File:Pico-LCD-2-details-3.jpg" class="image" style="color: rgb(51, 122, 183); line-height: 1.6;"></a><br><img src="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/pico-lcd-2-03.jpg" style="width: 100%;"><br></p><h2 style="font-family: inherit; line-height: 45px; margin: 5px; font-size: 22px; padding: 0px 10px; background-color: rgba(247, 247, 247, 0.4); text-shadow: none;"><span class="mw-headline" id="Setup_environment" style="text-shadow: none; color: rgb(126, 177, 40); margin-left: -10px; padding: 8px 12px; border-left: 10px solid rgb(126, 177, 40) !important;">Setup environment</span></h2><p style="margin: 7.5px 16px; overflow-wrap: break-word; line-height: 1.8;">Please refer to Raspberry Pi's guide:&nbsp;<a target="_blank" rel="nofollow noreferrer noopener" class="external free" href="https://www.raspberrypi.org/documentation/pico/getting-started/" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAVklEQVR4Xn3PgQkAMQhDUXfqTu7kTtkpd5RA8AInfArtQ2iRXFWT2QedAfttj2FsPIOE1eCOlEuoWWjgzYaB/IkeGOrxXhqB+uA9Bfcm0lAZuh+YIeAD+cAqSz4kCMUAAAAASUVORK5CYII=&quot;); background-position: right center; background-size: initial; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(51, 122, 183); line-height: 1.6; padding-right: 13px;">https://www.raspberrypi.org/documentation/pico/getting-started/</a><br></p><h2 style="font-family: inherit; line-height: 45px; margin: 5px; font-size: 22px; padding: 0px 10px; background-color: rgba(247, 247, 247, 0.4); text-shadow: none;"><span class="mw-headline" id="Download_Demo_codes" style="text-shadow: none; color: rgb(126, 177, 40); margin-left: -10px; padding: 8px 12px; border-left: 10px solid rgb(126, 177, 40) !important;">Download Demo codes</span></h2><p style="margin: 7.5px 16px; overflow-wrap: break-word; line-height: 1.8;">Open terminal and run the following command：<br></p><pre style="font-family: monospace, Courier; font-size: 14px; padding: 1em; margin: 12px; line-height: 1.5; color: black; background-color: rgb(249, 249, 249); border-color: rgb(221, 221, 221); border-radius: 4px; white-space: pre-wrap;">sudo apt-get install p7zip-full
+cd ~
+sudo wget  https://www.waveshare.com/w/upload/2/28/Pico_code.7z
+7z x Pico_code.7z -o./Pico_code
+cd ~/Pico_code
+cd c/build/
+</pre><h2 style="font-family: inherit; line-height: 45px; margin: 5px; font-size: 22px; padding: 0px 10px; background-color: rgba(247, 247, 247, 0.4); text-shadow: none;"><span class="mw-headline" id="Run_the_Demo_codes" style="text-shadow: none; color: rgb(126, 177, 40); margin-left: -10px; padding: 8px 12px; border-left: 10px solid rgb(126, 177, 40) !important;">Run the Demo codes</span></h2><p style="margin: 7.5px 16px; overflow-wrap: break-word; line-height: 1.8;">This guides is based on Raspberry Pi.</p><h3 style="font-family: inherit; line-height: 35px; margin: 10px 8px 18px; font-size: 20px; padding: 0px; border-bottom: 1px solid rgb(126, 177, 40) !important;"><span class="mw-headline" id="C_Examples" style="text-shadow: none; color: rgb(126, 177, 40);">C Examples</span></h3><p style="margin: 7.5px 16px; overflow-wrap: break-word; line-height: 1.8;">Open a terminal and enter the directory of C codes:</p><pre style="font-family: monospace, Courier; font-size: 14px; padding: 1em; margin: 12px; line-height: 1.5; color: black; background-color: rgb(249, 249, 249); border-color: rgb(221, 221, 221); border-radius: 4px; white-space: pre-wrap;">cd ~/Pico_LCD_code/c/
+</pre><p style="margin: 7.5px 16px; overflow-wrap: break-word; line-height: 1.8;">Create a build folder and add SDK:<br>For example, if the path of SDK is ../../pico-sdk<br>Then you should create build and add the path like these:</p><pre style="font-family: monospace, Courier; font-size: 14px; padding: 1em; margin: 12px; line-height: 1.5; color: black; background-color: rgb(249, 249, 249); border-color: rgb(221, 221, 221); border-radius: 4px; white-space: pre-wrap;">mkdir build
+cd build
+export PICO_SDK_PATH=../../pico-sdk
+</pre><p style="margin: 7.5px 16px; overflow-wrap: break-word; line-height: 1.8;">Run cmake.. command to to generate Makefile file</p><pre style="font-family: monospace, Courier; font-size: 14px; padding: 1em; margin: 12px; line-height: 1.5; color: black; background-color: rgb(249, 249, 249); border-color: rgb(221, 221, 221); border-radius: 4px; white-space: pre-wrap;">cmake ..
+</pre><p style="margin: 7.5px 16px; overflow-wrap: break-word; line-height: 1.8;">Run make command to build.</p><pre style="font-family: monospace, Courier; font-size: 14px; padding: 1em; margin: 12px; line-height: 1.5; color: black; background-color: rgb(249, 249, 249); border-color: rgb(221, 221, 221); border-radius: 4px; white-space: pre-wrap;">make -j9
+</pre><p style="margin: 7.5px 16px; overflow-wrap: break-word; line-height: 1.8;">Open
+ main.c under the c folder, you can change the routine you need. This 
+routine can drive the display of our company's Pico series and the 
+source code will be updated all the time. Please select the 
+corresponding LCD or OLED test function and comment out the irrelevant 
+functions.<br><img src="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/pico-lcd-2-04.png" style="width: 100%;"><a href="https://www.waveshare.com/wiki/File:Pico_LCD_0.96_Guide001.png" class="image" style="color: rgb(51, 122, 183); line-height: 1.6;"></a><br>Run make command to build.</p><pre style="font-family: monospace, Courier; font-size: 14px; padding: 1em; margin: 12px; line-height: 1.5; color: black; background-color: rgb(249, 249, 249); border-color: rgb(221, 221, 221); border-radius: 4px; white-space: pre-wrap;">make -j9
+</pre><p style="margin: 7.5px 16px; overflow-wrap: break-word; line-height: 1.8;">After
+ the compilation is complete, the uf2 file will be generated. Press and 
+hold the button on the Pico board, connect the pico to the USB port of 
+the Raspberry Pi through the Micro USB cable, and release the button. 
+After connecting, the Raspberry Pi will automatically recognize a 
+removable disk (RPI-RP2), and copy the main.uf2 file in the build folder
+ to the recognized removable disk (RPI-RP2).<br></p><pre style="font-family: monospace, Courier; font-size: 14px; padding: 1em; margin: 12px; line-height: 1.5; color: black; background-color: rgb(249, 249, 249); border-color: rgb(221, 221, 221); border-radius: 4px; white-space: pre-wrap;">cp main.uf2 /media/pi/RPI-RP2/
+</pre><h3 style="font-family: inherit; line-height: 35px; margin: 10px 8px 18px; font-size: 20px; padding: 0px; border-bottom: 1px solid rgb(126, 177, 40) !important;"><span class="mw-headline" id="Python_codes" style="text-shadow: none; color: rgb(126, 177, 40);">Python codes</span></h3><h4 style="font-family: inherit; line-height: 19px; color: rgb(126, 177, 40); margin: 15px 10px; font-size: 17px; padding: 2px 8px; background-color: rgba(208, 208, 208, 0);"><span class="mw-headline" id="Use_in_Windows" style="text-shadow: none;">Use in Windows</span></h4><ul style="margin: 1em 0px 1em 1.2em; padding: 0px 0px 0px 1em;"><li style="margin: 0.5em;">1.
+ Press and hold the BOOTSET button on the Pico board, connect the pico 
+to the USB port of the computer through the Micro USB cable, and release
+ the button after the computer recognizes a removable hard disk 
+(RPI-RP2).<br></li><li style="margin: 0.5em;">2. Copy the rp2-pico-20210418-v1.15.uf2 file in the python directory to the recognized removable disk (RPI-RP2).<br></li><li style="margin: 0.5em;">3.
+ Open Thonny IDE (Note: Use the latest version of Thonny, otherwise 
+there is no Pico support package, the latest version under Windows is 
+v3.3.3).<br></li><li style="margin: 0.5em;">4. Click Tools-&gt;Settings-&gt;Interpreter, select Pico and the corresponding port as shown in the figure.<br></li></ul><p style="margin: 7.5px 16px; overflow-wrap: break-word; line-height: 1.8;"><img src="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/pico-lcd-2-05.png" style="width: 100%;"><br></p><ul style="margin: 1em 0px 1em 1.2em; padding: 0px 0px 0px 1em;"><li style="margin: 0.5em;">5. File -&gt; Open -&gt; the corresponding .py file, click to run, as shown in the following figure:</li></ul><p style="margin: 7.5px 16px; overflow-wrap: break-word; line-height: 1.8;"><img src="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/pico-lcd-2-06.jpg" style="width: 100%;"><br>This demo provides a simple program...</p><h4 style="font-family: inherit; line-height: 19px; color: rgb(126, 177, 40); margin: 15px 10px; font-size: 17px; padding: 2px 8px; background-color: rgba(208, 208, 208, 0);"><span class="mw-headline" id="Run_in_Raspberry_Pi" style="text-shadow: none;">Run in Raspberry Pi</span></h4><ul style="margin: 1em 0px 1em 1.2em; padding: 0px 0px 0px 1em;"><li style="margin: 0.5em;">Hold the BOOTSET key of the Pico board, then connect the Pico to Raspberry Pi by USB cable, then release the key.</li><li style="margin: 0.5em;">Once the removable disk (RPI-RPI2) is recognized, copy the rp2-pico-20210418-v1.15.uf2 file to pico.</li><li style="margin: 0.5em;">Open the Thonny IDE in Raspberry Pi, and update it if it doesn't support Pico.</li><li style="margin: 0.5em;">Configure the port by choosing MicroPython(Raspberry Pi and ttyACM0 port) in Tools -&gt; Options... -&gt; Interpreter.</li></ul><p style="margin: 7.5px 16px; overflow-wrap: break-word; line-height: 1.8;"><img src="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/pico-lcd-2-07.png" style="width: 100%;"><br>If your Thonny doesn't support Pico, you can update it with the following command:<br></p><pre style="font-family: monospace, Courier; font-size: 14px; padding: 1em; margin: 12px; line-height: 1.5; color: black; background-color: rgb(249, 249, 249); border-color: rgb(221, 221, 221); border-radius: 4px; white-space: pre-wrap;">sudo apt upgrade thonny
+</pre><ul style="margin: 1em 0px 1em 1.2em; padding: 0px 0px 0px 1em;"><li style="margin: 0.5em;">Choose File-&gt;Open...-&gt;python/ and select the corresponding .py file to run the codes.<br></li></ul><h2 style="font-family: inherit; line-height: 45px; margin: 5px; font-size: 22px; padding: 0px 10px; background-color: rgba(247, 247, 247, 0.4); text-shadow: none;"><span class="mw-headline" id="Codes_Analysis" style="text-shadow: none; color: rgb(126, 177, 40); margin-left: -10px; padding: 8px 12px; border-left: 10px solid rgb(126, 177, 40) !important;">Codes Analysis</span></h2><h3 style="font-family: inherit; line-height: 35px; margin: 10px 8px 18px; font-size: 20px; padding: 0px; border-bottom: 1px solid rgb(126, 177, 40) !important;"><span class="mw-headline" id="C" style="text-shadow: none; color: rgb(126, 177, 40);">C</span></h3><h4 style="font-family: inherit; line-height: 19px; color: rgb(126, 177, 40); margin: 15px 10px; font-size: 17px; padding: 2px 8px; background-color: rgba(208, 208, 208, 0);"><span class="mw-headline" id="Bottom_hardware_interface" style="text-shadow: none;">Bottom hardware interface</span></h4><p style="margin: 7.5px 16px; overflow-wrap: break-word; line-height: 1.8;">We package the hardware layer for easily porting to the different hardware platforms.<br>DEV_Config.c(.h) in the directory:...\c\lib\Config<br></p><ul style="margin: 1em 0px 1em 1.2em; padding: 0px 0px 0px 1em;"><li style="margin: 0.5em;">Data type：</li></ul><pre style="font-family: monospace, Courier; font-size: 14px; padding: 1em; margin: 12px; line-height: 1.5; color: black; background-color: rgb(249, 249, 249); border-color: rgb(221, 221, 221); border-radius: 4px; white-space: pre-wrap;">#define UBYTE   uint8_t
+#define UWORD   uint16_t
+#define UDOUBLE uint32_t
+</pre><ul style="margin: 1em 0px 1em 1.2em; padding: 0px 0px 0px 1em;"><li style="margin: 0.5em;">Module initialize and exit:</li></ul><pre style="font-family: monospace, Courier; font-size: 14px; padding: 1em; margin: 12px; line-height: 1.5; color: black; background-color: rgb(249, 249, 249); border-color: rgb(221, 221, 221); border-radius: 4px; white-space: pre-wrap;">void DEV_Module_Init(void);
+void DEV_Module_Exit(void);
+Note：
+1.The functions above are used to initialize the display or exit handle.
+</pre><ul style="margin: 1em 0px 1em 1.2em; padding: 0px 0px 0px 1em;"><li style="margin: 0.5em;">GPIO write/read：</li></ul><pre style="font-family: monospace, Courier; font-size: 14px; padding: 1em; margin: 12px; line-height: 1.5; color: black; background-color: rgb(249, 249, 249); border-color: rgb(221, 221, 221); border-radius: 4px; white-space: pre-wrap;">void 	DEV_Digital_Write(UWORD Pin, UBYTE Value);
+UBYTE 	DEV_Digital_Read(UWORD Pin);
+</pre><ul style="margin: 1em 0px 1em 1.2em; padding: 0px 0px 0px 1em;"><li style="margin: 0.5em;">SPI transmit data</li></ul><pre style="font-family: monospace, Courier; font-size: 14px; padding: 1em; margin: 12px; line-height: 1.5; color: black; background-color: rgb(249, 249, 249); border-color: rgb(221, 221, 221); border-radius: 4px; white-space: pre-wrap;">void DEV_SPI_WriteByte(UBYTE Value);
+</pre><h4 style="font-family: inherit; line-height: 19px; color: rgb(126, 177, 40); margin: 15px 10px; font-size: 17px; padding: 2px 8px; background-color: rgba(208, 208, 208, 0);"><span class="mw-headline" id="Application_functions" style="text-shadow: none;">Application functions</span></h4><p style="margin: 7.5px 16px; overflow-wrap: break-word; line-height: 1.8;">We provide basic GUI functions for testing, like draw point, line, string, and so on. The GUI function can be found in <a href="directory:..\c\lib\GUI\GUI_Paint.c(.h).">directory:..\c\lib\GUI\GUI_Paint.c(.h).</a><br><img src="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/pico-lcd-2-08.png" style="width: 100%;"><br>The fonts used can be found in the directory: RaspberryPi\c\lib\Fonts.<br><img src="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/pico-lcd-2-09.png" style="width: 100%;"><br></p><ul style="margin: 1em 0px 1em 1.2em; padding: 0px 0px 0px 1em;"><li style="margin: 0.5em;">Create a new image, you can set the image name, width, height, rotate angle, and color.</li></ul><pre style="font-family: monospace, Courier; font-size: 14px; padding: 1em; margin: 12px; line-height: 1.5; color: black; background-color: rgb(249, 249, 249); border-color: rgb(221, 221, 221); border-radius: 4px; white-space: pre-wrap;">void Paint_NewImage(UWORD *image, UWORD Width, UWORD Height, UWORD Rotate, UWORD Color, UWORD Depth)
+Parameter:
+ 	image: Name of the image buffer, this is a pointer;
+ 	Width: Width of the image;
+ 	Height: Height of the image;
+ 	Rotate: Rotate the angle of the Image;
+ 	Color: The initial color of the image;
+ 	Depth: Depth of the color
+</pre><ul style="margin: 1em 0px 1em 1.2em; padding: 0px 0px 0px 1em;"><li style="margin: 0.5em;">Select
+ image buffer: You can create multiple image buffers at the same time 
+and select the certain one and draw by this function.</li></ul><pre style="font-family: monospace, Courier; font-size: 14px; padding: 1em; margin: 12px; line-height: 1.5; color: black; background-color: rgb(249, 249, 249); border-color: rgb(221, 221, 221); border-radius: 4px; white-space: pre-wrap;">void Paint_SelectImage(UBYTE *image)
+Parameter:
+ 	image: The name of the image buffer, this is a pointer;
+</pre><ul style="margin: 1em 0px 1em 1.2em; padding: 0px 0px 0px 1em;"><li style="margin: 0.5em;">Rotate
+ image: You need to set the rotation angle of the image, this function 
+should be used after Paint_SelectImage(). The angle can be 0, 90, 180, 
+or 270.</li></ul><pre style="font-family: monospace, Courier; font-size: 14px; padding: 1em; margin: 12px; line-height: 1.5; color: black; background-color: rgb(249, 249, 249); border-color: rgb(221, 221, 221); border-radius: 4px; white-space: pre-wrap;">void Paint_SetRotate(UWORD Rotate)
+Parameter:
+ 	Rotate: Rotate angle of the image, the parameter can be ROTATE_0, ROTATE_90, ROTATE_180, ROTATE_270.
+</pre><dl style="margin-bottom: 20px;"><dd style="line-height: 1.42857; margin: 0.5em 0px 0.5em 1.6em;">【Note】After rotating, the place of the first pixel is different as below:<br></dd></dl><img src="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/pico-lcd-2-10.jpg" style="width: 100%;"><dl style="margin-bottom: 20px;"><dd style="line-height: 1.42857; margin: 0.5em 0px 0.5em 1.6em;"><br></dd><dd style="line-height: 1.42857; margin: 0.5em 0px 0.5em 1.6em;"><a href="https://www.waveshare.com/wiki/File:Pico_LCD_Rotate.jpg" class="image" style="color: rgb(51, 122, 183); line-height: 1.6;"></a></dd></dl><ul style="margin: 1em 0px 1em 1.2em; padding: 0px 0px 0px 1em;"><li style="margin: 0.5em;">Image mirror: This function is used to set the image mirror.</li></ul><pre style="font-family: monospace, Courier; font-size: 14px; padding: 1em; margin: 12px; line-height: 1.5; color: black; background-color: rgb(249, 249, 249); border-color: rgb(221, 221, 221); border-radius: 4px; white-space: pre-wrap;">void Paint_SetMirroring(UBYTE mirror)
+Parameter:
+ 	mirror: Mirror type if the image, the parameter can be MIRROR_NONE、MIRROR_HORIZONTAL、MIRROR_VERTICAL、MIRROR_ORIGIN.
+</pre><ul style="margin: 1em 0px 1em 1.2em; padding: 0px 0px 0px 1em;"><li style="margin: 0.5em;">Set
+ the position and color of pixels: This is the basic function of GUI, it
+ is used to set the position and color of a pixel in the buffer.</li></ul><pre style="font-family: monospace, Courier; font-size: 14px; padding: 1em; margin: 12px; line-height: 1.5; color: black; background-color: rgb(249, 249, 249); border-color: rgb(221, 221, 221); border-radius: 4px; white-space: pre-wrap;">void Paint_SetPixel(UWORD Xpoint, UWORD Ypoint, UWORD Color)
+Parameter:
+ 	Xpoint: The X-axis position of the point in the image buffer
+ 	Ypoint: The Y-axis position of the point in the image buffer
+ 	Color: The color of the point
+</pre><ul style="margin: 1em 0px 1em 1.2em; padding: 0px 0px 0px 1em;"><li style="margin: 0.5em;">Color of the image: To set the color of the image, this function always be used to clear the display.</li></ul><pre style="font-family: monospace, Courier; font-size: 14px; padding: 1em; margin: 12px; line-height: 1.5; color: black; background-color: rgb(249, 249, 249); border-color: rgb(221, 221, 221); border-radius: 4px; white-space: pre-wrap;">void Paint_Clear(UWORD Color)
+Parameter:
+ 	Color: The color of the image
+</pre><ul style="margin: 1em 0px 1em 1.2em; padding: 0px 0px 0px 1em;"><li style="margin: 0.5em;">Color
+ of the windows: This function is used to set the color of windows, it 
+is always used for updating partial areas like displaying a clock.</li></ul><pre style="font-family: monospace, Courier; font-size: 14px; padding: 1em; margin: 12px; line-height: 1.5; color: black; background-color: rgb(249, 249, 249); border-color: rgb(221, 221, 221); border-radius: 4px; white-space: pre-wrap;">void Paint_ClearWindows(UWORD Xstart, UWORD Ystart, UWORD Xend, UWORD Yend, UWORD Color)
+Parameter:
+ 	Xstart: X-axis position of the start point.
+ 	Ystart: Y-axis position of the start point.
+ 	Xend: X-axis position of the endpoint.
+ 	Yend: Y-axis position of the endpoint
+ 	Color: Color of the windows.
+</pre><ul style="margin: 1em 0px 1em 1.2em; padding: 0px 0px 0px 1em;"><li style="margin: 0.5em;">Draw point: Draw a point at the position （Xpoint, Ypoint） of the image buffer, you can configure the color, size, and style.</li></ul><pre style="font-family: monospace, Courier; font-size: 14px; padding: 1em; margin: 12px; line-height: 1.5; color: black; background-color: rgb(249, 249, 249); border-color: rgb(221, 221, 221); border-radius: 4px; white-space: pre-wrap;">void Paint_DrawPoint(UWORD Xpoint, UWORD Ypoint, UWORD Color, DOT_PIXEL Dot_Pixel, DOT_STYLE Dot_Style)
+Parameter:
+ 	Xpoint: X-axis position of the point.
+ 	Ypoint: Y-axis position of the point
+ 	Color: Color of the point
+ 	Dot_Pixel: Size of the point, 8 sizes are available.
+ 	 	 typedef enum {
+ 	 	 	 DOT_PIXEL_1X1  = 1,	// 1 x 1
+ 	 	 	 DOT_PIXEL_2X2  , 		// 2 X 2
+ 	 	 	 DOT_PIXEL_3X3  , 	 	// 3 X 3
+ 	 	 	 DOT_PIXEL_4X4  , 	 	// 4 X 4
+ 	 	 	 DOT_PIXEL_5X5  , 		// 5 X 5
+ 	 	 	 DOT_PIXEL_6X6  , 		// 6 X 6
+ 	 	 	 DOT_PIXEL_7X7  , 		// 7 X 7
+ 	 	 	 DOT_PIXEL_8X8  , 		// 8 X 8
+ 	 	} DOT_PIXEL;
+ 	Dot_Style: Style of the point, it defines the extended mode of the point.
+ 	 	typedef enum {
+ 	 	   DOT_FILL_AROUND  = 1,		
+ 	 	   DOT_FILL_RIGHTUP,
+ 	 	} DOT_STYLE;
+</pre><ul style="margin: 1em 0px 1em 1.2em; padding: 0px 0px 0px 1em;"><li style="margin: 0.5em;">Draw
+ the line: Draw a line from (Xstart, Ystart) to (Xend, Yend) in the 
+image buffer, you can configure the color, width, and style.</li></ul><pre style="font-family: monospace, Courier; font-size: 14px; padding: 1em; margin: 12px; line-height: 1.5; color: black; background-color: rgb(249, 249, 249); border-color: rgb(221, 221, 221); border-radius: 4px; white-space: pre-wrap;">void Paint_DrawLine(UWORD Xstart, UWORD Ystart, UWORD Xend, UWORD Yend, UWORD Color, LINE_STYLE Line_Style , LINE_STYLE Line_Style)
+Parameter:
+ 	Xstart: Xstart of the line
+ 	Ystart: Ystart of the line
+ 	Xend: Xend of the line
+ 	Yend: Yend of the line
+ 	Color: Color of the line
+ 	Line_width: Width of the line, 8 sizes are available.
+ 	 	typedef enum {
+ 	 	 	 DOT_PIXEL_1X1  = 1,	// 1 x 1
+ 	 	 	 DOT_PIXEL_2X2  , 		// 2 X 2
+ 	 	 	 DOT_PIXEL_3X3  ,		// 3 X 3
+ 	 	 	 DOT_PIXEL_4X4  ,		// 4 X 4
+ 	 	 	 DOT_PIXEL_5X5  , 		// 5 X 5
+ 	 	 	 DOT_PIXEL_6X6  , 		// 6 X 6
+ 	 	 	 DOT_PIXEL_7X7  , 		// 7 X 7
+ 	 	 	 DOT_PIXEL_8X8  , 		// 8 X 8
+ 	 	} DOT_PIXEL;
+ 	 Line_Style: Style of the line, Solid or Dotted.
+ 	 	typedef enum {
+ 	 	 	 LINE_STYLE_SOLID = 0,
+ 	 	 	 LINE_STYLE_DOTTED,
+ 	 	} LINE_STYLE;
+</pre><ul style="margin: 1em 0px 1em 1.2em; padding: 0px 0px 0px 1em;"><li style="margin: 0.5em;">Draw a rectangle: Draw a rectangle from (Xstart, Ystart) to (Xend, Yend), you can configure the color, width, and style.</li></ul><pre style="font-family: monospace, Courier; font-size: 14px; padding: 1em; margin: 12px; line-height: 1.5; color: black; background-color: rgb(249, 249, 249); border-color: rgb(221, 221, 221); border-radius: 4px; white-space: pre-wrap;">void Paint_DrawRectangle(UWORD Xstart, UWORD Ystart, UWORD Xend, UWORD Yend, UWORD Color, DOT_PIXEL Line_width, DRAW_FILL Draw_Fill)
+Parameter:
+ 	Xstart: Xstart of the rectangle.
+ 	Ystart: Ystart of the rectangle.
+ 	Xend: Xend of the rectangle.
+ 	Yend: Yend of the rectangle.
+ 	Color: Color of the rectangle
+ 	Line_width: The width of the edges. 8 sizes are available.
+ 	 	typedef enum {
+ 	 	 	 DOT_PIXEL_1X1  = 1,	// 1 x 1
+ 	 	 	 DOT_PIXEL_2X2  , 		// 2 X 2
+ 	 	 	 DOT_PIXEL_3X3  ,		// 3 X 3
+ 	 	 	 DOT_PIXEL_4X4  ,		// 4 X 4
+ 	 	 	 DOT_PIXEL_5X5  , 		// 5 X 5
+ 	 	 	 DOT_PIXEL_6X6  , 		// 6 X 6
+ 	 	 	 DOT_PIXEL_7X7  , 		// 7 X 7
+ 	 	 	 DOT_PIXEL_8X8  , 		// 8 X 8
+ 	 	} DOT_PIXEL;
+ 	Draw_Fill: Style of the rectangle, empty or filled.
+ 	 	typedef enum {
+ 	 	 	 DRAW_FILL_EMPTY = 0,
+ 	 	 	 DRAW_FILL_FULL,
+ 	 	} DRAW_FILL;
+</pre><ul style="margin: 1em 0px 1em 1.2em; padding: 0px 0px 0px 1em;"><li style="margin: 0.5em;">Draw
+ circle: Draw a circle in the image buffer, use (X_Center Y_Center) as 
+the center and Radius as the radius. You can configure the color, width 
+of the line, and style of the circle.</li></ul><pre style="font-family: monospace, Courier; font-size: 14px; padding: 1em; margin: 12px; line-height: 1.5; color: black; background-color: rgb(249, 249, 249); border-color: rgb(221, 221, 221); border-radius: 4px; white-space: pre-wrap;">void Paint_DrawCircle(UWORD X_Center, UWORD Y_Center, UWORD Radius, UWORD Color, DOT_PIXEL Line_width, DRAW_FILL Draw_Fill)
+Parameter:
+ 	X_Center: X-axis of center
+ 	Y_Center: Y-axis of center
+ 	Radius：radius of circle
+ 	Color:  Color of the circle
+ 	Line_width: The width of arc, 8 sizes are available.
+ 	 	typedef enum {
+ 	 	 	 DOT_PIXEL_1X1  = 1,	// 1 x 1
+ 	 	 	 DOT_PIXEL_2X2  , 		// 2 X 2
+ 	 	 	 DOT_PIXEL_3X3  ,		// 3 X 3
+ 	 	 	 DOT_PIXEL_4X4  ,		// 4 X 4
+ 	 	 	 DOT_PIXEL_5X5  , 		// 5 X 5
+ 	 	 	 DOT_PIXEL_6X6  , 		// 6 X 6
+ 	 	 	 DOT_PIXEL_7X7  , 		// 7 X 7
+ 	 	 	 DOT_PIXEL_8X8  , 		// 8 X 8
+ 	 	} DOT_PIXEL;
+ 	Draw_Fill: Style of the circle: empty or filled.
+ 	 	typedef enum {
+ 	 	 	 DRAW_FILL_EMPTY = 0,
+ 	 	 	 DRAW_FILL_FULL,
+ 	 	} DRAW_FILL;
+</pre><ul style="margin: 1em 0px 1em 1.2em; padding: 0px 0px 0px 1em;"><li style="margin: 0.5em;">Show Ascii character: Show a character in (Xstart, Ystart) position, you can configure the font, foreground, and background.</li></ul><pre style="font-family: monospace, Courier; font-size: 14px; padding: 1em; margin: 12px; line-height: 1.5; color: black; background-color: rgb(249, 249, 249); border-color: rgb(221, 221, 221); border-radius: 4px; white-space: pre-wrap;">void Paint_DrawChar(UWORD Xstart, UWORD Ystart, const char Ascii_Char, sFONT* Font, UWORD Color_Foreground, UWORD Color_Background)
+Parameter:
+ 	Xstart: Xstart of the character
+ 	Ystart: Ystart of the character
+ 	Ascii_Char：Ascii char
+ 	Font: five fonts are avaialble：
+ 	 	font8：5*8
+ 	 	font12：7*12
+ 	 	font16：11*16
+ 	 	font20：14*20
+ 	 	font24：17*24
+ 	Color_Foreground: foreground color
+ 	Color_Background: background color
+</pre><ul style="margin: 1em 0px 1em 1.2em; padding: 0px 0px 0px 1em;"><li style="margin: 0.5em;">Draw string: Draw string at (Xstart Ystart), you can configure the fonts, foreground, and the background</li></ul><pre style="font-family: monospace, Courier; font-size: 14px; padding: 1em; margin: 12px; line-height: 1.5; color: black; background-color: rgb(249, 249, 249); border-color: rgb(221, 221, 221); border-radius: 4px; white-space: pre-wrap;">void Paint_DrawString_EN(UWORD Xstart, UWORD Ystart, const char * pString, sFONT* Font, UWORD Color_Foreground, UWORD Color_Background)
+Parameter:
+ 	Xstart: Xstart of the string
+ 	Ystart: Ystart of the string
+ 	pString：String
+ 	Font: five fonts are available：
+ 	 	font8：5*8
+ 	 	font12：7*12
+ 	 	font16：11*16
+ 	 	font20：14*20
+ 	 	font24：17*24
+ 	Color_Foreground: foreground color
+ 	Color_Background: background color
+</pre><ul style="margin: 1em 0px 1em 1.2em; padding: 0px 0px 0px 1em;"><li style="margin: 0.5em;">Draw
+ Chinese string: Draw Chinese string at (Xstart Ystart) of the image 
+buffer. You can configure fonts (GB2312), foreground, and background.</li></ul><pre style="font-family: monospace, Courier; font-size: 14px; padding: 1em; margin: 12px; line-height: 1.5; color: black; background-color: rgb(249, 249, 249); border-color: rgb(221, 221, 221); border-radius: 4px; white-space: pre-wrap;">void Paint_DrawString_CN(UWORD Xstart, UWORD Ystart, const char * pString, cFONT* font, UWORD Color_Foreground, UWORD Color_Background)
+Parameter:
+ 	Xstart: Xstart of string
+ 	Ystart: Ystart of string
+ 	pString：string
+ 	Font: GB2312 fonts, two fonts are available                                                                                 ：
+ 	 	font12CN：ascii 11*21，Chinese 16*21
+ 	 	font24CN：ascii 24*41，Chinese 32*41
+ 	Color_Foreground: Foreground color
+ 	Color_Background: Background color
+</pre><ul style="margin: 1em 0px 1em 1.2em; padding: 0px 0px 0px 1em;"><li style="margin: 0.5em;">Draw
+ number: In the image buffer, at (Xstart Ystart) as the left vertex, 
+write a string of numbers, you can choose the Ascii font, font 
+foreground color, or font background color.</li></ul><pre style="font-family: monospace, Courier; font-size: 14px; padding: 1em; margin: 12px; line-height: 1.5; color: black; background-color: rgb(249, 249, 249); border-color: rgb(221, 221, 221); border-radius: 4px; white-space: pre-wrap;">void Paint_DrawNum(UWORD Xpoint, UWORD Ypoint, double Nummber, sFONT* Font, UWORD Digit,UWORD Color_Foreground, UWORD Color_Background);
+Parameter:
+ 	Xstart: Left vertex X coordinate
+ 	Ystart: Left vertex Y coordinate
+ 	Nummber： The displayed number is stored in a 32-bit int type, which can be displayed up to 2147483647.
+ 	 	font8：5*8
+ 	 	font12：7*12
+ 	 	font16：11*16
+ 	 	font20：14*20
+ 	 	font24：17*24
+        Digit: Display decimal places
+ 	Color_Foreground: Foreground color
+ 	Color_Background: Background color
+</pre><ul style="margin: 1em 0px 1em 1.2em; padding: 0px 0px 0px 1em;"><li style="margin: 0.5em;">Display time: Display time at (Xstart Ystart) of the image buffer, you can configure fonts, foreground, and background.</li></ul><pre style="font-family: monospace, Courier; font-size: 14px; padding: 1em; margin: 12px; line-height: 1.5; color: black; background-color: rgb(249, 249, 249); border-color: rgb(221, 221, 221); border-radius: 4px; white-space: pre-wrap;">void Paint_DrawTime(UWORD Xstart, UWORD Ystart, PAINT_TIME *pTime, sFONT* Font, UWORD Color_Background, UWORD Color_Foreground)
+Parameter:
+ 	Xstart: Xstart of time
+ 	Ystart: Ystart of time
+ 	pTime：Structure of time
+ 	Font: Ascii font, five fonts are avaialble
+ 	 	font8：5*8
+ 	 	font12：7*12
+ 	 	font16：11*16
+ 	 	font20：14*20
+ 	 	font24：17*24
+ 	Color_Foreground: Foreground
+ 	Color_Background: Background</pre></div></div>                    </div>
+
+                    <div attr-id="2" class="detail_left_content rich_text" style="display: none;">
+                        <h2 style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, Tahoma, &quot;Arial sans-serif&quot;; line-height: 45px; color: rgb(51, 51, 51); margin: 5px; font-size: 22px; padding: 0px 10px; background-color: rgba(247, 247, 247, 0.4); text-shadow: none;"><span class="mw-headline" id="Document" style="text-shadow: none; color: rgb(126, 177, 40); margin-left: -10px; padding: 8px 12px; border-left: 10px solid rgb(126, 177, 40) !important;">Document</span></h2><ul style="margin: 1em 0px 1em 1.2em; padding: 0px 0px 0px 1em; color: rgb(51, 51, 51); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, Tahoma, &quot;Arial sans-serif&quot;; font-size: 16px;"><li style="margin: 0.5em;"><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.waveshare.com/w/upload/5/5f/Pico-LCD-2_SchDoc.pdf" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAVklEQVR4Xn3PgQkAMQhDUXfqTu7kTtkpd5RA8AInfArtQ2iRXFWT2QedAfttj2FsPIOE1eCOlEuoWWjgzYaB/IkeGOrxXhqB+uA9Bfcm0lAZuh+YIeAD+cAqSz4kCMUAAAAASUVORK5CYII=&quot;); background-position: right center; background-size: initial; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(51, 122, 183); line-height: 1.6; padding-right: 13px;">Schematic</a></li><li style="margin: 0.5em;"><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.waveshare.com/w/upload/a/ad/ST7789VW.pdf" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAVklEQVR4Xn3PgQkAMQhDUXfqTu7kTtkpd5RA8AInfArtQ2iRXFWT2QedAfttj2FsPIOE1eCOlEuoWWjgzYaB/IkeGOrxXhqB+uA9Bfcm0lAZuh+YIeAD+cAqSz4kCMUAAAAASUVORK5CYII=&quot;); background-position: right center; background-size: initial; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(51, 122, 183); line-height: 1.6; padding-right: 13px;">ST7789VW Datasheet</a></li></ul><h2 style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, Tahoma, &quot;Arial sans-serif&quot;; line-height: 45px; color: rgb(51, 51, 51); margin: 5px; font-size: 22px; padding: 0px 10px; background-color: rgba(247, 247, 247, 0.4); text-shadow: none;"><span class="mw-headline" id="Examples" style="text-shadow: none; color: rgb(126, 177, 40); margin-left: -10px; padding: 8px 12px; border-left: 10px solid rgb(126, 177, 40) !important;">Examples</span></h2><ul style="margin: 1em 0px 1em 1.2em; padding: 0px 0px 0px 1em; color: rgb(51, 51, 51); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, Tahoma, &quot;Arial sans-serif&quot;; font-size: 16px;"><li style="margin: 0.5em;"><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.waveshare.com/w/upload/2/28/Pico_code.7z" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAVklEQVR4Xn3PgQkAMQhDUXfqTu7kTtkpd5RA8AInfArtQ2iRXFWT2QedAfttj2FsPIOE1eCOlEuoWWjgzYaB/IkeGOrxXhqB+uA9Bfcm0lAZuh+YIeAD+cAqSz4kCMUAAAAASUVORK5CYII=&quot;); background-position: right center; background-size: initial; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(51, 122, 183); line-height: 1.6; padding-right: 13px;">Demo codes</a></li></ul>                    </div>
+                    
+                    <div attr-id="3" class="detail_left_content rich_text" style="display: none;">
+                                            </div>
+
+                    <div attr-id="4" class="detail_left_content rich_text" style="display: none;">
+                        <h3 style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;;">To：</h3><p style="margin-bottom: 0px; font-family: 微软雅黑; overflow-wrap: break-word; scroll-behavior: smooth; word-break: break-word; padding: 0px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-indent: 40px; color: rgb(51, 51, 51); font-size: 20px;"></p><p style="margin-bottom: 0px; font-family: 微软雅黑; overflow-wrap: break-word; scroll-behavior: smooth; word-break: break-word; padding: 0px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-indent: 40px; color: rgb(51, 51, 51); font-size: 20px;"></p><p style="margin-top: 15px; margin-bottom: 15px; font-family: 微软雅黑; overflow-wrap: break-word; scroll-behavior: smooth; word-break: break-word; padding: 0px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-indent: 40px; color: rgb(51, 51, 51); font-size: 20px;"><span style="overflow-wrap: break-word; scroll-behavior: smooth; word-break: break-word; font-size: 14px;">Dear
+ Customers, There may be a lag of several hours before we could process 
+your order, depending on the time difference between your location and 
+ours. Sincerely hoping your understanding!</span></p><h2 style="font-family: 微软雅黑; color: rgb(51, 51, 51); margin: 0px; font-size: 20px; overflow-wrap: break-word; scroll-behavior: smooth; word-break: break-word; padding: 0px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Email(support)</h2><p style="margin-top: 15px; margin-bottom: 15px; font-family: 微软雅黑; overflow-wrap: break-word; scroll-behavior: smooth; word-break: break-word; padding: 0px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-indent: 40px; color: rgb(51, 51, 51); font-size: 20px;"><span style="overflow-wrap: break-word; scroll-behavior: smooth; word-break: break-word; font-size: 14px;"></span></p><p style="margin-right: 30px; margin-bottom: 0px; font-family: 微软雅黑; overflow-wrap: break-word; scroll-behavior: smooth; word-break: break-word; padding: 0px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-size: 20px; color: rgb(51, 51, 51);">services01@spotpear.com</p>                    </div>
+
+                    <div style="padding: 0 10px; padding-bottom: 10px;">
+                                                        <span class="tag_label">TAG：</span>
+                                                                <span class="stag"><a href="https://spotpear.com/wiki/1.85-inch-Type-C-Monitor-HDR-4K-DisplayScreen-Computer-PC-Raspberry-Pi-Jetson-PC-2160P.html">Raspberry Pi 18.5 inch Type C/HDMI/4K Display Screen 3840×2160 Computer PC Phone Xbox/PS4/Switch</a></span>
+                                                                <span class="stag"><a href="https://spotpear.com/index/study/detail/id/1183.html">Raspberry Pi</a></span>
+                                                                <span class="stag"><a href="https://spotpear.com/wiki/Raspberry-Pi-5-Case-Argon-Neo-5-User-Guide.html">SpotPear</a></span>
+                                                                <span class="stag"><a href="https://spotpear.com/wiki/Raspberry-Pi-5-PCIe-M.2-NVMe-SSD.html">Raspberry Pi 5 PCIe to M.2</a></span>
+                                                                <span class="stag"><a href="https://spotpear.com/index/study/detail/id/1214.html">ADXL354C Dev Board</a></span>
+                                                                <span class="stag"><a href="https://spotpear.com/wiki/Milk-V-Duo-S-eMMC-version-firmware-burning.html">Milk-V Duo S eMMC version firmware burning</a></span>
+                                                                <span class="stag"><a href="https://spotpear.com/index/study/detail/id/1198.html">GPU Monitor Display</a></span>
+                                                                <span class="stag"><a href="https://spotpear.com/index/study/detail/id/1154.html">Raspberry Pi 0.96inch OLED</a></span>
+                                                                <span class="stag"><a href="https://spotpear.com/index/study/detail/id/1147.html">Bus Servo Adapter A</a></span>
+                                                                <span class="stag"><a href="https://spotpear.com/wiki/Industrial-USB-TO-RS232-RS485-Serial-UART-FT232RNL.html">Industrial USB TO RS232/485 Serial UART Converter FT232RNL Compact Size</a></span>
+                                                                <span class="stag"><a href="https://spotpear.com/wiki/ESP32-C6-LCD-1.9-inch-LCD-Display-TouchScreen-LVGL-SD-WIFI6-ST7789-QMI8658.html">ESP32 C6 Development board 1.9 inch LCD display 1.9inch Screen 172×320 With SD slot RGB LED QMI8658 6-Axis-Sensor ST7789 CST816</a></span>
+                                                                <span class="stag"><a href="https://spotpear.com/index/study/detail/id/1198.html">7inch Monitor LCD</a></span>
+                                                                <span class="stag"><a href="https://spotpear.com/index/study/detail/id/1216.html">Raspberry Pi 5 27W Power</a></span>
+                                                                <span class="stag"><a href="https://spotpear.com/wiki/ESP32-S3-A7670E-GSM-GPRS-GNSS-LTE-Cat-1-2G.html">ESP32-S3 A7670E 4G development board supports LTE Cat-1/2G/GNSS positioning/WiFi/Bluetooth</a></span>
+                                                                <span class="stag"><a href="https://spotpear.com/wiki/ESP32-S3-N16R8-AI-DeepSeek-XiaoZhi-XiaGe-Qwen-DouBao-1.28-inch-Round-LCD-BOX-TouchScreen.html">DeepSeek XiaoZhi AI Voice Chat Robot BOX ESP32-S3 Development Board 1.28 inch Round LCD 1.28inch TouchScreen N16R8</a></span>
+                                                                <span class="stag"><a href="https://spotpear.com/wiki/Raspberry-Pi-5-USB-Audio-Sound-Card-with-Earphone-Jack-Buzzer-Speaker-User-Guide.html">Raspberry Pi 5 Sound</a></span>
+                                                                <span class="stag"><a href="https://spotpear.com/index/study/detail/id/1086.html">DAPLINK</a></span>
+                                                                <span class="stag"><a href="https://spotpear.com/index/study/detail/id/1079.html">Mobile Robot</a></span>
+                                                                <span class="stag"><a href="https://spotpear.com/wiki/TVOC-Sensor-gas-Sensor-Mini-High-Sensitivity-Low-Power.html">TVOC Sensor gas Sensor Expansion board UART High Sensitivity For Arduino /Raspberry Pi /Pico /ESP32</a></span>
+                                                                <span class="stag"><a href="https://spotpear.com/wiki/Seeed-Studio-XIAO-RA4M1-Tiny-SuperMini-Arduino-Uno-R4-R7FA4M1.html">XIAO RA4M1 Tiny SuperMini Board For Arduino Uno IDE For SeeedStudio R7FA4M1</a></span>
+                                                        </div>
+                </div>
+                <div class="mobile_line"></div>
+ 
+                               <div class="study_detail_right">
+                    <div class="study_detail_right_box" style="display: flex;border: #d9d9d9 1.5px solid;">
+                        <div class="study_detail_right_product_img" style="flex: 1;">
+                            <a href="https://spotpear.com/index/product/detail/id/791.html" target="_blank">
+                                <img src="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/pico-lcd-2-01.jpg" width="140" height="140" alt="">
+                            </a>
+                        </div>
+                        <div class="study_detail_right_product_desc" style="flex: 1;">
+                            <a href="https://spotpear.com/index/product/detail/id/791.html" target="_blank">
+                                <div style="display: flex; flex-direction: column; justify-content: center; height: 140px;">
+                                    <div class="detail_right_text">
+                                        <div>Price：</div>
+                                        <div class="red yc">$12.59</div>
+                                    </div>
+                    
+                                                                        <div class="detail_right_text">
+                                        <div>Model：</div>
+                                        <div class="yc">Pico-LCD-2</div>
+                                    </div>
+                                                                        <div class="detail_right_text">
+                                        <div>Brand：</div>
+                                        <div class="yc">Spotpear</div>
+                                    </div>
+                                                                        <div class="detail_right_text">
+                                        <div>SKU：</div>
+                                        <div class="yc">0101541</div>
+                                    </div>
+                                                                    </div>
+                            </a>
+                        </div>                   
+                    
+                    </div>
+
+                    <div class="study_detail_right_text_box">
+                        <div class="detail_right_text">
+                            <a href="https://spotpear.com/index/product/detail/id/791.html" target="_blank">
+    
+                                <h3 style="margin: 5px 0;width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                                    Raspberry Pi Pico 2inch LCD Display 
+Module 2 inch Screen 65K Colors 320×240 SPI                             
+   </h3>
+                            </a>
+                        </div>
+
+                                                <div class="detail_right_text">
+                            <span>TAG：</span>
+                            <span>
+                                                                <span class="tag"><a href="https://spotpear.com/index/product/detail/id/1473.html">JETSON NANO MINI Board</a></span>
+                                                                <span class="tag"><a href="https://spotpear.com/index/product/detail/id/1022.html">Raspberry Pi LCD</a></span>
+                                                                <span class="tag"><a href="https://spotpear.com/index/product/detail/id/1360.html">ESP32 Google Dinosaur game</a></span>
+                                                                <span class="tag"><a href="https://spotpear.com/index/product/detail/id/1022.html">Raspberry Pi 5 DSI LCD</a></span>
+                                                                <span class="tag"><a href="https://spotpear.com/shop/Raspberry-Pi-5inch-LCD-B-DSI-MIPI-800x480-Display-Capacitive-Touchscreen.html">Raspberry Pi 5inch DSI LCD B Display MIPI IPS 800x480 Capacitive TouchScreen</a></span>
+                                                                <span class="tag"><a href="https://spotpear.com/shop/SIMCOM-3G-4G-5G-GNSS-Sub-6G-LTE-FDD-TDD-WCDMA-HSPA+-PCIe-USB3.1-GPIO-NSA-SA-SIM8202G-M2.html">SIM8202G M2 3G 4G 5G GNSS Sub-6G PCIe USB3.1 GPIO M.2 LTE-A NSA SA DFOTA VoLTE SIMCOM</a></span>
+                                                                <span class="tag"><a href="https://spotpear.com/shop/Solar-Charge-D.html">Solar</a></span>
+                                                                <span class="tag"><a href="https://spotpear.com/shop/LuckFox-Pico-Camera-SC3336-3MP-B.html">LuckFox Pico SC3336</a></span>
+                                                                <span class="tag"><a href="https://spotpear.com/shop/ESP32-S3-N16R8-AI-DeepSeek-XiaoZhi-XiaGe-Qwen-DouBao-1.28-inch-LCD.html">DeepSeek
+  AI Voice  Robot Ball ESP32-S3 1.28 inch LCD N16R8 Development Board 
+espHome Assistant Wifi Weather Station TimeClock Electronic EYE</a></span>
+                                                                <span class="tag"><a href="https://spotpear.com/shop/1.54-inch-Passive-NFC-e-Paper-BW-E-ink-Screen-Wireless-Power.html">1.54 inch Passive NFC e-Paper BW Display E-ink Screen No Need Battery Wireless Powered</a></span>
+                                                                <span class="tag"><a href="https://spotpear.com/shop/3.5inch-LCD-Computer-CPU-GPU-RAM-Monitor-PC-USB-TypeC-Secondary-Display-Screen.html">CPU</a></span>
+                                                                <span class="tag"><a href="https://spotpear.com/shop/DDSM400-Direct-Drive-Servo-Hub-Motor-All-In-One-Serial-LIN-Bus.html">DDSM400 Servo Motor All-In-One Hub LIN Bus</a></span>
+                                                                <span class="tag"><a href="https://spotpear.com/index/product/detail/id/1407.html">Clock trinket</a></span>
+                                                                <span class="tag"><a href="https://spotpear.com/shop/Raspberry-Pi-Pico-RP2040-Round-LCD-1.28inch-Touch-B.html">Raspberry Pi Pico 1.28inch</a></span>
+                                                                <span class="tag"><a href="https://spotpear.com/shop/Raspberry-Pi-AI-Camera-Official-Original-12MP-IMX500.html">Raspberry Pi AI Camera 12MP IMX500 RP2040</a></span>
+                                                                <span class="tag"><a href="https://spotpear.com/shop/Raspberry-Pi-5-ICE-Tower-Thinner-Pi5-CPU-Cooler-Fins-RGB-Fan-U-Copper-Tube.html">1.69inch LCD TouchScreen Display 240&amp;amp;times;280 ST7789 Arduino Raspberry Pi ESP32S3 Pico STM32</a></span>
+                                                                <span class="tag"><a href="https://spotpear.com/shop/ESP32-H2-BLE-Zigbee-Thread.html">ESP32</a></span>
+                                                                <span class="tag"><a href="https://spotpear.com/index/product/detail/id/1488.html">Raspberry Pi RP2040 1.14inch LCD</a></span>
+                                                                <span class="tag"><a href="https://spotpear.com/shop/Jetson-RTL8822CE-5G-WiFi-Wireless-Bluetooth-NGFF-M.2.html">Wireless RTL8822CE NIC  2.4G 5GHz Dual Band WiFi High Speed Wireless Card RTL8822CE-CG core</a></span>
+                                                                <span class="tag"><a href="https://spotpear.com/shop/ESP32-S3-1.91-inch-AMOLED-Display-TouchScreen.html">ESP32 S3 1.91 inch AMOLED Display Screen Arduino LVGL SD-Port QMI8658C 6-Axis Sensor</a></span>
+                                                            </span>
+                        </div>
+                                            </div>
+                </div>
+                
+                               
+                    
+                
+               
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+<div class="footer">
+    <div class="footer_body">
+        <div class="footer_body_left">
+            <ul>
+                                <li>
+                    <a href="https://spotpear.com/index/product/new.html">NEW</a>
+                </li>
+                                <li>
+                    <a href="https://spotpear.com/index/product/index.html">PRODUCTS</a>
+                </li>
+                                <li class="active">
+                    <a href="https://spotpear.com/index/study/index.html">ARTICLES</a>
+                </li>
+                                <li>
+                    <a href="https://spotpear.com/index/about_us/index.html">ABOUT US</a>
+                </li>
+                                <li>
+                    <a href="https://spotpear.com/index/contact/index.html">CONTACT US</a>
+                </li>
+                                <li>
+                    <a href="https://spotpear.com/index/pay/index.html">SHOP</a>
+                </li>
+                            </ul>
+            <div class="beian">©Copyright 2015 Berlinger Haus | All Rights Reserved</div>
+        </div>
+        <div class="footer_body_right">
+            <div class="row">Address：Rm401, building 4, Enlai industrial city, Nankang Road, Danzhutou community, Nanwan street, Longgang District, Shenzhen</div>
+            <!-- <div class="row">Phone：</div> -->
+            <div class="row">Email：services01@spotpear.com        (Only tech support .Order see 'CONTACT US' at our web )</div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/jquery.min.js"></script>
+<script type="text/javascript" src="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/axios.min.js"></script>
+<script type="text/javascript" src="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/fun.js"></script>
+<script type="text/javascript" src="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/index.js"></script>
+<script charset="UTF-8" id="LA_COLLECT" src="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/js-sdk-pro.min.js"></script>
+
+
+<script src="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/jquery.min.js"></script>
+<script src="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/layui.js"></script>
+<script src="Raspberry%20Pi%20Pico-LCD-2%20User%20Guide-Dateien/index.js"></script>
+
+</body></html>
